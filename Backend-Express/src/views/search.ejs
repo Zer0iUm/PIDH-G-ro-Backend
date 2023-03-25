@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Lato:wght@400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="../../assets/css/style_Result_Busca.css" />
+		<link href="../../assets/css/cabecalho.css" rel="stylesheet" />
+		<link href="../../assets/css/footer.css" rel="stylesheet" />
+		<link href="../../assets/css/busca.css" rel="stylesheet" />
+
+		<title>Lista de produtos - resultado de busca</title>
+	</head>
+
+	<body>
+		<header class="cabecalho">
+			<nav class="menu">
+				<a class="menu__link" href="../homeStore/homeStore.html"
+					><img
+						class="logo"
+						alt="Logo Goró"
+						src="../../assets/img/logo goro 1.png"
+					/>
+				</a>
+				<ul class="menu__lista">
+					<li id="menuOne" class="menu__item">
+						<a
+							onmouseover="mouseOverMenu()"
+							onmouseout="mouseOutMenu()"
+							class="menu__linka"
+							href="../lists/listBeers/listBeer.html"
+							>CERVEJAS</a
+						>
+					</li>
+					<li id="menuTwo" class="menu__item">
+						<a
+							onmouseover="mouseOverMenuTwo()"
+							onmouseout="mouseOutMenuTwo()"
+							class="menu__linka"
+							href="../lists/listAcessories/index.html"
+							>ACESSÓRIOS</a
+						>
+					</li>
+					<li id="menuThree" class="menu__item">
+						<a
+							onmouseover="mouseOverMenuThree()"
+							onmouseout="mouseOutMenuThree()"
+							class="menu__linka"
+							href="../lists/listKits/index.html"
+							>KITS</a
+						>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="redes">
+				<ul class="menu__lista">
+					<li id="menuFour" class="menu__item">
+						<a
+							onmouseover="mouseOverMenuFour()"
+							onmouseout="mouseOutMenuFour()"
+							class="menu__link"
+							href="../login/Login.html"
+							><img
+								class="redes__logo"
+								alt="Login"
+								src="../../assets/img/login.svg"
+							/>
+							LOGIN
+						</a>
+					</li>
+					<li id="menuFive" class="menu__item">
+						<a
+							onmouseover="mouseOverMenuFive()"
+							onmouseout="mouseOutMenuFive()"
+							class="menu__link"
+							href="../signUp/signUp.html"
+							><img
+								class="redes__logo"
+								alt="Carrinho"
+								src="../../assets/img/carrinho.svg"
+							/>
+							CARRINHO
+						</a>
+					</li>
+				</ul>
+
+				<div class="menu-bar">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</nav>
+		</header>
+
+		<section class="pesquisa">
+			<div class="pesquisa__container">
+				<input
+					class="pesquisa__input"
+					type="search"
+					placeholder="Buscar no site"
+				/>
+			</div>
+		</section>
+
+		<main>
+			<div class="filtro_container-completo">
+				<div class="filtros">
+					<h2 class="filtro">Filtros</h2>
+					<hr class="linha-filtro" />
+					<h3 class="Preco">Preço</h3>
+
+					<form action="index.html" method="get">
+						<input type="checkbox" name="Menor" value="Menor" />
+						<label class="Menor" for="Menor">Menor preço</label
+						><br />
+						<input type="checkbox" name="Maior" value="Maior" />
+						<label class="Maior" for="Maior">Maior preço</label>
+					</form>
+
+					<h3 class="produto">Produto</h3>
+					<form action="index.html" method="get">
+						<input
+							type="checkbox"
+							name="Camiseta"
+							value="Camiseta"
+						/>
+						<label class="Camiseta" for="Camiseta">Camiseta</label
+						><br />
+						<input type="checkbox" name="Térmico" value="Térmico" />
+						<label class="Térmico" for="Térmico">Térmico</label
+						><br />
+						<input
+							type="checkbox"
+							name="Abridor de cerveja"
+							value="Abridor de cerveja"
+						/>
+						<label class="AbridorDeCerveja" for="Abridor de cerveja"
+							>Abridor de cerveja</label
+						><br />
+						<input type="checkbox" name="balde" value="balde" />
+						<label class="balde" for="balde">balde</label>
+					</form>
+
+					<h3 class="estilo">Estilo</h3>
+					<form action="index.html" method="get">
+						<input
+							type="checkbox"
+							name="American Pale Ale"
+							value="American Pale Ale"
+						/>
+						<label class="AmericanPaleAle" for="American Pale Ale"
+							>American Pale Ale</label
+						><br />
+						<input
+							type="checkbox"
+							name="Double IPA"
+							value="Double IPA"
+						/>
+						<label class="DoubleIpa" for="Double IPA"
+							>Double IPA</label
+						><br />
+						<input
+							type="checkbox"
+							name="Brown ALE"
+							value="Brown ALE"
+						/>
+						<label class="BrownAle" for="Brown ALE"
+							>Brown ALE</label
+						>
+					</form>
+
+					<h3 class="percentualAlcool">% de álcool</h3>
+					<form action="index.html" method="get">
+						<input type="checkbox" name="2,5%" value="2,5%" />
+						<label class="doisEmeio" for="2,5%">2,5%</label><br />
+						<input type="checkbox" name="6%" value="6%" />
+						<label class="seis" for="6%">6%</label><br />
+						<input type="checkbox" name="10%" value="10%" />
+						<label class="dez" for="10%">10%</label>
+					</form>
+
+					<h3 class="ibu">IBU</h3>
+					<form action="index.html" method="get">
+						<input type="checkbox" name="63" value="63" />
+						<label class="sessentaEtres" for="63">63</label><br />
+						<input type="checkbox" name="33" value="33" />
+						<label class="trintaEtres" for="33">33</label><br />
+						<input type="checkbox" name="80" value="80" />
+						<label class="oitenta" for="80">80</label>
+					</form>
+
+					<h3 class="embalagem">Embalagem</h3>
+					<form action="index.html" method="get">
+						<input type="checkbox" name="Vidro" value="Vidro" />
+						<label class="Vidro" for="Vidro">Vidro</label><br />
+						<input
+							type="checkbox"
+							name="Alumínio"
+							value="Alumínio"
+						/>
+						<label class="Aluminio" for="Alumínio">Alumínio</label
+						><br />
+					</form>
+				</div>
+
+				<section class="container-produtos">
+					<h1 class="resultado-busca">
+						<span>RESULTADO DA BUSCA "PRODUTO DIGITADO"</span>
+					</h1>
+					<hr class="linha-produtos" />
+
+					<div class="container-todosProdutos">
+						<div class="item-cerveja">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="imagem-cerveja"
+								onclick="changeImage('../../assets/img/PRODUTOSKIT 1.png'); clickedImage('img-cerveja01')"
+								id="img-cerveja01"
+							/>
+							<div class="item-sacola">
+								<a href="../shoppingCart/shoppingCart.html">
+									<img
+										class="sacola"
+										src="../../assets/img/sacola.png"
+										alt="imagem-sacola"
+									/>
+								</a>
+							</div>
+							<p class="nome-produto">Goró - Brown Ale</p>
+							<p class="bebida">Cerveja</p>
+							<br />
+							<p class="valor-produto">R$ 00,00</p>
+						</div>
+
+						<div class="item-cerveja">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="imagem-cerveja"
+							/>
+							<div class="item-sacola">
+								<a href="../shoppingCart/shoppingCart.html">
+									<img
+										class="sacola"
+										src="../../assets/img/sacola.png"
+										alt="imagem-sacola"
+									/>
+								</a>
+							</div>
+							<p class="nome-produto">Goró - Brown Ale</p>
+							<p class="bebida">Cerveja</p>
+							<br />
+							<p class="valor-produto">R$ 00,00</p>
+						</div>
+
+						<div class="item-cerveja">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="imagem-cerveja"
+							/>
+							<div class="item-sacola">
+								<a href="../shoppingCart/shoppingCart.html">
+									<img
+										class="sacola"
+										src="../../assets/img/sacola.png"
+										alt="imagem-sacola"
+									/>
+								</a>
+							</div>
+							<p class="nome-produto">Goró - Brown Ale</p>
+							<p class="bebida">Cerveja</p>
+							<br />
+							<p class="valor-produto">R$ 00,00</p>
+						</div>
+
+						<div class="item-cerveja">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="imagem-cerveja"
+							/>
+							<div class="item-sacola">
+								<a href="../shoppingCart/shoppingCart.html">
+									<img
+										class="sacola"
+										src="../../assets/img/sacola.png"
+										alt="imagem-sacola"
+									/>
+								</a>
+							</div>
+							<p class="nome-produto">Goró - Brown Ale</p>
+							<p class="bebida">Cerveja</p>
+							<p class="valor-produto">R$ 00,00</p>
+						</div>
+
+						<div class="item-cerveja">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="imagem-cerveja"
+							/>
+							<div class="item-sacola">
+								<a href="../shoppingCart/shoppingCart.html">
+									<img
+										class="sacola"
+										src="../../assets/img/sacola.png"
+										alt="imagem-sacola"
+									/>
+								</a>
+							</div>
+							<p class="nome-produto">Goró - Brown Ale</p>
+							<p class="bebida">Cerveja</p>
+							<p class="valor-produto">R$ 00,00</p>
+						</div>
+
+						<div class="item-cerveja">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="imagem-cerveja"
+							/>
+							<div class="item-sacola">
+								<a href="../shoppingCart/shoppingCart.html">
+									<img
+										class="sacola"
+										src="../../assets/img/sacola.png"
+										alt="imagem-sacola"
+									/>
+								</a>
+							</div>
+							<p class="nome-produto">Goró - Brown Ale</p>
+							<p class="bebida">Cerveja</p>
+							<p class="valor-produto">R$ 00,00</p>
+						</div>
+
+						<div class="item-cerveja">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="imagem-cerveja"
+							/>
+							<div class="item-sacola">
+								<a href="../shoppingCart/shoppingCart.html">
+									<img
+										class="sacola"
+										src="../../assets/img/sacola.png"
+										alt="imagem-sacola"
+									/>
+								</a>
+							</div>
+							<p class="nome-produto">Goró - Brown Ale</p>
+							<p class="bebida">Cerveja</p>
+							<p class="valor-produto">R$ 00,00</p>
+						</div>
+
+						<div class="item-cerveja">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="imagem-cerveja"
+							/>
+							<div class="item-sacola">
+								<a href="../shoppingCart/shoppingCart.html">
+									<img
+										class="sacola"
+										src="../../assets/img/sacola.png"
+										alt="imagem-sacola"
+									/>
+								</a>
+							</div>
+							<p class="nome-produto">Goró - Brown Ale</p>
+							<p class="bebida">Cerveja</p>
+							<p class="valor-produto">R$ 00,00</p>
+						</div>
+
+						<div class="item-cerveja">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="imagem-cerveja"
+							/>
+							<div class="item-sacola">
+								<a href="../shoppingCart/shoppingCart.html">
+									<img
+										class="sacola"
+										src="../../assets/img/sacola.png"
+										alt="imagem-sacola"
+									/>
+								</a>
+							</div>
+							<p class="nome-produto">Goró - Brown Ale</p>
+							<p class="bebida">Cerveja</p>
+							<p class="valor-produto">R$ 00,00</p>
+						</div>
+					</div>
+
+					<button class="verMaisProdutos" type="button">
+						<p>
+							<a href="../shoppingCart/shoppingCart.html"
+								>VER MAIS PRODUTOS</a
+							>
+						</p>
+					</button>
+				</section>
+			</div>
+		</main>
+
+		<hr class="amarelo" />
+		<hr class="vermelho" />
+		<hr class="preto" />
+
+		<footer>
+			<div class="footer__container">
+				<div class="footer__logo">
+					<img
+						class="logo"
+						alt="Logo Goró"
+						src="../../assets/img/logo goro 1.png"
+					/>
+				</div>
+
+				<div class="footer__inst">
+					<ul>
+						<h5>INSTITUCIONAL</h5>
+						<li>
+							<a href="../../index.html"> Home </a>
+						</li>
+						<li>
+							<a href="../../index.html#info--menu">
+								Portfólio
+							</a>
+						</li>
+						<li>
+							<a href="#"> Contato </a>
+						</li>
+						<li>
+							<a href="../../index.html#about"> Sobre nós </a>
+						</li>
+						<li>
+							<a href="../homeStore/homeStore.html"> loja </a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__legal">
+					<ul>
+						<h5>LEGAL</h5>
+						<li>
+							<a href="#"> Termos de uso </a>
+						</li>
+						<li>
+							<a href="#"> Política de privacidade </a>
+						</li>
+					</ul>
+
+					<div class="footer__redes">
+						<h5>REDES SOCIAIS</h5>
+						<ul class="footer__lista">
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Instagram"
+										src="../../assets/img/Instagram.png"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="YouTube"
+										src="../../assets/img/YouTube.png"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Facebook"
+										src="../../assets/img/Facebook.png"
+								/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__busca">
+					<p>
+						Inscreva-se na nossa Newsletter e receba as nossas
+						novidades em primeira mão.
+					</p>
+					<div class="busca__input">
+						<input type="text" placeholder="SEU E-MAIL" />
+						<button>INSCREVER-SE</button>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				© 2022 CERVEJARIA GORÓ LTDA. 00.000.000/0001-00 | Rua dos Bobos,
+				0 - Cidade, ES
+			</p>
+		</footer>
+		<script src="./search.js"></script>
+	</body>
+</html>

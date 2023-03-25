@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Goró Loja</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link href="../../assets/css/reset.css" rel="stylesheet" />
+		<link href="../../assets/css/cabecalho.css" rel="stylesheet" />
+		<link href="../../assets/css/banner.css" rel="stylesheet" />
+		<link href="../../assets/css/categoria.css" rel="stylesheet" />
+		<link href="../../assets/css/produtos.css" rel="stylesheet" />
+		<link href="../../assets/css/footer.css" rel="stylesheet" />
+		<link href="../../assets/css/busca.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="cabecalho">
+			<nav class="menu">
+				<a class="menu__link" href="./homeStore.html"
+					><img
+						class="logo"
+						alt="Logo Goró"
+						src="../../assets/img/logo goro 1.png"
+					/>
+				</a>
+				<ul class="menu__lista">
+					<li id="menuOne" class="menu__item">
+						<a
+							onmouseover="mouseOverMenu()"
+							onmouseout="mouseOutMenu()"
+							class="menu__linka"
+							href="../lists/listBeers/listBeer.html"
+							>CERVEJAS</a
+						>
+					</li>
+					<li id="menuTwo" class="menu__item">
+						<a
+							onmouseover="mouseOverMenuTwo()"
+							onmouseout="mouseOutMenuTwo()"
+							class="menu__linka"
+							href="../lists/listAcessories/index.html"
+							>ACESSÓRIOS</a
+						>
+					</li>
+					<li id="menuThree" class="menu__item">
+						<a
+							onmouseover="mouseOverMenuThree()"
+							onmouseout="mouseOutMenuThree()"
+							class="menu__linka"
+							href="../lists/listKits/index.html"
+							>KITS</a
+						>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="redes">
+				<ul class="menu__lista">
+					<li id="menuFour" class="menu__item">
+						<a
+							onmouseover="mouseOverMenuFour()"
+							onmouseout="mouseOutMenuFour()"
+							class="menu__link"
+							href="../login/Login.html"
+							><img
+								class="redes__logo"
+								alt="Login"
+								src="../../assets/img/login.svg"
+							/>
+							LOGIN
+						</a>
+					</li>
+					<li id="menuFive" class="menu__item">
+						<a
+							onmouseover="mouseOverMenuFive()"
+							onmouseout="mouseOutMenuFive()"
+							class="menu__link"
+							href="../shoppingCart/shoppingCart.html"
+							><img
+								class="redes__logo"
+								alt="Carrinho"
+								src="../../assets/img/carrinho.svg"
+							/>
+							CARRINHO
+						</a>
+					</li>
+				</ul>
+
+				<div class="menu-bar">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</nav>
+		</header>
+
+		<section class="pesquisa">
+			<div class="pesquisa__container">
+				<input
+					class="pesquisa__input"
+					type="search"
+					placeholder="Buscar no site"
+				/>
+			</div>
+		</section>
+
+		<section class="carrossel">
+			<!-- Slider main container -->
+			<div class="swiper">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+					<!-- Slides -->
+					<div class="swiper-slide">
+						<div>
+							<img
+								src="../../assets/img/banner goró 1.png"
+								alt="banner"
+							/>
+						</div>
+						<div class="conteudo">
+							<p class="conteudo-um">ACESSÓRIOS</p>
+							<h2>GORÓ STYLE</h2>
+							<p class="conteudo-dois">
+								Chique e confortável! Garanta a camiseta que
+								<br />combina com a sua cerveja favorita.
+							</p>
+							<a href="#">VER CAMISETAS</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<img
+								src="../../assets/img/banner goró 1.png"
+								alt="banner"
+							/>
+						</div>
+						<div class="conteudo">
+							<p class="conteudo-um">ACESSÓRIOS</p>
+							<h2>GORÓ STYLE</h2>
+							<p class="conteudo-dois">
+								Chique e confortável! Garanta a camiseta que
+								<br />combina com a sua cerveja favorita.
+							</p>
+							<a href="#">VER CAMISETAS</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div>
+							<img
+								src="../../assets/img/banner goró 1.png"
+								alt="banner"
+							/>
+						</div>
+						<div class="conteudo">
+							<p class="conteudo-um">ACESSÓRIOS</p>
+							<h2>GORÓ STYLE</h2>
+							<p class="conteudo-dois">
+								Chique e confortável! Garanta a camiseta que
+								<br />combina com a sua cerveja favorita.
+							</p>
+							<a href="../lists/listAcessories/index.html"
+								>VER CAMISETAS</a
+							>
+						</div>
+					</div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+
+				<!-- If we need navigation buttons -->
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+
+				<!-- If we need scrollbar -->
+				<!-- <div class="swiper-scrollbar"></div> -->
+			</div>
+		</section>
+
+		<section class="categoria">
+			<h3>CATEGORIAS</h3>
+			<div class="categoria__container">
+				<a
+					href="../lists/listBeers/listBeer.html"
+					class="categoria__amarelo"
+				>
+					<img src="../../assets/img/Group 4.svg" />
+					<h4>CERVEJA</h4>
+				</a>
+				<a
+					href="../lists/listAcessories/index.html"
+					class="categoria__preto"
+				>
+					<img src="../../assets/img/Vector.svg" />
+					<h4>ACESSÓRIOS</h4>
+				</a>
+				<a
+					href="../lists/listKits/index.html"
+					class="categoria__vermelho"
+				>
+					<img src="../../assets/img/Vector_.svg" />
+					<h4>KITS</h4>
+				</a>
+			</div>
+		</section>
+
+		<section class="produtos">
+			<h3>TODOS OS PRODUTOS</h3>
+			<ul class="produtos__container">
+				<li class="produto__container">
+					<a href="../product/product.html" class="link__produto">
+						<div class="produto__img">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="banner"
+							/>
+							<div class="icone">
+								<a href="#"
+									><img
+										class="icone"
+										src="../../assets/img/sacola.png"
+										alt="banner"
+								/></a>
+							</div>
+						</div>
+						<div class="produto__conteudo">
+							<p class="produto__nome">Kit Goró - 3 cervejas</p>
+							<p class="produto__descricao">kits</p>
+							<p class="produto__valor">R$ 00,00</p>
+						</div>
+					</a>
+				</li>
+				<li class="produto__container">
+					<a href="#" class="link__produto">
+						<div class="produto__img">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="banner"
+							/>
+							<div class="icone">
+								<a href="#"
+									><img
+										class="icone"
+										src="../../assets/img/sacola.png"
+										alt="banner"
+								/></a>
+							</div>
+						</div>
+						<div class="produto__conteudo">
+							<p class="produto__nome">Kit Goró - 3 cervejas</p>
+							<p class="produto__descricao">kits</p>
+							<p class="produto__valor">R$ 00,00</p>
+						</div>
+					</a>
+				</li>
+				<li class="produto__container">
+					<a href="#" class="link__produto">
+						<div class="produto__img">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="banner"
+							/>
+							<div class="icone">
+								<a href="#"
+									><img
+										class="icone"
+										src="../../assets/img/sacola.png"
+										alt="banner"
+								/></a>
+							</div>
+						</div>
+						<div class="produto__conteudo">
+							<p class="produto__nome">Kit Goró - 3 cervejas</p>
+							<p class="produto__descricao">kits</p>
+							<p class="produto__valor">R$ 00,00</p>
+						</div>
+					</a>
+				</li>
+				<li class="produto__container">
+					<a href="#" class="link__produto">
+						<div class="produto__img">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="banner"
+							/>
+							<div class="icone">
+								<a href="#"
+									><img
+										class="icone"
+										src="../../assets/img/sacola.png"
+										alt="banner"
+								/></a>
+							</div>
+						</div>
+						<div class="produto__conteudo">
+							<p class="produto__nome">Kit Goró - 3 cervejas</p>
+							<p class="produto__descricao">kits</p>
+							<p class="produto__valor">R$ 00,00</p>
+						</div>
+					</a>
+				</li>
+				<li class="produto__container">
+					<a href="#" class="link__produto">
+						<div class="produto__img">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="banner"
+							/>
+							<div class="icone">
+								<a href="#"
+									><img
+										class="icone"
+										src="../../assets/img/sacola.png"
+										alt="banner"
+								/></a>
+							</div>
+						</div>
+						<div class="produto__conteudo">
+							<p class="produto__nome">Kit Goró - 3 cervejas</p>
+							<p class="produto__descricao">kits</p>
+							<p class="produto__valor">R$ 00,00</p>
+						</div>
+					</a>
+				</li>
+				<li class="produto__container">
+					<a href="#" class="link__produto">
+						<div class="produto__img">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="banner"
+							/>
+							<div class="icone">
+								<a href="#"
+									><img
+										class="icone"
+										src="../../assets/img/sacola.png"
+										alt="banner"
+								/></a>
+							</div>
+						</div>
+						<div class="produto__conteudo">
+							<p class="produto__nome">Kit Goró - 3 cervejas</p>
+							<p class="produto__descricao">kits</p>
+							<p class="produto__valor">R$ 00,00</p>
+						</div>
+					</a>
+				</li>
+				<li class="produto__container">
+					<a href="#" class="link__produto">
+						<div class="produto__img">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="banner"
+							/>
+							<div class="icone">
+								<a href="#"
+									><img
+										class="icone"
+										src="../../assets/img/sacola.png"
+										alt="banner"
+								/></a>
+							</div>
+						</div>
+						<div class="produto__conteudo">
+							<p class="produto__nome">Kit Goró - 3 cervejas</p>
+							<p class="produto__descricao">kits</p>
+							<p class="produto__valor">R$ 00,00</p>
+						</div>
+					</a>
+				</li>
+				<li class="produto__container">
+					<a href="#" class="link__produto">
+						<div class="produto__img">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="banner"
+							/>
+							<div class="icone">
+								<a href="#"
+									><img
+										class="icone"
+										src="../../assets/img/sacola.png"
+										alt="banner"
+								/></a>
+							</div>
+						</div>
+						<div class="produto__conteudo">
+							<p class="produto__nome">Kit Goró - 3 cervejas</p>
+							<p class="produto__descricao">kits</p>
+							<p class="produto__valor">R$ 00,00</p>
+						</div>
+					</a>
+				</li>
+				<li class="produto__container">
+					<a href="#" class="link__produto">
+						<div class="produto__img">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="banner"
+							/>
+							<div class="icone">
+								<a href="#"
+									><img
+										class="icone"
+										src="../../assets/img/sacola.png"
+										alt="banner"
+								/></a>
+							</div>
+						</div>
+						<div class="produto__conteudo">
+							<p class="produto__nome">Kit Goró - 3 cervejas</p>
+							<p class="produto__descricao">kits</p>
+							<p class="produto__valor">R$ 00,00</p>
+						</div>
+					</a>
+				</li>
+				<li class="produto__container">
+					<a href="#" class="link__produto">
+						<div class="produto__img">
+							<img
+								class="foto"
+								src="../../assets/img/PRODUTOSKIT 1.png"
+								alt="banner"
+							/>
+							<div class="icone">
+								<a href="#"
+									><img
+										class="icone"
+										src="../../assets/img/sacola.png"
+										alt="banner"
+								/></a>
+							</div>
+						</div>
+						<div class="produto__conteudo">
+							<p class="produto__nome">Kit Goró - 3 cervejas</p>
+							<p class="produto__descricao">kits</p>
+							<p class="produto__valor">R$ 00,00</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<a class="produtos__botao" href="#">VER TODOS OS PRODUTOS</a>
+		</section>
+
+		<hr class="amarelo" />
+		<hr class="vermelho" />
+		<hr class="preto" />
+
+		<footer>
+			<div class="footer__container">
+				<div class="footer__logo">
+					<img
+						class="logo"
+						alt="Logo Goró"
+						src="../../assets/img/logo goro 1.png"
+					/>
+				</div>
+
+				<div class="footer__inst">
+					<ul>
+						<h5>INSTITUCIONAL</h5>
+						<li>
+							<a href="../../index.html"> Home </a>
+						</li>
+						<li>
+							<a href="../../index.html#info--menu">
+								Portfólio
+							</a>
+						</li>
+						<li>
+							<a href="#"> Contato </a>
+						</li>
+						<li>
+							<a href="../../index.html#about"> Sobre nós </a>
+						</li>
+						<li>
+							<a href="./homeStore.html"> loja </a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__legal">
+					<ul>
+						<h5>LEGAL</h5>
+						<li>
+							<a href="#"> Termos de uso </a>
+						</li>
+						<li>
+							<a href="#"> Política de privacidade </a>
+						</li>
+					</ul>
+
+					<div class="footer__redes">
+						<h5>REDES SOCIAIS</h5>
+						<ul class="footer__lista">
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Instagram"
+										src="../../assets/img/Instagram.png"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="YouTube"
+										src="../../assets/img/YouTube.png"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Facebook"
+										src="../../assets/img/Facebook.png"
+								/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__busca">
+					<p>
+						Inscreva-se na nossa Newsletter e receba as nossas
+						novidades em primeira mão.
+					</p>
+					<div class="busca__input">
+						<input type="text" placeholder="SEU E-MAIL" />
+						<button>INSCREVER-SE</button>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				© 2022 CERVEJARIA GORÓ LTDA. 00.000.000/0001-00 | Rua dos Bobos,
+				0 - Cidade, ES
+			</p>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script src="../../script.js"></script>
+	</body>
+</html>

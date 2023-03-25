@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Goró Loja</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link href="../../assets/css/reset.css" rel="stylesheet" />
+		<link href="../../assets/css/cabecalho.css" rel="stylesheet" />
+		<link href="../../assets/css/banner.css" rel="stylesheet" />
+		<link href="../../assets/css/footer.css" rel="stylesheet" />
+		<link href="../../assets/css/busca.css" rel="stylesheet" />
+		<link href="../../assets/css/cadastro.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="cabecalho">
+			<nav class="menu">
+				<a class="menu__link" href="../homeStore/homeStore.html"
+					><img
+						class="logo"
+						alt="Logo Goró"
+						src="../../assets/img/logo goro 1.png"
+					/>
+				</a>
+				<ul class="menu__lista">
+					<li class="menu__item">
+						<a
+							class="menu__linka"
+							href="../lists/listBeers/listBeer.html"
+							>CERVEJAS</a
+						>
+					</li>
+					<li class="menu__item">
+						<a
+							class="menu__linka"
+							href="../lists/listAcessories/index.html"
+							>ACESSÓRIOS</a
+						>
+					</li>
+					<li class="menu__item">
+						<a
+							class="menu__linka"
+							href="../lists/listKits/index.html"
+							>KITS</a
+						>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="redes">
+				<ul class="menu__lista">
+					<li class="menu__item">
+						<a class="menu__link" href="../login/Login.html"
+							><img
+								class="redes__logo"
+								alt="Login"
+								src="../../assets/img/login.svg"
+							/>
+							LOGIN
+						</a>
+					</li>
+					<li class="menu__item">
+						<a
+							class="menu__link"
+							href="../shoppingCart/shoppingCart.html"
+							><img
+								class="redes__logo"
+								alt="Carrinho"
+								src="../../assets/img/carrinho.svg"
+							/>
+							CARRINHO
+						</a>
+					</li>
+				</ul>
+
+				<div class="menu-bar">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</nav>
+		</header>
+
+		<section class="pesquisa">
+			<div class="pesquisa__container">
+				<input
+					class="pesquisa__input"
+					type="search"
+					placeholder="Buscar no site"
+				/>
+			</div>
+		</section>
+
+		<section class="section__cadastro">
+			<div class="cadastro">
+				<div class="cadastro__titulo">
+					<img src="../../assets/img/login_cadastro.svg" />
+					<h3>DADOS PESSOAIS</h3>
+				</div>
+
+				<div class="cadastro__estapa">
+					<p class="cadastro__circuloamarelo">1</p>
+					<p class="cadastro__circulocinza">2</p>
+					<p class="cadastro__circulocinza">3</p>
+				</div>
+			</div>
+
+			<form class="form">
+				<div class="teste">
+					<input type="nome" placeholder="Nome" id="nome" />
+					<input
+						type="sobrenome"
+						placeholder="Sobrenome"
+						id="sobrenome"
+					/>
+				</div>
+				<div class="teste">
+					<input
+						type="dataNascimento"
+						placeholder="Data de Nascimento | 00/00/0000"
+						id="dataNascimento"
+					/>
+					<input
+						type="genero"
+						placeholder="Gênero | ex: Feminino"
+						id="genero"
+					/>
+				</div>
+				<div class="teste">
+					<input
+						type="CPF"
+						placeholder="CPF | 000.000.000-00"
+						id="CPF"
+					/>
+					<input
+						type="telefoneContato"
+						placeholder="Telefone | (00) 00000-0000"
+						id="telefoneContato"
+					/>
+				</div>
+				<span class="form__erro">Mensagem de erro</span>
+			</form>
+		</section>
+
+		<section class="section__cadastro">
+			<div class="cadastro">
+				<div class="cadastro__titulo">
+					<img src="../../assets/img/cadeado.svg" />
+					<h3>DADOS DE LOGIN</h3>
+				</div>
+
+				<div class="cadastro__estapa">
+					<p class="cadastro__circulocinza">1</p>
+					<p class="cadastro__circuloamarelo">2</p>
+					<p class="cadastro__circulocinza">3</p>
+				</div>
+			</div>
+
+			<form class="form">
+				<div class="teste">
+					<input type="email" placeholder="E-mail" id="email" />
+					<input
+						type="emailConfirmar"
+						placeholder="Confirme seu e-mail"
+					/>
+				</div>
+				<div class="teste">
+					<input type="senha" placeholder="Senha" id="senha" />
+					<input
+						type="senhaConfirmar"
+						placeholder="Confirme sua senha"
+					/>
+				</div>
+			</form>
+		</section>
+
+		<section class="section__cadastro" style="margin-bottom: 4.5rem">
+			<div class="cadastro">
+				<div class="cadastro__titulo">
+					<img src="../../assets/img/casa.svg" />
+					<h3>DADOS DE ENDEREÇO</h3>
+				</div>
+
+				<div class="cadastro__estapa">
+					<p class="cadastro__circulocinza">1</p>
+					<p class="cadastro__circulocinza">2</p>
+					<p class="cadastro__circuloamarelo">3</p>
+				</div>
+			</div>
+
+			<form class="form">
+				<div class="teste">
+					<input type="cep" placeholder="CEP | 00000-000" />
+					<input
+						class="teste vazio"
+						aria-hidden="true"
+						disabled="disabled"
+					/>
+				</div>
+				<div class="teste">
+					<input type="cidade" placeholder="Cidade" />
+					<select id="state">
+						<option class="select" disabled selected hidden>
+							Selecione seu estado
+						</option>
+					</select>
+				</div>
+				<div class="teste">
+					<input type="endereco" placeholder="Rua" />
+					<input type="complemento" placeholder="Complemento" />
+				</div>
+				<div class="teste">
+					<input type="numero" placeholder="Número" />
+					<input type="bairro" placeholder="Bairro" />
+				</div>
+			</form>
+			<div class="teste">
+				<button type="submit" class="cadastro__botao">
+					CRIAR CONTA
+				</button>
+			</div>
+		</section>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+		<script>
+			const swiper = new Swiper('.swiper', {
+				speed: 400,
+				spaceBetween: 10,
+				slidesPerView: 1,
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+				},
+			});
+		</script>
+
+		<hr class="amarelo" />
+		<hr class="vermelho" />
+		<hr class="preto" />
+
+		<footer>
+			<div class="footer__container">
+				<div class=".footer__logo">
+					<img
+						class="logo"
+						alt="Logo Goró"
+						src="../../assets/img/logo goro 1.png"
+					/>
+				</div>
+
+				<div class="footer__inst">
+					<ul>
+						<h5>INSTITUCIONAL</h5>
+						<li>
+							<a href="./index.html"> Home </a>
+						</li>
+						<li>
+							<a href="./index.html#info--menu"> Portfólio </a>
+						</li>
+						<li>
+							<a href="#"> Contato </a>
+						</li>
+						<li>
+							<a href="./index.html#about"> Sobre nós </a>
+						</li>
+						<li>
+							<a href="./home-loja.html"> loja </a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__legal">
+					<ul>
+						<h5>LEGAL</h5>
+						<li>
+							<a href="#"> Termos de uso </a>
+						</li>
+						<li>
+							<a href="#"> Política de privacidade </a>
+						</li>
+					</ul>
+
+					<div class="footer__redes">
+						<h5>REDES SOCIAIS</h5>
+						<ul class="footer__lista">
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Instagram"
+										src="../../assets/img/Instagram.png"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="YouTube"
+										src="../../assets/img/YouTube.png"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Facebook"
+										src="../../assets/img/Facebook.png"
+								/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__busca">
+					<p>
+						Inscreva-se na nossa Newsletter e receba as nossas
+						novidades em primeira mão.
+					</p>
+					<div class="busca__input">
+						<input type="text" placeholder="SEU E-MAIL" />
+						<button>INSCREVER-SE</button>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				© 2022 CERVEJARIA GORÓ LTDA. 00.000.000/0001-00 | Rua dos Bobos,
+				0 - Cidade, ES
+			</p>
+		</footer>
+
+		<script src="cadastro.js"></script>
+	</body>
+</html>

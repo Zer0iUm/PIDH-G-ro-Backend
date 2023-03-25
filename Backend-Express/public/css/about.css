@@ -1,0 +1,39 @@
+#about {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 4rem;
+}
+
+#about h2 {
+	font-size: 25px;
+	margin: 3rem 0 1rem 0;
+}
+
+#about hr {
+	margin-bottom: 4rem;
+}
+
+#about p {
+	font-size: 20px;
+}
+
+#container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.coluna {
+	width: 50%;
+	width: min-content;
+}
+
+.coluna:first-child p {
+	margin-bottom: 3rem;
+}
+
+.coluna:last-child p {
+	margin: 3rem 0 3rem 0;
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+* {
+	margin: 0;
+}
+
+body,
+html {
+	font-family: 'Lato';
+	background-color: rgb(241, 237, 232);
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+.btn-geral {
+	font-size: 14pt;
+	width: max-content;
+	height: 3rem;
+	border-radius: 0;
+	border: 1px solid;
+	background-color: #000000;
+	color: #ffffff;
+	padding: 0.313rem 3.125rem;
+}
+
+.btn-geral:hover {
+	background-color: #606060;
+}
+
+/*****ajeitando footer da home marca******/
+
+.footer__redes {
+	text-align: center !important;
+	margin-top: 3rem;
+	margin-right: 20px;
+}
+
+.footer__lista {
+	margin-top: 1rem;
+	display: flex;
+	align-items: flex-start;
+	margin-right: 15px;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Goró Loja</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+		/>
+		<link href="../../assets/css/reset.css" rel="stylesheet" />
+		<link href="../../assets/css/cabecalho.css" rel="stylesheet" />
+		<link href="../../assets/css/banner.css" rel="stylesheet" />
+		<link href="../../assets/css/categoria.css" rel="stylesheet" />
+		<link href="../../assets/css/produtos.css" rel="stylesheet" />
+		<link href="../../assets/css/footer.css" rel="stylesheet" />
+		<link href="../../assets/css/busca.css" rel="stylesheet" />
+		<link href="../../assets/css/login-form.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="cabecalho">
+			<nav class="menu">
+				<a class="menu__link" href="../homeStore/homeStore.html"
+					><img
+						class="logo"
+						alt="Logo Goró"
+						src="../../assets/img/logo goro 1.png"
+					/>
+				</a>
+				<ul class="menu__lista">
+					<li class="menu__item">
+						<a
+							class="menu__linka"
+							href="../lists/listBeers/listBeer.html"
+							>CERVEJAS</a
+						>
+					</li>
+					<li class="menu__item">
+						<a
+							class="menu__linka"
+							href="../lists/listAcessories/index.html"
+							>ACESSÓRIOS</a
+						>
+					</li>
+					<li class="menu__item">
+						<a
+							class="menu__linka"
+							href="../lists/listKits/index.html"
+							>KITS</a
+						>
+					</li>
+				</ul>
+			</nav>
+
+			<nav class="redes">
+				<ul class="menu__lista">
+					<li class="menu__item">
+						<a class="menu__link" href="../login/Login.html"
+							><img
+								class="redes__logo"
+								alt="Login"
+								src="../../assets/img/login.svg"
+							/>
+							LOGIN
+						</a>
+					</li>
+					<li class="menu__item">
+						<a
+							class="menu__link"
+							href="../shoppingCart/shoppingCart.html"
+							><img
+								class="redes__logo"
+								alt="Carrinho"
+								src="../../assets/img/carrinho.svg"
+							/>
+							CARRINHO
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="pesquisa">
+			<div class="pesquisa__container">
+				<input
+					class="pesquisa__input"
+					type="search"
+					placeholder="Buscar no site"
+				/>
+			</div>
+		</section>
+
+		<section class="form">
+			<form class="form__login">
+				<h2 class="form__titulo">Faça o seu login</h2>
+				<h3 class="form__subtitulo">
+					Conecte-se para finalizar a compra
+				</h3>
+				<input
+					placeholder="E-mail"
+					autocomplete="username"
+					id="email"
+				/>
+				<input
+					type="password"
+					placeholder="Senha"
+					autocomplete="current-password"
+					id="senha"
+				/>
+				<a href="#" class="esqueci__senha">Esqueci a minha senha</a>
+				<span class="form__erro"></span>
+				<button type="submit" class="form__button">ENTRAR</button>
+				<p>
+					Primeira vez por aqui?
+					<a href="../signUp/signUp.html" class="">Crie uma conta</a>
+				</p>
+			</form>
+		</section>
+
+		<footer>
+			<div class="footer__container">
+				<div class="footer__logo">
+					<img
+						class="logo"
+						alt="Logo Goró"
+						src="../../assets/img/logo goro 1.png"
+					/>
+				</div>
+
+				<div class="footer__inst">
+					<h5>INSTITUCIONAL</h5>
+					<li>
+						<a href="../../index.html"> Home </a>
+					</li>
+					<li>
+						<a href="../../index.html#info--menu"> Portfólio </a>
+					</li>
+					<li>
+						<a href="#"> Contato </a>
+					</li>
+					<li>
+						<a href="../../index.html#about"> Sobre nós </a>
+					</li>
+					<li>
+						<a href="../homeStore/homeStore.html"> loja </a>
+					</li>
+				</div>
+
+				<div class="footer__legal">
+					<ul>
+						<h5>LEGAL</h5>
+						<li>
+							<a href="#"> Termos de uso </a>
+						</li>
+						<li>
+							<a href="#"> Política de privacidade </a>
+						</li>
+					</ul>
+
+					<div class="footer__redes">
+						<h5>REDES SOCIAIS</h5>
+						<ul class="footer__lista">
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Instagram"
+										src="../../assets/img/Instagram.png"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="YouTube"
+										src="../../assets/img/YouTube.png"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Facebook"
+										src="../../assets/img/Facebook.png"
+								/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__busca">
+					<p>
+						Inscreva-se na nossa Newsletter e receba as nossas
+						novidades em primeira mão.
+					</p>
+					<div class="busca__input">
+						<input type="text" placeholder="SEU E-MAIL" />
+						<button>INSCREVER-SE</button>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				© 2022 CERVEJARIA GORÓ LTDA. 00.000.000/0001-00 | Rua dos Bobos,
+				0 - Cidade, ES
+			</p>
+		</footer>
+
+		<script src="Login.js"></script>
+	</body>
+</html>

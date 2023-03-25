@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/style--checkout.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel='stylesheet' href='../../assets/css/cabecalho.css' />
+    <link rel='stylesheet' href='../../assets/css/footer.css' />
+    <link rel='stylesheet' href='../../assets/css/busca.css' />
+    <link href="https: //fonts.googleapis.com/css2?family= Lato: família= Inter:wght@400;700;900 &wght @400;700;900 & display=swap" rel="stylesheet">
+    <title>Goró - Checkout</title>
+</head>
+<body>
+  <header class="cabecalho">
+    <nav class="menu">
+      <a class="menu__link" href="../homeStore/homeStore.html"
+        ><img
+          class="logo"
+          alt="Logo Goró"
+          src="../../assets/img/logo goro 1.png"
+        />
+      </a>
+      <ul class="menu__lista">
+        <li id="menuOne" class="menu__item">
+          <a
+            onmouseover="mouseOverMenu()"
+            onmouseout="mouseOutMenu()"
+            class="menu__linka"
+            href="../lists/listBeers/listBeer.html"
+            >CERVEJAS</a
+          >
+        </li>
+        <li id="menuTwo" class="menu__item">
+          <a
+            onmouseover="mouseOverMenuTwo()"
+            onmouseout="mouseOutMenuTwo()"
+            class="menu__linka"
+            href="../lists/listAcessories/index.html"
+            >ACESSÓRIOS</a
+          >
+        </li>
+        <li id="menuThree" class="menu__item">
+          <a
+            onmouseover="mouseOverMenuThree()"
+            onmouseout="mouseOutMenuThree()"
+            class="menu__linka"
+            href="../lists/listKits/index.html"
+            >KITS</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="redes">
+      <ul class="menu__lista">
+        <li id="menuFour" class="menu__item">
+          <a
+            onmouseover="mouseOverMenuFour()"
+            onmouseout="mouseOutMenuFour()"
+            class="menu__link"
+            href="../login/Login.html"
+            ><img
+              class="redes__logo"
+              alt="Login"
+              src="../../assets/img/login.svg"
+            />
+            LOGIN
+          </a>
+        </li>
+        <li id="menuFive" class="menu__item">
+          <a
+            onmouseover="mouseOverMenuFive()"
+            onmouseout="mouseOutMenuFive()"
+            class="menu__link"
+            href="../shoppingCart/shoppingCart.html"
+            ><img
+              class="redes__logo"
+              alt="Carrinho"
+              src="../../assets/img/carrinho.svg"
+            />
+            CARRINHO
+          </a>
+        </li>
+      </ul>
+
+      <div class="menu-bar">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="pesquisa">
+    <div class="pesquisa__container">
+      <input
+        class="pesquisa__input"
+        type="search"
+        placeholder="Buscar no site"
+      />
+    </div>
+  </section>
+
+      <main>
+            
+            
+            <div class="pagamento">
+              <img class="img--carteira" src="../../assets/img/carteira.svg" alt="carteira--pagamento">
+              <p>PAGAMENTO</p>
+            </div>
+          
+            <hr class="linha--pagamento">
+          
+            <div class="corpo">
+                <div class="caixa--1">
+                <div class="titulo--endereco">
+                  <p>ENDEREÇO DA ENTREGA</p>
+                </div>
+              
+                <div class="container--dados">
+                  <div class="dados--cliente">
+                    <p class="nome--cpf">Paula Silva <br>000.000.000-00</p>
+                    <br>
+                    <p class="endereco">Rua dos Bobos, Nº 000 <br> Bairro Travessa 1 <br>Cidade-ES <br>CEP 00000-000</p>
+                    <button class="dados--cadastrais">EDITAR DADOS CADASTRAIS</button>
+                  </div>
+                </div>
+              </div>
+
+
+              <div>
+              <div class="metodo--pagamento">
+                <p>MÉTODO DE PAGAMENTO</p>
+              </div>
+
+              <div class="forma--pagamento">
+                
+                    <div class="titulo--metodo--pagamento">
+                      <img class="img--cartao" src="../../assets/img/cartao.svg" alt="imagem cartão">
+                      <h2 class="titulo--cartao">Cartão de crédito</h2>
+                    </div>
+      
+                    <hr class="linha--metodo">
+      
+                    <form id="form" class="formulario" action="/" method="get">
+                      <div class="div--form">
+                        <label for="nome--cartao">Nome do cartão</label>
+                        <input 
+                        type="text" 
+                        id="nome--cartao" 
+                        name="nome--completo" 
+                        placeholder="ex: Paula Silva">
+                      </div>
+      
+                    <div class="div--form">
+                      <label for="numero--cartao">Numero do cartão de crédito</label>
+                      <input 
+                      type="text" 
+                      id="numero--cartao" 
+                      name="numero--cartao--completo" 
+                      placeholder="0000 000000 00000">
+                    </div>
+      
+                    <div class="div--form">
+                      <label for="validade--cartao">Validade do cartão</label>
+                      <input type="text" 
+                      id="validade--cartao" 
+                      name="validade--card" 
+                      placeholder="00/00">
+                    </div>
+      
+                    <div class="div--form">
+                      <label for="cod--cartao">Código de segurança</label>
+                      <input 
+                      type="text" 
+                      id="cod--cartao" 
+                      name="cod--seguranca"
+                      placeholder="CVV">
+                    </div>
+
+                    <div class="botao">
+                      <button 
+                      type="submit" 
+                      class="confirmar--cartao">CONFIRMAR CARTÃO</button>
+                    </form>
+                </div>
+              </div>
+
+            </div>
+                
+                <div class="finalizar--compra">
+                
+                  <div class="titulo--compra">
+                    <p>VALOR FINAL DA COMPRA</p>
+                  </div>
+                  
+                  
+                    <div class="valor--final">
+                      <div class="subtotal">
+                      <p><strong>SUBTOTAL</strong> <br> (X produtos)</p>
+                        <p>R$ 00,00</p>
+                      </div>
+                      <br>
+                      <div class="frete">
+                        <p><strong>FRETE</strong></p>
+                        <p>R$ 00,00</p>  
+                      </div>
+                      <hr class="linha--compra">
+      
+                      <div class="total">
+                        <p><strong>TOTAL</strong></p>
+                        <p>R$ 00,00</p>
+                      </div>
+                      <div class="botao--compra">
+                        <button class="confirmar--compra">CONFIRMAR A COMPRA</button>
+                      </div>
+                    </div>
+                </div>
+              
+                </div>
+            </div>
+              
+      </main>
+
+      <hr class="amarelo" />
+		<hr class="vermelho" />
+		<hr class="preto" />
+
+		<footer>
+			<div class="footer__container">
+				<div class="footer__logo">
+					<img
+						class="logo"
+						alt="Logo Goró"
+						src="../../assets/img/logo goro 1.png"
+					/>
+				</div>
+
+				<div class="footer__inst">
+					<ul>
+						<h5>INSTITUCIONAL</h5>
+						<li>
+							<a href="../../index.html"> Home </a>
+						</li>
+						<li>
+							<a href="../../index.html#info--menu">
+								Portfólio
+							</a>
+						</li>
+						<li>
+							<a href="#"> Contato </a>
+						</li>
+						<li>
+							<a href="../../index.html#about"> Sobre nós </a>
+						</li>
+						<li>
+							<a href="../homeStore/homeStore.html"> loja </a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__legal">
+					<ul>
+						<h5>LEGAL</h5>
+						<li>
+							<a href="#"> Termos de uso </a>
+						</li>
+						<li>
+							<a href="#"> Política de privacidade </a>
+						</li>
+					</ul>
+
+					<div class="footer__redes">
+						<h5>REDES SOCIAIS</h5>
+						<ul class="footer__lista">
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Instagram"
+										src="../../assets/img/Instagram.png"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="YouTube"
+										src="../../assets/img/YouTube.png"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Facebook"
+										src="../../assets/img/Facebook.png"
+								/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__busca">
+					<p>
+						Inscreva-se na nossa Newsletter e receba as nossas
+						novidades em primeira mão.
+					</p>
+					<div class="busca__input">
+						<input type="text" placeholder="SEU E-MAIL" />
+						<button>INSCREVER-SE</button>
+					</div>
+				</div>
+			</div>
+
+			<p>
+				© 2022 CERVEJARIA GORÓ LTDA. 00.000.000/0001-00 | Rua dos Bobos,
+				0 - Cidade, ES
+			</p>
+		</footer>
+
+      <script src="./checkout.js"></script>
+      <script src="../../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;900&display=swap" rel="stylesheet"/>
+	<link href="../../assets/css/pagina_de_carrinho.css" rel="stylesheet" />
+	<link rel="stylesheet" href="../../assets/css/reset.css"/>
+	<link rel="stylesheet" href="../../assets/css/header.css"/>
+	<link rel="stylesheet" href="../../assets/css/footer.css"/>
+    <title>Carrinho de compras</title>
+
+	<script
+		src="https://kit.fontawesome.com/8efdacdf0c.js"
+		crossorigin="anonymous"
+	></script>
+	<script src="../../script.js"></script>
+
+    <title>Carrinho de compras</title>
+
+
+</head>
+
+<body>
+ <header class="cabecalho">
+    
+     <div class="menu">
+		<a class="menu__link" href="../homeStore/homeStore.html">
+			<img class="logo" alt="Logo Goró" src="../../assets/img/logo goro 1.svg" >
+				</a>
+		<ul class="menu__lista">
+			<li class="menu__item">
+				<a class="menu__linka" href="../lists/listBeers/listBeer.html">CERVEJAS</a>
+				</li>
+				<li class="menu__item">
+				<a class="menu__linka" href="../lists/listAcessories/index.html">ACESSÓRIOS</a>
+				</li>
+				<li class="menu__item">
+				<a class="menu__linka" href="../lists/listKits/index.html">KITS</a>
+				</li>
+		</ul>
+	</div>
+			<div>
+			<ul class="menu__profile">
+					<li class="log">
+					<img class="login" alt="login" src="../../assets/img//profile.svg">
+					<a class="login" href="../login/Login.html">LOGIN</a>
+					</li>
+
+					<li class="car">
+					<img class="carrinho" alt="carrinho" src="../../assets/img//carrinho.svg">
+					<a class="carrinho" href="../shoppingCart/shoppingCart.html">CARRINHO</a>
+					</li>
+					
+				</ul>
+			</div>
+	</header>
+
+	<section class="pesquisa">
+		<div class="barra_pesquisa">
+			<input class="pesquisa__input" type="search" id="busca" placeholder="Buscar no site"/>
+		</div>
+	</section>
+
+	<section class="carrinho_compra">
+		<div class="header_carrinho">
+			<div class="titulo_carrinho">
+				<img class="carrinho2" alt="carrinho" src="../../assets/img/carrinho.svg">
+				<h1 class="titulos"> CARRINHO DE COMPRAS</h1>
+			</div>
+			<button class="botao_preto" type="button">CONTINUAR COMPRANDO</button>
+		</div>
+	</section>
+
+	<div id="linha-horizontal1"></div>
+
+	<section class="barra_carrinho">
+		<div>
+		  <h2 class="topo_carrinho1">PRODUTO</h2>
+		</div>
+		<div>
+		  <h2 class="topo_carrinho">
+			<li>
+			  <h2>QUANTIDADE</h2>	
+			</li>
+			<li>
+			  <h2>VALOR UNITÁRIO</h2>	
+			</li>
+			<li>
+			  <h2>VALOR TOTAL</h2>	
+			</li>
+		  </h2>
+		</div>
+	  </section>
+	  
+
+			<section class="compra">
+				<div class="produto">
+					<img class="foto_carrinho" src="#">
+					<div>
+					<p class="nome_produto">Goró - Brown Ale</p>
+					<p class="descritivo_produto">Cerveja - 000 ML</p>
+				</div>
+				</div>
+				<div class="carrinho_direita">
+				<div class="container">
+					<div class="row">
+						<section id="mais_menos">
+							<div
+								class="btn-quantidade"
+								id="remover"
+								onclick="setQuantidade('remove')"
+							>
+								-
+							</div>
+							<input
+								id="input-quantidade"
+								type="text"
+								value="0"
+								min="0"
+							/>
+							<div
+								class="btn-quantidade"
+								id="adicionar"
+								onclick="setQuantidade('add')"
+							>
+								+
+							</div>
+					</div>
+				  </div>
+				<div class="valor_unitário">R$ 00,00</div>
+				<div class="valor_total">R$ 00,00</div>
+			</div>
+			</section>
+			
+			<section class="compra">
+				<div class="produto">
+					<img class="foto_carrinho" src="#">
+					<div>
+					<p class="nome_produto">Goró - Brown Ale</p>
+					<p class="descritivo_produto">Cerveja - 000 ML</p>
+				</div>
+				</div>
+				<div class="carrinho_direita">
+				<div class="container">
+					<div class="row">
+						<section id="mais_menos">
+							<div
+								class="btn-quantidade"
+								id="remover"
+								onclick="setQuantidade('remove')"
+							>
+								-
+							</div>
+							<input
+								id="input-quantidade"
+								type="text"
+								value="0"
+								min="0"
+							/>
+							<div
+								class="btn-quantidade"
+								id="adicionar"
+								onclick="setQuantidade('add')"
+							>
+								+
+							</div>
+					</div>
+				  </div>
+				<div class="valor_unitário">R$ 00,00</div>
+				<div class="valor_total">R$ 00,00</div>
+			</div>
+			</section>
+		
+			<section class="compra">
+				<div class="produto">
+					<img class="foto_carrinho" src="#">
+					<div>
+					<p class="nome_produto">Goró - Brown Ale</p>
+					<p class="descritivo_produto">Cerveja - 000 ML</p>
+				</div>
+				</div>
+				<div class="carrinho_direita">
+				<div class="container">
+					<div class="row">
+						<section id="mais_menos">
+							<div
+								class="btn-quantidade"
+								id="remover"
+								onclick="setQuantidade('remove')"
+							>
+								-
+							</div>
+							<input
+								id="input-quantidade"
+								type="text"
+								value="0"
+								min="0"
+							/>
+							<div
+								class="btn-quantidade"
+								id="adicionar"
+								onclick="setQuantidade('add')"
+							>
+								+
+							</div>
+					</div>
+				  </div>
+				<div class="valor_unitário">R$ 00,00</div>
+				<div class="valor_total">R$ 00,00</div>
+			</div>
+			</section>
+
+			<section class="frete">
+				<div class="titulo_frete">
+				<img class="caminhao" src="../../assets/img/frete.svg">
+				<h3 class="CEP">DIGITE O CEP DO ENDEREÇO DE ENTREGA</h3>
+				</div>
+				<div class="valor_frete">
+					<input type="number" class="barra_cep" name="CEP" placeholder="ex: 00000-000">
+					<span id="valor_frete">R$ 00,00</span>
+				</div>
+			</section>
+
+			<section class="fim_carrinho">
+				<div class="espaco_total"></div>
+			<div class="soma_carrinho">
+				<div class="subtotal">
+				<div>
+				<span class="subtil">SUBTOTAL<br class="produtosx">(X produtos)</span>
+				</div>
+				<span>R$ 00,00</span>
+				</div>
+				<span class="frete2">
+				<span class="subtil">FRETE</span>
+				<span id="frete_valor2">R$ 00,00</span>
+				</span>
+
+			<div id="linha-horizontal2"></div>
+
+				<div class="total_compra">
+				<span>TOTAL</span>
+				<span>R$ 00,00</span>
+				</div>
+				<div class="alinhamento_botao">
+				<div></div>
+				<div>
+					<button class="botao_amarelo" type="button">FINALIZAR COMPRA</button>
+				</div>
+			</div>
+			</div>
+			</div>
+		</section>
+		<hr class="amarelo" />
+		<hr class="vermelho" />
+		<hr class="preto" />
+		<footer>
+			<div class="footer__container">
+				<div class="footer__logo">
+					<img
+						class="logo"
+						alt="Logo Goró"
+						src="../../assets/img/logo goro 1.svg"
+					/>
+				</div>
+
+				<div class="footer__inst">
+					<ul>
+						<h5>INSTITUCIONAL</h5>
+						<li>
+							<a href="../../index.html"> Home </a>
+						</li>
+						<li>
+							<a href="../../index.html#info--menu"> Portfólio </a>
+						</li>
+						<li>
+							<a href="#"> Contato </a>
+						</li>
+						<li>
+							<a href="../../index.html#about"> Sobre nós </a>
+						</li>
+						<li>
+							<a href="../homeStore/homeStore.html"> loja </a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="footer__legal">
+					<ul>
+						<h5>LEGAL</h5>
+						<li>
+							<a href="#"> Termos de uso </a>
+						</li>
+						<li>
+							<a href="#"> Política de privacidade </a>
+						</li>
+					</ul>
+
+					<div class="footer__redes">
+						<h5>REDES SOCIAIS</h5>
+						<ul class="footer__lista">
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Instagram"
+										src="../../assets/img/Instagram - Negative.svg"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="YouTube"
+										src="../../assets/img/YouTube - Negative.svg"
+								/></a>
+							</li>
+							<li class="footer__item">
+								<a class="footer__link" href="#"
+									><img
+										class="redes__logo"
+										alt="Facebook"
+										src="../../assets/img/Facebook - Negative.svg"
+								/></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="footer__email">
+					<p>
+						Inscreva-se na nossa Newsletter e receba as nossas
+						novidades em primeira mão.
+					</p>
+					<div class="email__input">
+						<input id="email" type="email"  placeholder="SEU E-MAIL" />
+						<button>INSCREVER-SE</button>
+					</div>
+				</div>
+			</div>
+
+			<p id="CNPJ">
+				© 2022 CERVEJARIA GORÓ LTDA. 00.000.000/0001-00 | Rua dos Bobos,
+				0 - Cidade, ES
+			</p>
+		</footer>
+		
+	
+
+</body>
+
+</html>

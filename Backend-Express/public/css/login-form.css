@@ -1,0 +1,93 @@
+.form {
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin: 129px auto;
+  color: #000000;
+  box-sizing: border-box;
+  width: 427px;
+  height: 512px;
+  background: #ffffff;
+  border: 1px solid #c2c2c2;
+  font-family: "Lato";
+}
+
+.form__login {
+  margin: 47px auto;
+}
+
+.form__titulo {
+  font-weight: 700;
+  font-size: 30px;
+  padding-bottom: 1rem;
+}
+
+.form__subtitulo {
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 2rem;
+}
+
+.form input {
+  display: block;
+  margin: 1rem auto;
+  width: 17.563rem;
+  height: 36px;
+  left: 585px;
+  top: 466px;
+  border: 1px solid #888888;
+  border-radius: 5px;
+  padding: 0 1rem;
+}
+
+.form input::placeholder {
+  color: #acacac;
+}
+.esqueci__senha {
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.form__login a {
+  padding-bottom: 2rem;
+  text-decoration: none;
+  color: #000000;
+}
+
+.form a:hover {
+  text-decoration: underline;
+}
+
+.form span {
+  display: block;
+  font-weight: 400;
+  font-size: 15px;
+  color: #cf1010;
+  padding-bottom: 1rem;
+}
+
+.form__button {
+  display: block;
+  margin: 1rem auto;
+  width: 98px;
+  height: 35px;
+  left: 688px;
+  top: 679px;
+  background: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 1000;
+}
+
+.form__button:hover {
+  background-color: #606060;
+}
+
+.form__login p {
+  padding-top: 1rem;
+}
+
+.form__login p a {
+  color: #326ec8;
+}

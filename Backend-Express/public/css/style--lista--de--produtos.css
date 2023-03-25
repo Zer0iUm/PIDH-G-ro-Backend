@@ -1,0 +1,509 @@
+*{
+    font-family: 'Lato';
+}
+
+
+.cabecalho{
+    font-family: 'Lato';
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 8rem;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu--lista{
+    display: flex;
+    align-items: center;
+}
+
+:root{
+    font-size: 62.5%;
+}
+
+.menu--lista li{
+    list-style: none;
+    padding: 0 4.5rem;
+}
+
+.menu--lista a{
+    text-decoration: none;
+    color: black;
+}
+
+.menu--lista a:hover{
+    text-decoration: underline;
+}
+
+.usuario--lista{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.usuario--lista li{
+    list-style: none;
+    padding: 0 3.7rem;
+}
+
+.usuario--lista a{
+    text-decoration: none;
+    color: black;
+}
+
+.usuario--lista a:hover{
+    text-decoration: underline;
+}
+
+main .fundo--barra--busca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 8.2rem;
+    background-color: black;
+}
+
+main .barra--busca{
+    width: 70%;
+    height: 5.8rem;
+    border-radius: 10rem;
+    
+}
+
+main .fundo--barra--busca img.lupa{
+    position: relative;
+    left: -50px;
+}
+
+
+
+.barra--busca::placeholder{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+    font-family: 'Lato';
+    color: #acacac;
+    padding-left: 3.2rem;
+}
+
+.banner img{
+    width: 100%;
+}
+
+section span{
+    font-size: 2.5rem; 
+    font-weight: 900;
+    line-height: 3rem;
+    padding: 3.5rem 0 2.1rem 0;
+    display: flex;
+}
+
+section .container--produtos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.linha--cerveja{
+    border: .2rem solid black;
+    width: 99%;
+    margin-bottom: 5.7rem;
+}
+.container--cervejas{
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    }
+
+.filtro--cerveja--completo{
+    display: flex;
+}
+    
+.item p.goro{
+    font-size: 1.8rem;
+    font-weight: 400;
+    font-family: 'Lato';
+    line-height: 2.16rem;
+    color: black;
+}
+
+.item p.cerva{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Lato';
+    line-height: 1.8rem;
+    color: #8B8B8B;
+}
+
+.item p.valor{
+    font-size: 2rem;
+    font-weight: 900;
+    font-family: 'Lato';
+    line-height: 2.4rem;
+    color: black;
+}
+
+.img--cerveja{
+    position: relative;
+    display: inline-block;
+}
+
+.item--sacola{
+    position: absolute;
+    margin: -5rem 22rem;
+    background-color: white;
+    border-radius: 5rem; 
+}
+
+
+section .container--produtos .item{
+    height: 36rem;
+    width:26.9rem;
+}
+
+.ver--produtos{
+    background-color: black;
+    color: white;
+    font-family: 'Lato';
+    width: 25.2rem;
+    height: 4.4rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+
+
+/*     margin: 10rem 44.6rem 10rem 34rem; */
+}
+
+.botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.ver--produtos a{
+    text-decoration: none;
+    color: white;
+}
+
+.filtro--completo{
+    margin: 14.3rem 10rem;
+}
+
+h2.filtro{
+    display: flex;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+
+.linha--filtro{
+    border: .1rem solid #8F8F8F;
+    width: 21.1rem;
+}
+
+.estilo{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-top: 1.4rem;
+}
+
+.american--pale--ale{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: #8F8F8F;
+    padding: 1.9rem 0 1rem 0;
+}
+
+.double--ipa{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    color: #8F8F8F;
+    padding-bottom: 1rem;
+}
+
+.brown--ale{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #8F8F8F;
+    line-height: 2.4rem;
+}
+
+
+.preco{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    padding: 2rem 0 1.6rem 0;
+}
+
+.menor--preco{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem; 
+    color: #8F8F8F;
+    padding-bottom: 1rem;
+}
+
+.maior--preco{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #8F8F8F;
+    line-height: 2.4rem; 
+
+}
+
+.alcool{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    padding: 2rem 0 1.6rem 0;
+}
+
+.dois-e-meio{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem; 
+    color: #8F8F8F;
+    padding-bottom: 1rem;
+}
+
+.seis{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem; 
+    color: #8F8F8F;
+    padding-bottom: 1rem;
+}
+
+.dez{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #8F8F8F;
+    line-height: 2.4rem;  
+}
+
+.ibu{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    padding: 2rem 0 1.6rem 0;
+}
+
+.sessenta--e--tres{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem; 
+    color: #8F8F8F;
+    padding-bottom: 1rem;
+}
+
+.trinta--e--tres{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem; 
+    color: #8F8F8F;
+    padding-bottom: 1rem;
+}
+
+.oitenta{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #8F8F8F;
+    line-height: 2.4rem;  
+}
+
+.embalagem{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    padding: 2rem 0 1.6rem 0;
+}
+
+.vidro{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.4rem; 
+    color: #8F8F8F;
+    padding-bottom: 1rem;
+}
+
+.aluminio{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #8F8F8F;
+    line-height: 2.4rem;  
+}
+
+.linha--amarela{
+    padding: 0;
+    margin: 0;
+    border: .5rem solid #F8A912;
+}
+
+.linha--vermelha{
+    padding: 0;
+    margin: 0;
+    border: .5rem solid #BD2D16;
+}
+
+.linha--preta{
+    padding: 0;
+    margin: 0;
+    border: .5rem solid #1E0202;
+}
+
+footer{
+    background-color:#F3F0EB;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    line-height: 2.0rem;
+}
+
+
+ul.institucional{
+    
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+}
+
+ul.institucional li{
+    padding: .4rem;
+    display: flex;
+}
+
+.negrito{
+    font-weight: 900;
+}
+
+ul.institucional li a{
+    text-decoration: none;
+    color: black;
+}
+
+ul.institucional li a:hover{
+    text-decoration: underline
+}
+
+.lista--logo{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 6.7rem;
+}
+
+.legal{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.redes--sociais{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.redes{
+    display: flex;
+    align-items: center;
+}
+
+a.youtube{
+    padding:0 1rem 0 1rem;
+}
+
+.titulo--redes{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    font-weight: 400;
+    padding-top: 1rem;
+}
+
+.titulo--legal{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    font-weight: 900;
+}
+
+ul.legal a{
+    text-decoration: none;
+    color: black;
+}
+
+ul.legal a:hover{
+    text-decoration: underline;
+}
+
+.newsletter p{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.input--news{
+    border: .2rem solid black ;
+    width: 31.1rem;
+    height: 3.6rem;
+    margin: 0;
+}
+
+.inscrever{
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    width: 13.3rem;
+    height: 4.2rem;
+}
+
+.newsletter{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.news--botao{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+p.cnpj{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    background-color:#F3F0EB ;
+}

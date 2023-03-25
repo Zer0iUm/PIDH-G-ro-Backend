@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+#container-pop-up {
+	width: 36.938rem;
+	height: 32.625rem;
+	position: fixed;
+	top: 15%;
+	left: 30%;
+	z-index: 4;
+	justify-content: center;
+	background-color: #fbf7f2;
+}
+
+.pop-up {
+	position: relative;
+
+	z-index: 5;
+}
+
+.pop-up img {
+	position: absolute;
+	right: 0.938rem;
+	top: 2rem;
+	cursor: pointer;
+}
+
+.title-pop-up {
+	position: absolute;
+	top: 6.688rem;
+	left: 1rem;
+	font-size: 2.5rem;
+	text-align: center;
+	font-weight: 900;
+	line-height: 3rem;
+}
+
+.text {
+	position: absolute;
+	top: 15.188rem;
+	left: 11.313rem;
+	font-size: 1.25rem;
+	font-weight: 400;
+}
+
+.container-date {
+	position: absolute;
+	left: 5rem;
+	top: 18.375rem;
+	display: flex;
+	gap: 0.813rem;
+}
+
+.select {
+	height: 2.75rem;
+	border: 2px solid #1e0202;
+	background-color: #fbf7f2;
+	font-size: 1.25rem;
+	padding-left: 1.25rem;
+}
+
+.day {
+	width: 6.875rem;
+}
+
+.month {
+	width: 11.063rem;
+}
+
+.year {
+	width: 7.438rem;
+}
+
+.divider {
+	position: absolute;
+	top: 25.438rem;
+	width: 100%;
+}
+
+#btn-popup {
+	position: absolute;
+	bottom: 2rem;
+	left: 12.563rem;
+	cursor: pointer;
+	font-size: 14pt;
+	width: 11rem;
+	height: 3rem;
+	border-radius: 0;
+	border: 1px solid;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#btn-popup:hover {
+	background-color: #606060;
+}

@@ -1,0 +1,119 @@
+.cabecalho {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 8rem;
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu__item {
+  list-style: none;
+  padding: 0 1rem;
+}
+
+.redes .menu__item {
+  padding: 0;
+}
+
+.menu__lista {
+  display: flex;
+}
+
+.menu__link {
+  text-decoration: none;
+  margin-right: 1.25rem;
+  color: #000000;
+}
+
+/* .menu__link:hover {
+  text-decoration: underline;
+}
+ */
+.menu__linka {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 1.25rem;
+}
+
+/* .menu__linka:hover {
+  color: #ffffff;
+  background-color: #000000;
+  padding: 0.5rem 0rem;
+  border-radius: 5px;
+  opacity: 0.7;
+} */
+
+.menu-bar {
+  cursor: pointer;
+  display: none;
+}
+
+.menu-bar .bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #000000;
+  margin: 5px auto;
+  transition: all 0.3s;
+}
+.menu-bar .bar:nth-child(1),
+.menu-bar .bar:nth-child(3) {
+  background-color: #bd2d16;
+}
+
+/*=============== Responsividade =============*/
+@media (max-width: 890px) {
+  .cabecalho {
+    padding: 20px 3%;
+    transition: 0.4s;
+  }
+
+  .menu__lista {
+    display: none;
+    right: 100%;
+  }
+  .menu-bar {
+    display: block;
+  }
+  .menu-bar.ativo .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-bar.ativo .bar:nth-child(1) {
+    opacity: 0;
+  }
+  .menu-bar.ativo .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 630px) {
+  .cabecalho {
+    padding: 00px 3%;
+    transition: 0.4s;
+  }
+
+  .menu__lista {
+    display: none;
+  }
+  .menu-bar {
+    display: block;
+  }
+  .menu-bar.ativo .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-bar.ativo .bar:nth-child(1) {
+    opacity: 0;
+  }
+  .menu-bar.ativo .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
