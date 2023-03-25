@@ -38,6 +38,6 @@ const ProductController = {
             return res.json(products)
         }
         else return res.status(400).json({ error: 'Produto não encontrado.' })
-      }
+      },
 }
 module.exports = ProductController
