@@ -10,6 +10,13 @@ const MainController = {
     cervejas: (req, res) =>{
         res.render('listBeer', { products })
         toThousand
-    }
+    },
+
+    checkout:(req, res) =>{
+        res.render('checkout', {})
+    },
+
+
 }
+
 module.exports = MainController

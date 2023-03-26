@@ -1,4 +1,5 @@
 const express = require('express')
+const MainController = require('../controllers/MainController')
 const router = express.Router()
 
 const mainController = require('../controllers/MainController')
@@ -22,4 +23,6 @@ router.put('/product/:id', productController.update)
 
 router.delete('/product/:id', productController.delete)
 
-module.exports = router
+router.get('/checkout', mainController.checkout)
+
+module.exports = router;
