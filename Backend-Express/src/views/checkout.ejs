@@ -6,94 +6,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/style--checkout.css">
-    <link rel="stylesheet" href="../../assets/css/reset.css">
-    <link rel='stylesheet' href='../../assets/css/cabecalho.css' />
-    <link rel='stylesheet' href='../../assets/css/footer.css' />
-    <link rel='stylesheet' href='../../assets/css/busca.css' />
+    <link rel="stylesheet" href="/css/style--checkout.css">
+    <link rel="stylesheet" href="/css/reset.css">
+<<<<<<< HEAD
+    <link rel='stylesheet' href='/css/cabecalho.css' />
+=======
+    <link rel='stylesheet' href='/css/header.css' />
+>>>>>>> 7a41b73a64edb1f30fe4ca98d75f0d02102ae9ba
+    <link rel='stylesheet' href='/css/footer.css' />
+    <link rel='stylesheet' href='/css/busca.css' />
     <link href="https: //fonts.googleapis.com/css2?family= Lato: família= Inter:wght@400;700;900 &wght @400;700;900 & display=swap" rel="stylesheet">
+    
+    
+    
+    
     <title>Goró - Checkout</title>
 </head>
 <body>
-  <header class="cabecalho">
-    <nav class="menu">
-      <a class="menu__link" href="../homeStore/homeStore.html"
-        ><img
-          class="logo"
-          alt="Logo Goró"
-          src="../../assets/img/logo goro 1.png"
-        />
-      </a>
-      <ul class="menu__lista">
-        <li id="menuOne" class="menu__item">
-          <a
-            onmouseover="mouseOverMenu()"
-            onmouseout="mouseOutMenu()"
-            class="menu__linka"
-            href="../lists/listBeers/listBeer.html"
-            >CERVEJAS</a
-          >
-        </li>
-        <li id="menuTwo" class="menu__item">
-          <a
-            onmouseover="mouseOverMenuTwo()"
-            onmouseout="mouseOutMenuTwo()"
-            class="menu__linka"
-            href="../lists/listAcessories/index.html"
-            >ACESSÓRIOS</a
-          >
-        </li>
-        <li id="menuThree" class="menu__item">
-          <a
-            onmouseover="mouseOverMenuThree()"
-            onmouseout="mouseOutMenuThree()"
-            class="menu__linka"
-            href="../lists/listKits/index.html"
-            >KITS</a
-          >
-        </li>
-      </ul>
-    </nav>
-
-    <nav class="redes">
-      <ul class="menu__lista">
-        <li id="menuFour" class="menu__item">
-          <a
-            onmouseover="mouseOverMenuFour()"
-            onmouseout="mouseOutMenuFour()"
-            class="menu__link"
-            href="../login/Login.html"
-            ><img
-              class="redes__logo"
-              alt="Login"
-              src="../../assets/img/login.svg"
-            />
-            LOGIN
-          </a>
-        </li>
-        <li id="menuFive" class="menu__item">
-          <a
-            onmouseover="mouseOverMenuFive()"
-            onmouseout="mouseOutMenuFive()"
-            class="menu__link"
-            href="../shoppingCart/shoppingCart.html"
-            ><img
-              class="redes__logo"
-              alt="Carrinho"
-              src="../../assets/img/carrinho.svg"
-            />
-            CARRINHO
-          </a>
-        </li>
-      </ul>
-
-      <div class="menu-bar">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
-  </header>
+<<<<<<< HEAD
+  <%- include('includes/header') -%>
+=======
+<%- include("includes/header") %>
+>>>>>>> 7a41b73a64edb1f30fe4ca98d75f0d02102ae9ba
 
   <section class="pesquisa">
     <div class="pesquisa__container">
@@ -109,7 +43,7 @@
             
             
             <div class="pagamento">
-              <img class="img--carteira" src="../../assets/img/carteira.svg" alt="carteira--pagamento">
+              <img class="img--carteira" src="/img/carteira.svg" alt="carteira--pagamento">
               <p>PAGAMENTO</p>
             </div>
           
@@ -140,7 +74,7 @@
               <div class="forma--pagamento">
                 
                     <div class="titulo--metodo--pagamento">
-                      <img class="img--cartao" src="../../assets/img/cartao.svg" alt="imagem cartão">
+                      <img class="img--cartao" src="/img/cartao.svg" alt="imagem cartão">
                       <h2 class="titulo--cartao">Cartão de crédito</h2>
                     </div>
       
@@ -226,102 +160,15 @@
               
       </main>
 
+<<<<<<< HEAD
+      <%- include('includes/footer') -%>
+=======
       <hr class="amarelo" />
 		<hr class="vermelho" />
 		<hr class="preto" />
 
-		<footer>
-			<div class="footer__container">
-				<div class="footer__logo">
-					<img
-						class="logo"
-						alt="Logo Goró"
-						src="../../assets/img/logo goro 1.png"
-					/>
-				</div>
-
-				<div class="footer__inst">
-					<ul>
-						<h5>INSTITUCIONAL</h5>
-						<li>
-							<a href="../../index.html"> Home </a>
-						</li>
-						<li>
-							<a href="../../index.html#info--menu">
-								Portfólio
-							</a>
-						</li>
-						<li>
-							<a href="#"> Contato </a>
-						</li>
-						<li>
-							<a href="../../index.html#about"> Sobre nós </a>
-						</li>
-						<li>
-							<a href="../homeStore/homeStore.html"> loja </a>
-						</li>
-					</ul>
-				</div>
-
-				<div class="footer__legal">
-					<ul>
-						<h5>LEGAL</h5>
-						<li>
-							<a href="#"> Termos de uso </a>
-						</li>
-						<li>
-							<a href="#"> Política de privacidade </a>
-						</li>
-					</ul>
-
-					<div class="footer__redes">
-						<h5>REDES SOCIAIS</h5>
-						<ul class="footer__lista">
-							<li class="footer__item">
-								<a class="footer__link" href="#"
-									><img
-										class="redes__logo"
-										alt="Instagram"
-										src="../../assets/img/Instagram.png"
-								/></a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#"
-									><img
-										class="redes__logo"
-										alt="YouTube"
-										src="../../assets/img/YouTube.png"
-								/></a>
-							</li>
-							<li class="footer__item">
-								<a class="footer__link" href="#"
-									><img
-										class="redes__logo"
-										alt="Facebook"
-										src="../../assets/img/Facebook.png"
-								/></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="footer__busca">
-					<p>
-						Inscreva-se na nossa Newsletter e receba as nossas
-						novidades em primeira mão.
-					</p>
-					<div class="busca__input">
-						<input type="text" placeholder="SEU E-MAIL" />
-						<button>INSCREVER-SE</button>
-					</div>
-				</div>
-			</div>
-
-			<p>
-				© 2022 CERVEJARIA GORÓ LTDA. 00.000.000/0001-00 | Rua dos Bobos,
-				0 - Cidade, ES
-			</p>
-		</footer>
+		<%- include("includes/footer") %>
+>>>>>>> 7a41b73a64edb1f30fe4ca98d75f0d02102ae9ba
 
       <script src="./checkout.js"></script>
       <script src="../../script.js"></script>
