@@ -138,7 +138,8 @@ footer button {
 
   .footer__redes .footer__lista {
     display: flex;
-    text-align: left;
+    text-align: center;
+    justify-content: center;
     margin-top: 1rem;
     padding-bottom: 10px;
   }
@@ -197,12 +198,12 @@ footer button {
     text-align: left;
   }
 
-  .footer__redes .footer__lista {
+/*   .footer__redes .footer__lista {
     display: flex;
     text-align: left;
     margin-top: 1rem;
     padding-bottom: 10px;
-  }
+  } */
 
   .footer__item {
     margin-right: 1rem;

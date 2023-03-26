@@ -9,6 +9,8 @@ const productController = require('../controllers/ProductController')
 router.get('/', mainController.index)
 
 
+router.get('/cervejas', mainController.cervejas)
+
 //Product
 router.get('/product', productController.showAll)
 

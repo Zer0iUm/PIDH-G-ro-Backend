@@ -62,7 +62,7 @@ a{
 }
 
 .menu__linka:hover, .car:hover, .log:hover{
-    border-bottom: 5px solid #000000;
+    border-bottom: 2px solid #000000;
 }
 
 
@@ -104,7 +104,7 @@ a{
     border-radius: 100px;
     height: 50px;
     vertical-align: middle;
-    background-image: url(../img/lupa.svg);
+/*     background-image: url(../img/lupa.svg); */
     background-size: 1.5rem;
     background-repeat: no-repeat;
     background-position: right;
