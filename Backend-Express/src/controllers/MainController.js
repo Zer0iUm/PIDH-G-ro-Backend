@@ -37,4 +37,15 @@ const MainController = {
 	},
 };
 
+<<<<<<< HEAD
 module.exports = MainController;
+=======
+    loja:(req, res) =>{
+        res.render('homeStore', {products})
+    },
+
+
+}
+
+module.exports = MainController
+>>>>>>> 7a41b73a64edb1f30fe4ca98d75f0d02102ae9ba
