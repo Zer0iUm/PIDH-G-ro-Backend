@@ -16,6 +16,10 @@ const MainController = {
         res.render('checkout', {})
     },
 
+    loja:(req, res) =>{
+        res.render('homeStore', {products})
+    },
+
 
 }
 

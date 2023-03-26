@@ -25,4 +25,6 @@ router.delete('/product/:id', productController.delete)
 
 router.get('/checkout', mainController.checkout)
 
+router.get('/loja', mainController.loja)
+
 module.exports = router;
