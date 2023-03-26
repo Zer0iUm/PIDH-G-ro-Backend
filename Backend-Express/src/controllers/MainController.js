@@ -19,7 +19,10 @@ const MainController = {
     loja:(req, res) =>{
         res.render('homeStore', {products})
     },
-
+    
+    acessorios:(req, res) =>{
+        res.render('listAcessories', {products})
+    },
 
 }
 
