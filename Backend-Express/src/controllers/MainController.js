@@ -37,5 +37,10 @@ const MainController = {
 	},
 };
 
-module.exports = MainController;
 
+    loja:(req, res) =>{
+        res.render('homeStore', {products})
+    },
+
+
+module.exports = MainController
