@@ -2,18 +2,6 @@
     font-family: 'Lato';
 }
 
-
-.cabecalho{
-    font-family: 'Lato';
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 2rem 8rem;
-    font-weight: 400;
-    font-size: 1.6rem;
-}
-
-
 .menu{
     display: flex;
     align-items: center;
@@ -156,6 +144,8 @@ section .container--produtos{
 .img--cerveja{
     position: relative;
     display: inline-block;
+    height: 25rem;
+    width:26.9rem;
 }
 
 .item--sacola{
@@ -180,22 +170,27 @@ section .container--produtos .item{
     font-size: 2rem;
     font-weight: 400;
     line-height: 3rem;
+    margin-left: 45rem;
+}
 
 
 /*     margin: 10rem 44.6rem 10rem 34rem; */
-}
 
-.botao{
+/* .botao{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 5rem;
     margin-bottom: 5rem;
-}
+} */
 
 .ver--produtos a{
     text-decoration: none;
     color: white;
+}
+
+.ver--produtos a:hover{
+    text-decoration: underline;
 }
 
 .filtro--completo{
@@ -367,143 +362,4 @@ h2.filtro{
     padding: 0;
     margin: 0;
     border: .5rem solid #1E0202;
-}
-
-footer{
-    background-color:#F3F0EB;
-    display: flex;
-    font-family: 'Lato', sans-serif;
-    font-style: normal;
-    line-height: 2.0rem;
-}
-
-
-ul.institucional{
-    
-    list-style: none;
-    font-size: 1.2rem;
-    font-family: 'Lato', sans-serif;
-}
-
-ul.institucional li{
-    padding: .4rem;
-    display: flex;
-}
-
-.negrito{
-    font-weight: 900;
-}
-
-ul.institucional li a{
-    text-decoration: none;
-    color: black;
-}
-
-ul.institucional li a:hover{
-    text-decoration: underline
-}
-
-.lista--logo{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
-    margin-top: 6.7rem;
-}
-
-.legal{
-    font-size: 1.2rem;
-    line-height: 2rem;
-    font-weight: 400;
-    font-family: 'Lato', sans-serif;
-
-}
-
-.redes--sociais{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.redes{
-    display: flex;
-    align-items: center;
-}
-
-a.youtube{
-    padding:0 1rem 0 1rem;
-}
-
-.titulo--redes{
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
-    line-height: 3rem;
-    font-weight: 400;
-    padding-top: 1rem;
-}
-
-.titulo--legal{
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
-    line-height: 3rem;
-    font-weight: 900;
-}
-
-ul.legal a{
-    text-decoration: none;
-    color: black;
-}
-
-ul.legal a:hover{
-    text-decoration: underline;
-}
-
-.newsletter p{
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
-    line-height: 2rem;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.input--news{
-    border: .2rem solid black ;
-    width: 31.1rem;
-    height: 3.6rem;
-    margin: 0;
-}
-
-.inscrever{
-    margin: 0;
-    background-color: black;
-    color: white;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
-    line-height: 2rem;
-    width: 13.3rem;
-    height: 4.2rem;
-}
-
-.newsletter{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.news--botao{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}
-
-p.cnpj{
-    text-align: center;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
-    line-height: 2rem;
-    padding-top: 7rem;
-    padding-bottom: 5rem;
-    background-color:#F3F0EB ;
 }
