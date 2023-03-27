@@ -1,5 +1,4 @@
 const express = require('express');
-const MainController = require('../controllers/MainController');
 const router = express.Router();
 
 const mainController = require('../controllers/MainController');
@@ -8,11 +7,11 @@ const userController = require('../controllers/LoginController');
 
 router.get('/', mainController.index);
 
-router.get('/store', mainController.store);
+router.get('/homeStore', mainController.homeStore);
 
 router.get('/cervejas', mainController.cervejas);
 
-router.get('/acessories', mainController.acessories);
+router.get('/listAcessories', mainController.listAcessories);
 
 router.get('/kits', mainController.kits);
 
@@ -22,11 +21,17 @@ router.post('/login', userController.userLogin);
 
 router.get('/product', mainController.product);
 
-router.get('/user', mainController.user);
 
-router.get('/logout', mainController.logout);
 
-router.get('/admin', mainController.admin);
+router.get('/checkout', mainController.checkout);
+
+router.get('/search', mainController.pesquisa);
+
+router.get('/shoppingCart',mainController.shoppingCart);
+
+router.get('/signUp',mainController.signUp);
+
+
 
 //Product
 router.get('/product', productController.showAll);
@@ -39,6 +44,7 @@ router.put('/product/:id', productController.update);
 
 router.delete('/product/:id', productController.delete);
 
-router.get('/checkout', mainController.checkout);
+
+router.get('/erro', mainController.erro )
 
 module.exports = router;

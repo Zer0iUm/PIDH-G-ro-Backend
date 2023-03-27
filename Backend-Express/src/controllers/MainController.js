@@ -10,32 +10,29 @@ const MainController = {
 		res.render('index', { req, products });
 		toThousand;
 	},
-	requireLogin: (req, res, next) => {
-		if (!req.session.isLogged) {
-			res.redirect('/login');
-		} else {
-			next();
-		}
-	},
 
-	store: (req, res) => {
-		res.render('homeStore', { req, products });
-		toThousand;
-	},
+
+	homeStore:(req, res) =>{
+        res.render('homeStore', { products })
+        toThousand;
+    },
+	
 	cervejas: (req, res) => {
 		res.render('listBeer', { req, products });
 		toThousand;
 	},
-	acessories: (req, res) => {
-		res.render('listAcessories', { req, products });
-		toThousand;
+  
+	listAcessories: (req, res) => {
+		res.render('listAcessories', { products });
+		
 	},
-	kits: (req, res) => {
-		res.render('listKits', { req, products });
-		toThousand;
+	
+    kits: (req, res) => {
+		res.render('listKits', { products });
+
 	},
 	login: (req, res) => {
-		res.render('login', { req, users });
+		res.render('login', {});
 		toThousand;
 	},
 	product: (req, res) => {
@@ -46,22 +43,28 @@ const MainController = {
 	checkout: (req, res) => {
 		res.render('checkout', {});
 	},
-	user: (req, res) => {
-		res.render('user', { req });
-		toThousand;
-	},
-	admin: (req, res) => {
-		res.render('admin', { req });
-		toThousand;
-	},
-	logout: (req, res) => {
-		req.session.destroy;
-		res.redirect('store');
-		toThousand;
-	},
-};
 
-loja: (req, res) => {
-	res.render('homeStore', { products });
-},
-	(module.exports = MainController);
+    shoppingCart:(req, res) => {
+		res.render('shoppingCart', {products});
+	},
+
+    signUp:(req, res) => {
+		res.render('signUp', {});
+	},
+	pesquisa:(req, res) => {
+		let pesquisa = req.query.keywords
+		let produdutosParaPesquisa = products.filter(product => product.name.toLowerCase().includes(pesquisa))
+		res.render('search', {
+			products: produdutosParaPesquisa,
+			pesquisa,
+			toThousand,
+		})
+	},	
+    erro:(req, res) => {
+		res.render('404', {});
+	},
+
+}
+
+module.exports = MainController;
+
