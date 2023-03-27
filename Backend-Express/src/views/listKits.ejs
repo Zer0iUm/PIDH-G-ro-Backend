@@ -1,120 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link href="./reset.css" rel="stylesheet"/>
-    <link href="/css/produtos.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="/css/style-listKits.css">
-    <script src="kits.js"></script>
-    <title>Lista de Produtos - Cerveja</title>
-  </head>
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+			rel="stylesheet"
+		/>
+		<link href="./reset.css" rel="stylesheet" />
+		<link href="/css/produtos.css" rel="stylesheet" />
+		<link rel="stylesheet" href="/css/style-listKits.css" />
+		<script src="/js/lists.js"></script>
+		<title>Lista de Produtos - Cerveja</title>
+	</head>
 
-  <body>
-    <div class="container">
-      <%- include("includes/header") %>
-  
-      <main>
+	<body>
+		<div class="container">
+			<%- include("includes/header") %>
 
-        <div class="banner">
-          <img src="/img/banner menor kit 1.png" alt="banner" />
-        </div>
+			<main>
+				<div class="banner">
+					<img src="/img/banner menor kit 1.png" alt="banner" />
+				</div>
 
-        <div class="filtro--cerveja--completo">
-          <div class="filtro--completo">
+				<div class="filtro--cerveja--completo">
+					<div class="filtro--completo">
+						<h2 class="filtro">Filtros</h2>
+						<hr class="linha--filtro" />
+						<h3 class="produto">Qtde de Produtos</h3>
 
-            <h2 class="filtro">Filtros</h2>
-            <hr class="linha--filtro">
-            <h3 class="produto">Qtde de Produtos</h3>
+						<section>
+							<div class="prod2">
+								<input
+									type="checkbox"
+									id="prod2"
+									name="prod2"
+									checked
+								/>
+								<label for="prod2">2 Podutos</label>
+							</div>
 
-            <section>
-              <div class="prod2">
-                <input
-                  type="checkbox"
-                  id="prod2"
-                  name="prod2"
-                  checked
-                />
-                <label for="prod2">2 Podutos</label>
-              </div>
+							<div class="prod3">
+								<input
+									type="checkbox"
+									id="prod3"
+									name="prod3"
+								/>
+								<label for="prod3">3 Produtos</label>
+							</div>
 
-              <div class="prod3">
-                <input type="checkbox" id="prod3" name="prod3" />
-                <label for="prod3">3 Produtos</label>
-              </div>
+							<div class="prod4">
+								<input
+									type="checkbox"
+									id="prod4"
+									name="prod4"
+								/>
+								<label for="prod4">4 Produtos</label>
+							</div>
+						</section>
 
-              <div class="prod4">
-                <input type="checkbox" id="prod4" name="prod4" />
-                <label for="prod4">4 Produtos</label>
-              </div>
+						<section>
+							<h3 class="preco">Preço</h3>
 
-            </section>
+							<div class="menor--preco">
+								<input
+									type="checkbox"
+									id="menor--preco"
+									name="menor--preco"
+								/>
+								<label for="menor--preco">Menor preço</label>
+							</div>
 
-            <section>
-              <h3 class="preco">Preço</h3>
+							<div class="maior--preco">
+								<input
+									type="checkbox"
+									id="maior--preco"
+									name="maior--preco"
+								/>
+								<label for="maior--preco">Maior preço</label>
+							</div>
+						</section>
+					</div>
 
-              <div class="menor--preco">
-                <input type="checkbox" id="menor--preco" name="menor--preco" />
-                <label for="menor--preco">Menor preço</label>
-              </div>
+					<section class="container--kits">
+						<h1 class="kits"><span>KITS</span></h1>
+						<hr class="linha--kits" />
 
-              <div class="maior--preco">
-                <input type="checkbox" id="maior--preco" name="maior--preco" />
-                <label for="maior--preco">Maior preço</label>
-              </div>
-            </section>
+						<ul class="produtos__container">
+							<% products.forEach((product) =>{ %>
+							<li class="produto__container">
+								<a href="/product" class="link__produto">
+									<div class="produto__img">
+										<img
+											class="foto"
+											src="/img/<%= product.image %>"
+											alt="banner"
+										/>
+										<div class="icone">
+											<a href="#"
+												><img
+													class="icone"
+													src="/img/sacola.png"
+													alt="banner"
+											/></a>
+										</div>
+									</div>
+									<div class="produto__conteudo">
+										<p class="produto__nome">
+											<%= product.name %>
+										</p>
+										<p class="produto__descricao">
+											<%= product.type %>
+										</p>
+										<p class="produto__valor">
+											R$ <%= product.price %>
+										</p>
+									</div>
+								</a>
+							</li>
+							<% } )%>
+						</ul>
+						<a class="produtos__botao" href="#"
+							>VER TODOS OS PRODUTOS</a
+						>
+					</section>
+				</div>
+			</main>
 
-          </div>
-
-          <section class="container--kits">
-            <h1 class="kits"><span>KITS</span></h1>
-            <hr class="linha--kits" />
-
-            <ul class="produtos__container">
-              <% products.forEach((product) =>{ %>
-              <li class="produto__container">
-                <a href="/product" class="link__produto">
-                  <div class="produto__img">
-                    <img
-                      class="foto"
-      
-                      src="/img/<%= product.image %>"
-      
-                      alt="banner"
-                    />
-                    <div class="icone">
-                      <a href="#"
-                        ><img
-                          class="icone"
-      
-                          src="/img/sacola.png"
-      
-                          alt="banner"
-                      /></a>
-                    </div>
-                  </div>
-                  <div class="produto__conteudo">
-                    <p class="produto__nome"><%= product.name %></p>
-                    <p class="produto__descricao"><%= product.type %></p>
-                    <p class="produto__valor">R$ <%= product.price %></p>
-                  </div>
-                </a>
-              </li>	
-            <% } )%>
-            </ul>
-            <a class="produtos__botao" href="#">VER TODOS OS PRODUTOS</a>
-          </section>
-        </div>
-      </main>
-      
-    <%- include("includes/footer") %>
-    </div>
-  </body>
+			<%- include("includes/footer") %>
+		</div>
+	</body>
 </html>

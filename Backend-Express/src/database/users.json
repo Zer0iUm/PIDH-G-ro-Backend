@@ -2,16 +2,16 @@
 	{
 		"name": "Admin",
 		"email": "admin@email.com",
-		"password": "admin123"
+		"password": "adminBacana123"
 	},
 	{
 		"name": "Julio",
 		"email": "julio@email.com",
-		"password": "julio123"
+		"password": "caraLegal123"
 	},
 	{
 		"name": "Vinicius",
 		"email": "vinicius@email.com",
-		"password": "vinicius123"
+		"password": "ablubeA123"
 	}
 ]
