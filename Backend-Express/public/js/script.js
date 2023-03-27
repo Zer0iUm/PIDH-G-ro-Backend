@@ -119,6 +119,27 @@ const mouseOutMenuFive = () => {
 	menuFive.style.textDecoration = 'none';
 };
 
+/***********CADASTRO DE PRODUTOS*****************/
+
+const form = document.querySelector('form');
+	form.addEventListener('submit', cadastrarProduto);
+
+	function cadastrarProduto(event) {
+        event.preventDefault();
+
+    const nome = document.querySelector('#nome').value;
+    const descricao = document.querySelector('#descricao').value;
+    const preco = document.querySelector('#preco').value;
+    const imagem = document.querySelector('#imagem').value;
+
+    console.log('Nome:', nome);
+    console.log('Descrição:', descricao);
+    console.log('Preço:', preco);
+    console.log('Imagem:', imagem);
+}
+
+
+
 // /***********Mouse event carrinho*****************/
 // window.addEventListener('load', function () {
 // 	const btn_prt = document.querySelector('.botao_preto');

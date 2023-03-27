@@ -9,7 +9,7 @@ const userController = {
 		if (user) {
 			req.session.isLogged = true;
 			req.session.username = user.name;
-			res.redirect('/store');
+			res.redirect('/homeStore');
 			console.log(email);
 		} else {
 			alert('Email ou senha incorreto.');

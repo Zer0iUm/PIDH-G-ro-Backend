@@ -19,19 +19,19 @@ router.get('/login', mainController.login);
 
 router.post('/login', userController.userLogin);
 
+router.get('/logout', mainController.logout);
+
+router.get('/accountUser', mainController.accountUser);
+
 router.get('/product', mainController.product);
-
-
 
 router.get('/checkout', mainController.checkout);
 
 router.get('/search', mainController.pesquisa);
 
-router.get('/shoppingCart',mainController.shoppingCart);
+router.get('/shoppingCart', mainController.shoppingCart);
 
-router.get('/signUp',mainController.signUp);
-
-
+router.get('/signUp', mainController.signUp);
 
 //Product
 router.get('/product', productController.showAll);
@@ -44,7 +44,6 @@ router.put('/product/:id', productController.update);
 
 router.delete('/product/:id', productController.delete);
 
-
-router.get('/erro', mainController.erro )
+router.get('/erro', mainController.erro);
 
 module.exports = router;

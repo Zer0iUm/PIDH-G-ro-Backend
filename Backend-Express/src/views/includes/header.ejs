@@ -1,5 +1,3 @@
-
-
 <header class="cabecalho">
 	<link rel="stylesheet" href="/css/header.css" />
 	<div class="menu">
@@ -24,9 +22,13 @@
 			<li class="log">
 				<img class="login" alt="login" src="/img/profile.svg" />
 				<% if (req.session.username == 'Admin'){ %>
-				<a class="login" href="/admin"><%= req.session.username %></a>
+				<a class="login" href="/accountAdmin"
+					><%= req.session.username %></a
+				>
 				<% } else { %>
-				<a class="login" href="/user"><%= req.session.username %></a>
+				<a class="login" href="/accountUser"
+					><%= req.session.username %></a
+				>
 				<%}%>
 			</li>
 
