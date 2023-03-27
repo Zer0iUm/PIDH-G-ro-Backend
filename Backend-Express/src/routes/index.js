@@ -31,7 +31,7 @@ router.get('/product', mainController.product);
 
 router.get('/checkout', mainController.checkout);
 
-router.get('/pesquisa', mainController.pesquisa);
+router.get('/search', mainController.search);
 
 router.get('/shoppingCart', mainController.shoppingCart);
 

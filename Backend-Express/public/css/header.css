@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+/* @import './cabecalho.css'; */
 
 * {
 	margin: 0;
@@ -12,146 +13,138 @@ html {
 	scroll-behavior: smooth;
 }
 
-a{
-    text-decoration: none;
-    color: #000000;
-
+a {
+	text-decoration: none;
+	color: #000000;
 }
 
-
-.cabecalho{
-    max-width: 100%;
-    padding: 2.2rem 10% 2.2rem 10%;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10%;
-   
+.cabecalho {
+	max-width: 100%;
+	padding: 2.2rem 10% 2.2rem 10%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10%;
 }
 
-.logo{
-   
-    width: 115px;
-    height: 48px;
-    left: 138px;
-    top: 45px;
-
+.logo {
+	width: 115px;
+	height: 48px;
+	left: 138px;
+	top: 45px;
 }
-.menu{
-    display: flex;
-    align-items: center;
+.menu {
+	display: flex;
+	align-items: center;
 }
 
-.menu__lista{
-    padding-top: 0.6rem;
-    display: flex;
-    justify-content: flex-end;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    color: #000000;
-    list-style-type: none;
-    gap: 3rem;
-    padding-left: 3rem;
+.menu__lista {
+	padding-top: 0.6rem;
+	display: flex;
+	justify-content: flex-end;
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;
+	list-style-type: none;
+	gap: 3rem;
+	padding-left: 3rem;
 }
 
-.car, .log{
-    border-bottom: 5px solid transparent;
+.car,
+.log {
+	border-bottom: 5px solid transparent;
 }
 
-.menu__linka:hover, .car:hover, .log:hover{
-    border-bottom: 2px solid #000000;
+.menu__linka:hover,
+.car:hover,
+.log:hover {
+	border-bottom: 2px solid #000000;
 }
 
-
-.menu__profile{
-    padding-top: 0.5rem;
-    justify-content: right;
-    display: flex;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    list-style-type: none;
-    align-items: center;
-    color: #000000;
-    gap: 3rem;
-    
+.menu__profile {
+	padding-top: 0.5rem;
+	justify-content: right;
+	display: flex;
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	list-style-type: none;
+	align-items: center;
+	color: #000000;
+	gap: 3rem;
 }
 
-.menu__profile li{
-    display: flex;
-    gap: 0.5rem;
+.menu__profile li {
+	display: flex;
+	gap: 0.5rem;
 }
 
-.pesquisa{
-    max-width: 100%;
-    padding: 1rem 10% 1.2rem 10%;
-    /* height: 50px; */
-    align-content: center;
-    background-color:#000000;
-    
+.pesquisa {
+	max-width: 100%;
+	padding: 1rem 10% 1.2rem 10%;
+	/* height: 50px; */
+	align-content: center;
+	background-color: #000000;
 }
-.pesquisa__container{
-    display:flex;
+.pesquisa__container {
+	display: flex;
 }
 
-.pesquisa__input{
-    padding: 1rem 2rem 1rem 2rem;
-    font-family: 'Lato';
-    font-size: 18px;
-    width: 100%;
-    border-radius: 100px;
-    /* height: 20px; */
-    vertical-align: middle;
-/*     background-image: url(../img/lupa.svg); */
-    background-size: 1.5rem;
-    background-repeat: no-repeat;
-    background-position: right;
-    background-position-x: 98.5%;
-    
+.pesquisa__input {
+	padding: 1rem 2rem 1rem 2rem;
+	font-family: 'Lato';
+	font-size: 18px;
+	width: 100%;
+	border-radius: 100px;
+	/* height: 20px; */
+	vertical-align: middle;
+	/*     background-image: url(../img/lupa.svg); */
+	background-size: 1.5rem;
+	background-repeat: no-repeat;
+	background-position: right;
+	background-position-x: 98.5%;
 }
 
 .pesquisa__input::placeholder {
-    padding: 1rem 10% 1rem 0%;
-    width: 100%;
-    height: 30px;
-    left: 175.76px;
-    top: 154px;
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    color: #ACACAC;
+	padding: 1rem 10% 1rem 0%;
+	width: 100%;
+	height: 30px;
+	left: 175.76px;
+	top: 154px;
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 30px;
+	color: #acacac;
 }
 
-
-input[type="text"]::-webkit-input-placeholder {
-    /* Oculta o símbolo "X" */
-    visibility: hidden !important;
+input[type='text']::-webkit-input-placeholder {
+	/* Oculta o símbolo "X" */
+	visibility: hidden !important;
 }
 
 /* Para o Firefox */
-input[type="text"]::-moz-placeholder {
-    visibility: hidden !important;
+input[type='text']::-moz-placeholder {
+	visibility: hidden !important;
 }
 
 /* Para o Safari */
-input[type="text"]::-webkit-contacts-auto-fill-button {
-    visibility: hidden !important;
+input[type='text']::-webkit-contacts-auto-fill-button {
+	visibility: hidden !important;
 }
 
-
 .search-form {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-  
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
 /*   .pesquisa__input {
     border: solid 1px var(--light-gray);
     display: block;
@@ -162,19 +155,19 @@ input[type="text"]::-webkit-contacts-auto-fill-button {
     font-size: 1.5em;
     border-radius: 100%;
   } */
-  
-  .search-form_button {
-    position: absolute;
-    margin-top: 0.8%;
-    right: 11%;
-    /* height: 100%; */
-    background-color: #ffffff;
-    border: none;
-    border-left: solid 1px var(--light-gray);
-    color: var(--gray);
-    cursor: pointer;
-  }
 
-  .buttom-seach{
-    margin-top: 30%;
-  }
+.search-form_button {
+	position: absolute;
+	margin-top: 0.8%;
+	right: 11%;
+	/* height: 100%; */
+	background-color: #ffffff;
+	border: none;
+	border-left: solid 1px var(--light-gray);
+	color: var(--gray);
+	cursor: pointer;
+}
+
+.buttom-seach {
+	margin-top: 30%;
+}

@@ -1,8 +1,5 @@
 @import './style.css';
-@import './cabecalho.css';
-@import './busca.css';
 @import './produtos.css';
-@import './footer.css';
 
 body,
 html {

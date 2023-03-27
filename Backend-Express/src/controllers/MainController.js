@@ -65,10 +65,10 @@ const MainController = {
 	signUp: (req, res) => {
 		res.render('signUp', { req });
 	},
-	pesquisa: (req, res) => {
-		let pesquisa = req.query.keywords;
-		let produdutosParaPesquisa = products.filter(product =>
-			product.name.toLowerCase().includes(pesquisa)
+	search: (req, res) => {
+		let search = req.query.keywords;
+		let productsToSearch = products.filter(product =>
+			product.name.toLowerCase().includes(search)
 		);
 		res.render('search', {
 			products: productsToSearch,
