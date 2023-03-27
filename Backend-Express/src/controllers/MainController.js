@@ -1,34 +1,45 @@
 const products = require('../database/products.json');
+const users = require('../database/users.json');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-
+const checkLogin = (req, res) => {
+	req.session.isLogged;
+};
 const MainController = {
 	index: (req, res) => {
-		res.render('index', { products });
+		res.render('index', { req, products });
 		toThousand;
 	},
+	requireLogin: (req, res, next) => {
+		if (!req.session.isLogged) {
+			res.redirect('/login');
+		} else {
+			next();
+		}
+	},
+
 	store: (req, res) => {
-		res.render('homeStore', { products });
+		res.render('homeStore', { req, products });
 		toThousand;
 	},
 	cervejas: (req, res) => {
-		res.render('listBeer', { products });
+		res.render('listBeer', { req, products });
 		toThousand;
 	},
 	acessories: (req, res) => {
-		res.render('listAcessories', { products });
+		res.render('listAcessories', { req, products });
 		toThousand;
 	},
 	kits: (req, res) => {
-		res.render('listKits', { products });
+		res.render('listKits', { req, products });
 		toThousand;
 	},
 	login: (req, res) => {
-		res.render('login', { products });
+		res.render('login', { req, users });
 		toThousand;
 	},
 	product: (req, res) => {
-		res.render('product', { products });
+		res.render('product', { req, products });
 		toThousand;
 	},
 
@@ -37,15 +48,7 @@ const MainController = {
 	},
 };
 
-<<<<<<< HEAD
-module.exports = MainController;
-=======
-    loja:(req, res) =>{
-        res.render('homeStore', {products})
-    },
-
-
-}
-
-module.exports = MainController
->>>>>>> 7a41b73a64edb1f30fe4ca98d75f0d02102ae9ba
+loja: (req, res) => {
+	res.render('homeStore', { products });
+},
+	(module.exports = MainController);

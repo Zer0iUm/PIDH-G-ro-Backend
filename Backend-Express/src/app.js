@@ -4,10 +4,6 @@ const express = require('express');
 const bodyparser = require('body-parser');
 const session = require('express-session');
 const { v4: uuidv4 } = require('uuid');
-// Imports
-const routes = require('./routes/index');
-const path = require('path');
-const express = require('express');
 //const methodOverride = require('method-override') // métodos PUT e DELETE
 const app = express();
 // captura na forma de objeto literal tudo o que vem de um formulário

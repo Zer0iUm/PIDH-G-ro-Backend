@@ -99,18 +99,20 @@
 		</section>
 
 		<section class="form">
-			<form class="form__login">
+			<form class="form__login" method="post" action="/login">
 				<h2 class="form__titulo">Faça o seu login</h2>
 				<h3 class="form__subtitulo">
 					Conecte-se para finalizar a compra
 				</h3>
 				<input
 					placeholder="E-mail"
+					name="email"
 					autocomplete="username"
 					id="email"
 				/>
 				<input
 					type="password"
+					name="password"
 					placeholder="Senha"
 					autocomplete="current-password"
 					id="senha"
@@ -214,6 +216,6 @@
 			</p>
 		</footer>
 
-		<script src="Login.js"></script>
+		<!-- <script src="Login.js"></script> -->
 	</body>
 </html>
