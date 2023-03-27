@@ -9,7 +9,7 @@ const MainController = {
 	},
 
 	homeStore:(req, res) =>{
-        res.render('homeStore', {products})
+        res.render('homeStore', { products })
         toThousand;
     },
 	

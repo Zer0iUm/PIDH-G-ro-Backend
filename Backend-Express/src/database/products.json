@@ -4,6 +4,8 @@
 		"type": "Cerveja",
 		"name": "American Pale Ale",
 		"ABV": "5,8%",
+		"IBU": 31,
+		"typeGlass": "Taça",
 		"description": "A cerveja Pale Ale tem um teor alcoólico geralmente entre 4% a 6% ABV e um corpo médio, com uma textura suave. Ao provar uma Pale Ale, você pode esperar um sabor maltado com notas de caramelo e torradas, equilibrado com um amargor moderado do lúpulo, que pode ter sabores florais, frutados ou terrosos.Essa cerveja é popular entre os amantes de cervejas artesanais que procuram uma experiência de sabor equilibrada, mas ainda assim com um pouco de amargor. É uma cerveja versátil que pode ser apreciada sozinha ou emparelhada com uma variedade de alimentos, desde carnes grelhadas até pratos picantes.",
 		"price": 18.90,
 		"image": "american pale ale.png"
@@ -13,6 +15,8 @@
 		"type": "Cerveja",
 		"name": "Brown Ale",
 		"ABV": "5,4%",
+		"IBU": 22,
+		"typeGlass": "Taça",
 		"description": "Inspirada no raro estilo austríaco, a cerveja conquistou diversos prêmios internacionais. Ela tem uma coloração âmbar, conserva aroma intenso de malte que lembra biscoito e caramelo, com um toque cítrico. No paladar, o amargor é presente, com um final seco.",
 		"price": 24.90,
 		"image": "brown.png"
@@ -21,7 +25,9 @@
 		"id": "3",
 		"type": "Cerveja",
 		"name": "Double Ipa",
-		"ABV": "8% ABV",
+		"ABV": "8%",
+		"IBU": 35,
+		"typeGlass": "Tulipa",
 		"description": "Amargor, esta é a característica comum entre as diferentes IPAs. Este amargor vem do lúpulo, que, além do sabor peculiar, oferece quatro tipos de aromas diferentes: terroso, herbáceo, cítrico e frutado.",
 		"price": 15.90,
 		"image": "double.png"
@@ -31,6 +37,8 @@
 		"type": "Cerveja",
 		"name": "Pilsen",
 		"ABV": "5,1%",
+		"IBU": 20,
+		"typeGlass": "Copo americano",
 		"description": "amargor. Esta é a característica comum entre as diferentes IPAs. Este amargor vem do lúpulo, que, além do sabor peculiar, oferece quatro tipos de aromas diferentes: terroso, herbáceo, cítrico e frutado.",
 		"price": 12.99,
 		"image": "american pale ale.png"
@@ -40,6 +48,8 @@
 		"type": "Cerveja",
 		"name": "Weizen",
 		"ABV": "5,5%",
+		"IBU": 15,
+		"typeGlass": "Tulipa",
 		"description": "é uma tradicional cerveja alemã em que sua composição contém pelo menos 50% de malte de trigo e restante é composto por malte de cevada.",
 		"price": 25.50,
 		"image": "brown.png"
@@ -49,6 +59,8 @@
 		"type": "Cerveja",
 		"name": "Ambar Ale",
 		"ABV": "5,1%",
+		"IBU": 24,
+		"typeGlass": "Tulipa",
 		"description": "amargor. Esta é a característica comum entre as diferentes IPAs. Este amargor vem do lúpulo, que, além do sabor peculiar, oferece quatro tipos de aromas diferentes: terroso, herbáceo, cítrico e frutado.",
 		"price": 16.5,
 		"image": "american pale ale.png"
@@ -58,6 +70,8 @@
 		"type": "Cerveja",
 		"name": "Strong",
 		"ABV": "5,1%",
+		"IBU": 19,
+		"typeGlass": "Taça",
 		"description": "amargor. Esta é a característica comum entre as diferentes IPAs. Este amargor vem do lúpulo, que, além do sabor peculiar, oferece quatro tipos de aromas diferentes: terroso, herbáceo, cítrico e frutado.",
 		"price": 16.5,
 		"image": "american pale ale.png"
@@ -68,6 +82,8 @@
 		"type": "Cerveja",
 		"name": "Braza",
 		"ABV": "5,1%",
+		"IBU": 29,
+		"typeGlass": "Tulipa",
 		"description": "amargor. Esta é a característica comum entre as diferentes IPAs. Este amargor vem do lúpulo, que, além do sabor peculiar, oferece quatro tipos de aromas diferentes: terroso, herbáceo, cítrico e frutado.",
 		"price": 16.5,
 		"image": "american pale ale.png"
