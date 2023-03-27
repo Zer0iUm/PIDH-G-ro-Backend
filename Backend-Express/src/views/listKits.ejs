@@ -10,11 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <link href="./reset.css" rel="stylesheet" />
-    <link href="/css/cabecalho.css" rel="stylesheet" />
-    <link href="/css/footer.css" rel="stylesheet" />
-    <link href="/css/busca.css" rel="stylesheet" />
+    <link href="./reset.css" rel="stylesheet"/>
+    <link href="/css/produtos.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/style-listKits.css">
     <script src="kits.js"></script>
     <title>Lista de Produtos - Cerveja</title>
   </head>
@@ -26,7 +24,7 @@
       <main>
 
         <div class="banner">
-          <img src="./Imagens/banner_kits.png" alt="banner" />
+          <img src="/img/banner menor kit 1.png" alt="banner" />
         </div>
 
         <div class="filtro--cerveja--completo">
@@ -79,45 +77,43 @@
             <h1 class="kits"><span>KITS</span></h1>
             <hr class="linha--kits" />
 
-            <div class="container--produtos">
-              <% products.forEach((product) => { %>
-                <div class="item">
-                  <img
-                    class="img--cerveja"
-                    src="/img/<%= product.image %>"
-                    alt="imagem da cerveja"
-                  />
-                  <div class="item--sacola">
-                    <a href="#"><img
-                        class="sacola"
-                        src="/img/sacola.png"
-                        alt="imagem sacola"
-                      />
-                      </a>
+            <ul class="produtos__container">
+              <% products.forEach((product) =>{ %>
+              <li class="produto__container">
+                <a href="/product" class="link__produto">
+                  <div class="produto__img">
+                    <img
+                      class="foto"
+      
+                      src="/img/<%= product.image %>"
+      
+                      alt="banner"
+                    />
+                    <div class="icone">
+                      <a href="#"
+                        ><img
+                          class="icone"
+      
+                          src="/img/sacola.png"
+      
+                          alt="banner"
+                      /></a>
                     </div>
-                    <p class="goro">
-                      <%= product.name %>
-                    </p>
-                    <p class="cerva">
-                      <%= product.type %>
-                    </p>
-                    <br>
-                    <p class="valor">
-                      R$<%= product.price %>
-                    </p>
                   </div>
-                  <% }) %>
-            <button class="ver--produtos">
-              <p><a href="#">VER MAIS PRODUTOS</a></p>
-            </button>
+                  <div class="produto__conteudo">
+                    <p class="produto__nome"><%= product.name %></p>
+                    <p class="produto__descricao"><%= product.type %></p>
+                    <p class="produto__valor">R$ <%= product.price %></p>
+                  </div>
+                </a>
+              </li>	
+            <% } )%>
+            </ul>
+            <a class="produtos__botao" href="#">VER TODOS OS PRODUTOS</a>
           </section>
         </div>
       </main>
       
-      <hr class="amarelo" />
-		<hr class="vermelho" />
-		<hr class="preto" />
-
     <%- include("includes/footer") %>
     </div>
   </body>

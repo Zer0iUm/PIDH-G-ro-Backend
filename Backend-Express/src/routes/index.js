@@ -1,5 +1,4 @@
 const express = require('express');
-const MainController = require('../controllers/MainController');
 const router = express.Router();
 
 const mainController = require('../controllers/MainController');
@@ -22,11 +21,12 @@ router.get('/product', mainController.product);
 
 router.get('/checkout', mainController.checkout);
 
-router.get('/search',mainController.search);
+router.get('/search', mainController.pesquisa);
 
 router.get('/shoppingCart',mainController.shoppingCart);
 
 router.get('/signUp',mainController.signUp);
+
 
 
 //Product

@@ -11,10 +11,10 @@
 				<a class="menu__linka" href="/cervejas">CERVEJAS</a>
 			</li>
 			<li class="menu__item">
-				<a class="menu__linka" href="/acessories">ACESSÓRIOS</a>
+				<a class="menu__linka" href="/listAcessories">ACESSÓRIOS</a>
 			</li>
 			<li class="menu__item">
-				<a class="menu__linka" href="/kits">KITS</a>
+				<a class="menu__linka" href="/Kits">KITS</a>
 			</li>
 		</ul>
 	</div>
@@ -35,10 +35,15 @@
 
 <section class="pesquisa">
 	<div class="pesquisa__container">
+		<form action="/pesquisa" method="GET" class="seach-form"></form>
 		<input
+			name="keywords"
 			class="pesquisa__input"
-			type="search"
+			type="text"
 			placeholder="Buscar no site"
 		/>
+		<button type="submit" class="search-form_button">
+			<img class="button-seach" alt="lupa" src="/img/lupa.svg" />
+		</button>
 	</div>
 </section>

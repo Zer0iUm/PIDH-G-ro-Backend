@@ -39,10 +39,6 @@ const MainController = {
 		res.render('checkout', {});
 	},
 
-    search:(req, res) => {
-		res.render('search', {products});
-	},
-
     shoppingCart:(req, res) => {
 		res.render('shoppingCart', {products});
 	},
@@ -50,8 +46,15 @@ const MainController = {
     signUp:(req, res) => {
 		res.render('signUp', {});
 	},
-
-	
+	pesquisa:(req, res) => {
+		let pesquisa = req.query.keywords
+		let produdutosParaPesquisa = products.filter(product => product.name.toLowerCase().includes(pesquisa))
+		res.render('search', {
+			products: produdutosParaPesquisa,
+			pesquisa,
+			toThousand,
+		})
+	},	
     erro:(req, res) => {
 		res.render('404', {});
 	},
