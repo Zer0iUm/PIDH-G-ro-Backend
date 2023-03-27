@@ -90,7 +90,7 @@ a{
 .pesquisa{
     max-width: 100%;
     padding: 1rem 10% 1.2rem 10%;
-    height: 50px;
+    /* height: 50px; */
     align-content: center;
     background-color:#000000;
     
@@ -105,7 +105,7 @@ a{
     font-size: 18px;
     width: 100%;
     border-radius: 100px;
-    height: 20px;
+    /* height: 20px; */
     vertical-align: middle;
 /*     background-image: url(../img/lupa.svg); */
     background-size: 1.5rem;
