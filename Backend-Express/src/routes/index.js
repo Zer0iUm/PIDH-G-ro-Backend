@@ -23,11 +23,15 @@ router.get('/logout', mainController.logout);
 
 router.get('/accountUser', mainController.accountUser);
 
+router.get('/accountAdmin', mainController.accountAdmin);
+
+router.get('/productRegistration', mainController.productRegistration);
+
 router.get('/product', mainController.product);
 
 router.get('/checkout', mainController.checkout);
 
-router.get('/search', mainController.search);
+router.get('/pesquisa', mainController.pesquisa);
 
 router.get('/shoppingCart', mainController.shoppingCart);
 

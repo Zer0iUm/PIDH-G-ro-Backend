@@ -41,6 +41,14 @@ const MainController = {
 		res.render('accountUser', { req });
 		toThousand;
 	},
+	accountAdmin: (req, res) => {
+		res.render('accountAdmin', { req });
+		toThousand;
+	},
+	productRegistration: (req, res) => {
+		res.render('productRegistration', { req });
+		toThousand;
+	},
 	product: (req, res) => {
 		res.render('product', { req, products });
 		toThousand;

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Página de Usuário</title>
+		<link href="/css/header.css" rel="stylesheet" />
+		<link href="/css/footer.css" rel="stylesheet" />
+		<link href="/css/user.css" rel="stylesheet" />
+		<link href="/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<%- include('includes/header') -%>
+
+		<div class="mainContainer">
+			<h1>Olá, <%= req.session.username %></h1>
+
+			<a class="btn-user" href="/productRegistration">
+				<button>Adicionar produto</button>
+			</a>
+			<a class="btn-user" href="/logout">
+				<button>Sair</button>
+			</a>
+		</div>
+		<%- include('includes/footer') -%>
+	</body>
+</html>
