@@ -18,8 +18,8 @@
 		"IBU": 22,
 		"typeGlass": "Taça",
 		"description": "Inspirada no raro estilo austríaco, a cerveja conquistou diversos prêmios internacionais. Ela tem uma coloração âmbar, conserva aroma intenso de malte que lembra biscoito e caramelo, com um toque cítrico. No paladar, o amargor é presente, com um final seco.",
-		"price": 24.90,
-		"image": "brown.png"
+		"price": 24.9,
+		"image": "/img/brown.png"
 	},
 	{
 		"id": "3",
@@ -29,6 +29,7 @@
 		"IBU": 35,
 		"typeGlass": "Tulipa",
 		"description": "Amargor, esta é a característica comum entre as diferentes IPAs. Este amargor vem do lúpulo, que, além do sabor peculiar, oferece quatro tipos de aromas diferentes: terroso, herbáceo, cítrico e frutado.",
+
 		"price": 15.90,
 		"image": "double.png"
 	},

@@ -1,12 +1,16 @@
 const products = require('../database/products.json');
+const users = require('../database/users.json');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-
+const checkLogin = (req, res) => {
+	req.session.isLogged;
+};
 const MainController = {
 	index: (req, res) => {
-		res.render('index', { products });
+		res.render('index', { req, products });
 		toThousand;
 	},
+
 
 	homeStore:(req, res) =>{
         res.render('homeStore', { products })
@@ -14,9 +18,10 @@ const MainController = {
     },
 	
 	cervejas: (req, res) => {
-		res.render('listBeer', { products });
+		res.render('listBeer', { req, products });
 		toThousand;
 	},
+  
 	listAcessories: (req, res) => {
 		res.render('listAcessories', { products });
 		
@@ -31,7 +36,7 @@ const MainController = {
 		toThousand;
 	},
 	product: (req, res) => {
-		res.render('product', { products });
+		res.render('product', { req, products });
 		toThousand;
 	},
 

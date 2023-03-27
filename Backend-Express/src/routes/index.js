@@ -3,6 +3,7 @@ const router = express.Router();
 
 const mainController = require('../controllers/MainController');
 const productController = require('../controllers/ProductController');
+const userController = require('../controllers/LoginController');
 
 router.get('/', mainController.index);
 
@@ -16,7 +17,10 @@ router.get('/kits', mainController.kits);
 
 router.get('/login', mainController.login);
 
+router.post('/login', userController.userLogin);
+
 router.get('/product', mainController.product);
+
 
 
 router.get('/checkout', mainController.checkout);
@@ -39,6 +43,7 @@ router.post('/product', productController.create);
 router.put('/product/:id', productController.update);
 
 router.delete('/product/:id', productController.delete);
+
 
 router.get('/erro', mainController.erro )
 
