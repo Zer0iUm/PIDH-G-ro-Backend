@@ -40,7 +40,6 @@ router.put('/product/:id', productController.update);
 
 router.delete('/product/:id', productController.delete);
 
-
-
+router.get('/erro', mainController.erro )
 
 module.exports = router;

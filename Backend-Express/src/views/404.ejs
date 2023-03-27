@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<%- include('includes/head', {title: '404' }) %> <%-
-	include('includes/head', { linkCss: '../../../public/css/style.css' }) %>
-	<%- include('includes/head', { linkCssHeader:
-	'../../../public/css/cabecalho.css' }) %> <%- include('includes/head', {
-	linkCss: '../../../public/css/style.css' }) %>
-
-	<head>
+		<head>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<meta charset="UTF-8" />
@@ -17,10 +11,7 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Lato:wght@400;700;900&display=swap"
 			rel="stylesheet"
 		/>
-
-		<link rel="stylesheet" href="./style.css" />
-		<link href="css/cabecalho.css" rel="stylesheet" />
-		<link href="css/footer.css" rel="stylesheet" />
+		<link href="css/styles404.css" rel="stylesheet" />
 		<link href="css/busca.css" rel="stylesheet" />
 		<link href="css/reset.css" rel="stylesheet" />
 
@@ -42,7 +33,7 @@
 		<main>
 			<div class="banner_completo">
 				<div class="conteudo">
-					<img src="./imgError/bannerLogo.png" alt="banner" />
+					<img src="/img/bannerLogo.svg" alt="banner" />
 				</div>
 
 				<div class="conteudo_banner">
@@ -61,9 +52,6 @@
 			</div>
 		</main>
 
-		<hr class="amarelo" />
-		<hr class="vermelho" />
-		<hr class="preto" />
 
 		<%- include('includes/footer') -%>
 
