@@ -12,9 +12,9 @@
     align-items: center;
 }
 
-:root{
+/* :root{
     font-size: 62.5%;
-}
+} */
 
 .menu--lista li{
     list-style: none;
