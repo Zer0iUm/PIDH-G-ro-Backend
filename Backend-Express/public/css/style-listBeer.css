@@ -428,3 +428,50 @@ h2.filtro{
     margin: 0;
     border: .5rem solid #1E0202;
 }
+
+.produtos-botao {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 15ms;
+}
+
+.produtos-botao:hover {
+    background-color: #606060;
+}
+
+.produtos-botao {
+    font-size: 15px;
+  }
+
+
+  /* RESPONSIVIDADE */
+  @media (max-width: 360px) {
+    .produtos h3 {
+      margin-top: 1rem;
+      font-size: 15px;
+      border-bottom: solid;
+      text-align: left;
+      font-weight: 700;
+    }
+  
+    .produtos__botao {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 630px) {
+    .produtos h3 {
+      margin-top: 1rem;
+      font-size: 18px;
+      border-bottom: solid;
+      text-align: left;
+      font-weight: 700;
+    }
+  
+    .produtos-botao {
+      font-size: 10px;
+      padding: 0.5rem;
+    }
+  }
