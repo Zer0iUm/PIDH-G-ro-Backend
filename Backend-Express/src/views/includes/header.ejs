@@ -20,10 +20,23 @@
 	</div>
 	<div>
 		<ul class="menu__profile">
+			<% if (req.session.isLogged) { %>
+			<li class="log">
+				<img class="login" alt="login" src="/img/profile.svg" />
+				<% if (req.session.username == 'Admin'){ %>
+				<a class="login" href="/admin"><%= req.session.username %></a>
+				<% } else { %>
+				<a class="login" href="/user"><%= req.session.username %></a>
+				<%}%>
+			</li>
+
+			<% } else { %>
+
 			<li class="log">
 				<img class="login" alt="login" src="/img/profile.svg" />
 				<a class="login" href="/login">LOGIN</a>
 			</li>
+			<%}%>
 
 			<li class="car">
 				<img class="carrinho" alt="carrinho" src="/img/carrinho.svg" />
