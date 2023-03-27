@@ -63,8 +63,8 @@ const MainController = {
 			product.name.toLowerCase().includes(pesquisa)
 		);
 		res.render('search', {
-			products: produdutosParaPesquisa,
-			pesquisa,
+			products: productsToSearch,
+			search,
 			toThousand,
 		});
 	},

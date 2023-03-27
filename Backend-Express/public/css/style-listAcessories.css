@@ -22,15 +22,15 @@ section .container--produtos{
 }
 
 
-.linha--acessorios{
+.linha--cerveja{
     border: 3px solid black;
-    width: 99%;
+    width: 97%;
     margin-bottom: 57px;
 }
-.container--acessorios{
+.container--cervejas{
     display: flex;
     flex-direction: column;
-    width: 65%;
+    width: 70%;
     }
 
 .filtro--cerveja--completo{
