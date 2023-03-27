@@ -154,187 +154,33 @@
             <hr class="linha--kits" />
 
             <div class="container--produtos">
-              <div class="item">
-                <img
-                  class="img--cerveja"
-                  src="./Imagens/PRODUTOSKIT 1.png"
-                  alt="imagem da cerveja"
-                />
-                <div class="item--sacola">
-                  <a href="#"><img
-                    class="sacola"
-                    src="./Imagens/sacola.png"
-                    alt="imagem sacola"
+              <% products.forEach((product) => { %>
+                <div class="item">
+                  <img
+                    class="img--cerveja"
+                    src="/img/<%= product.image %>"
+                    alt="imagem da cerveja"
                   />
-                  </a>
-                </div>
-                <p class="goro">Goró - Brown Ale</p>
-                <p class="cerva">Cerveja</p>
-                <br>
-                <p class="valor">R$00,00</p>
-              </div>
-
-              <div class="item">
-                <img
-                  class="img--cerveja"
-                  src="./Imagens/PRODUTOSKIT 1.png"
-                  alt="imagem da cerveja"
-                />
-                <div class="item--sacola">
-                  <a href="#"><img
-                    class="sacola"
-                    src="./Imagens/sacola.png"
-                    alt="imagem sacola"
-                  />
-                  </a>
-                </div>
-                <p class="goro">Goró - Brown Ale</p>
-                <p class="cerva">Cerveja</p>
-                <br>
-                <p class="valor">R$00,00</p>
-              </div>
-
-              <div class="item">
-                <img
-                  class="img--cerveja"
-                  src="./Imagens/PRODUTOSKIT 1.png"
-                  alt="imagem da cerveja"
-                />
-                <div class="item--sacola">
-                  <a href="#"><img
-                    class="sacola"
-                    src="./Imagens/sacola.png"
-                    alt="imagem sacola"
-                  />
-                  </a>
-                </div>
-                <p class="goro">Goró - Brown Ale</p>
-                <p class="cerva">Cerveja</p>
-                <br>
-                <p class="valor">R$00,00</p>
-              </div>
-
-              <div class="item">
-                <img
-                  class="img--cerveja"
-                  src="./Imagens/PRODUTOSKIT 1.png"
-                  alt="imagem da cerveja"
-                />
-                </a>
-                <div class="item--sacola">
-                  <a href="#"><img
-                    class="sacola"
-                    src="./Imagens/sacola.png"
-                    alt="imagem sacola"
-                  />
-                  </a>
-                </div>
-                <p class="goro">Goró - Brown Ale</p>
-                <p class="cerva">Cerveja</p>
-                <br>
-                <p class="valor">R$00,00</p>
-              </div>
-
-              <div class="item">
-                <img
-                  class="img--cerveja"
-                  src="./Imagens/PRODUTOSKIT 1.png"
-                  alt="imagem da cerveja"
-                />
-                <div class="item--sacola">
-                  <a href="#"><img
-                    class="sacola"
-                    src="./Imagens/sacola.png"
-                    alt="imagem sacola"
-                  />
-                  </a>
-                </div>
-                <p class="goro">Goró - Brown Ale</p>
-                <p class="cerva">Cerveja</p>
-                <br>
-                <p class="valor">R$00,00</p>
-              </div>
-
-              <div class="item">
-                <img
-                  class="img--cerveja"
-                  src="./Imagens/PRODUTOSKIT 1.png"
-                  alt="imagem da cerveja"
-                />
-                <div class="item--sacola">
-                  <a href="#"><img
-                    class="sacola"
-                    src="./Imagens/sacola.png"
-                    alt="imagem sacola"
-                  />
-                  </a>
-                </div>
-                <p class="goro">Goró - Brown Ale</p>
-                <p class="cerva">Cerveja</p>
-                <br>
-                <p class="valor">R$00,00</p>
-              </div>
-
-              <div class="item">
-                <img
-                  class="img--cerveja"
-                  src="./Imagens/PRODUTOSKIT 1.png"
-                  alt="imagem da cerveja"
-                />
-                <div class="item--sacola">
-                  <a href="#"><img
-                    class="sacola"
-                    src="./Imagens/sacola.png"
-                    alt="imagem sacola"
-                  />
-                  </a>
-                </div>
-                <p class="goro">Goró - Brown Ale</p>
-                <p class="cerva">Cerveja</p>
-                <br>
-                <p class="valor">R$00,00</p>
-              </div>
-
-              <div class="item">
-                <img
-                  class="img--cerveja"
-                  src="./Imagens/PRODUTOSKIT 1.png"
-                  alt="imagem da cerveja"
-                />
-                <div class="item--sacola">
-                <a href="#"><img
-                  class="sacola"
-                  src="./Imagens/sacola.png"
-                  alt="imagem sacola"
-                />
-                </a>
-                </div>
-                <p class="goro">Goró - Brown Ale</p>
-                <p class="cerva">Cerveja</p>
-                <br>
-                <p class="valor">R$00,00</p>
-              </div>
-
-              <div class="item">
-                <img
-                  class="img--cerveja"
-                  src="./Imagens/PRODUTOSKIT 1.png"
-                  alt="imagem da cerveja"
-                />
-                <div class="item--sacola">
-                <a href="#"><img
-                  class="sacola"
-                  src="./Imagens/sacola.png"
-                  alt="imagem sacola"
-                />
-                </a>
-                </div>
-                <p class="goro">Goró - Brown Ale</p>
-                <p class="cerva">Cerveja</p>
-                <br>
-                <p class="valor">R$00,00</p>
-              </div>
-            </div>
+                  <div class="item--sacola">
+                    <a href="#"><img
+                        class="sacola"
+                        src="/img/sacola.png"
+                        alt="imagem sacola"
+                      />
+                      </a>
+                    </div>
+                    <p class="goro">
+                      <%= product.name %>
+                    </p>
+                    <p class="cerva">
+                      <%= product.type %>
+                    </p>
+                    <br>
+                    <p class="valor">
+                      R$<%= product.price %>
+                    </p>
+                  </div>
+                  <% }) %>
             <button class="ver--produtos">
               <p><a href="#">VER MAIS PRODUTOS</a></p>
             </button>

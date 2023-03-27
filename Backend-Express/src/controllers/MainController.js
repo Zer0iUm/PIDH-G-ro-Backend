@@ -35,12 +35,12 @@ const MainController = {
 	checkout: (req, res) => {
 		res.render('checkout', {});
 	},
+	loja:(req, res) =>{
+		res.render('homeStore', {products})
+	},
 };
 
 
-    loja:(req, res) =>{
-        res.render('homeStore', {products})
-    },
 
 
 module.exports = MainController
