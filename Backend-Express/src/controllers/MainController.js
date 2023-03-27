@@ -7,24 +7,27 @@ const MainController = {
 		res.render('index', { products });
 		toThousand;
 	},
-	store: (req, res) => {
-		res.render('homeStore', { products });
-		toThousand;
-	},
+
+	homeStore:(req, res) =>{
+        res.render('homeStore', {products})
+        toThousand;
+    },
+	
 	cervejas: (req, res) => {
 		res.render('listBeer', { products });
 		toThousand;
 	},
-	acessories: (req, res) => {
+	listAcessories: (req, res) => {
 		res.render('listAcessories', { products });
-		toThousand;
+		
 	},
-	kits: (req, res) => {
+	
+    kits: (req, res) => {
 		res.render('listKits', { products });
-		toThousand;
+
 	},
 	login: (req, res) => {
-		res.render('login', { products });
+		res.render('login', {});
 		toThousand;
 	},
 	product: (req, res) => {
@@ -35,12 +38,22 @@ const MainController = {
 	checkout: (req, res) => {
 		res.render('checkout', {});
 	},
-	loja:(req, res) =>{
-		res.render('homeStore', {products})
+
+    search:(req, res) => {
+		res.render('search', {products});
 	},
-};
+
+    shoppingCart:(req, res) => {
+		res.render('shoppingCart', {products});
+	},
+
+    signUp:(req, res) => {
+		res.render('signUp', {});
+	},
+
+}
 
 
 
+module.exports = MainController;
 
-module.exports = MainController
