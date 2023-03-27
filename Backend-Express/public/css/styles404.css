@@ -38,9 +38,9 @@
     color: black;
 }
 
-:root{
+/* :root{
     font-size: 62.5%;
-}
+} */
 
 .usuario_lista{
     display: flex;
