@@ -18,7 +18,9 @@ a{
 
 }
 
-
+.comprando{
+    color: white;
+}
 
 .carrinho_compra{
     padding: 7rem 10% 2.2rem 10%;
@@ -404,7 +406,7 @@ textarea:focus, input:focus {
 
 .fim_carrinho{
     
-    margin-left: 68rem;
+    margin-left: 40%;
     
     
 }

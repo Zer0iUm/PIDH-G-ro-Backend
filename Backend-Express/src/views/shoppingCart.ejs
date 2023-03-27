@@ -7,7 +7,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;900&display=swap" rel="stylesheet"/>
-	<link rel="stylesheet" href="/css/reset.css"/>	
+	<link rel="stylesheet" href="/css/reset.css"/>
+	<link rel="stylesheet" href="/css/pagina_de_carrinho.css">	
     <title>Carrinho de compras</title>
 
 	<script
@@ -30,7 +31,9 @@
 				<img class="carrinho2" alt="carrinho" src="/img/carrinho.svg">
 				<h1 class="titulos"> CARRINHO DE COMPRAS</h1>
 			</div>
-			<button class="botao_preto" type="button">CONTINUAR COMPRANDO</button>
+			<button class="botao_preto" type="button">
+				<a class="comprando" href="/homeStore">CONTINUAR COMPRANDO</a>
+			</button>
 		</div>
 	</section>
 
@@ -55,13 +58,16 @@
 		</div>
 	  </section>
 	  
-
+	  		<% products.forEach((product) => { %>
 			<section class="compra">
 				<div class="produto">
-					<img class="foto_carrinho" src="#">
+					<img 
+					class="foto_carrinho"
+					src="/img/<%= product.image %>"
+					 alt="foto cerveja">
 					<div>
-					<p class="nome_produto">Goró - Brown Ale</p>
-					<p class="descritivo_produto">Cerveja - 000 ML</p>
+					<p class="nome_produto"><%= product.name %></p>
+					<p class="descritivo_produto"><%= product.type %></p>
 				</div>
 				</div>
 				<div class="carrinho_direita">
@@ -90,88 +96,11 @@
 							</div>
 					</div>
 				  </div>
-				<div class="valor_unitário">R$ 00,00</div>
+				<div class="valor_unitário">R$<%= product.price %></div>
 				<div class="valor_total">R$ 00,00</div>
 			</div>
 			</section>
-			
-			<section class="compra">
-				<div class="produto">
-					<img class="foto_carrinho" src="#">
-					<div>
-					<p class="nome_produto">Goró - Brown Ale</p>
-					<p class="descritivo_produto">Cerveja - 000 ML</p>
-				</div>
-				</div>
-				<div class="carrinho_direita">
-				<div class="container">
-					<div class="row">
-						<section id="mais_menos">
-							<div
-								class="btn-quantidade"
-								id="remover"
-								onclick="setQuantidade('remove')"
-							>
-								-
-							</div>
-							<input
-								id="input-quantidade"
-								type="text"
-								value="0"
-								min="0"
-							/>
-							<div
-								class="btn-quantidade"
-								id="adicionar"
-								onclick="setQuantidade('add')"
-							>
-								+
-							</div>
-					</div>
-				  </div>
-				<div class="valor_unitário">R$ 00,00</div>
-				<div class="valor_total">R$ 00,00</div>
-			</div>
-			</section>
-		
-			<section class="compra">
-				<div class="produto">
-					<img class="foto_carrinho" src="#">
-					<div>
-					<p class="nome_produto">Goró - Brown Ale</p>
-					<p class="descritivo_produto">Cerveja - 000 ML</p>
-				</div>
-				</div>
-				<div class="carrinho_direita">
-				<div class="container">
-					<div class="row">
-						<section id="mais_menos">
-							<div
-								class="btn-quantidade"
-								id="remover"
-								onclick="setQuantidade('remove')"
-							>
-								-
-							</div>
-							<input
-								id="input-quantidade"
-								type="text"
-								value="0"
-								min="0"
-							/>
-							<div
-								class="btn-quantidade"
-								id="adicionar"
-								onclick="setQuantidade('add')"
-							>
-								+
-							</div>
-					</div>
-				  </div>
-				<div class="valor_unitário">R$ 00,00</div>
-				<div class="valor_total">R$ 00,00</div>
-			</div>
-			</section>
+			<% }) %>
 
 			<section class="frete">
 				<div class="titulo_frete">
