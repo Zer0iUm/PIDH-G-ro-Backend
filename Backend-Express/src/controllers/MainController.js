@@ -46,6 +46,19 @@ const MainController = {
 	checkout: (req, res) => {
 		res.render('checkout', {});
 	},
+	user: (req, res) => {
+		res.render('user', { req });
+		toThousand;
+	},
+	admin: (req, res) => {
+		res.render('admin', { req });
+		toThousand;
+	},
+	logout: (req, res) => {
+		req.session.destroy;
+		res.redirect('store');
+		toThousand;
+	},
 };
 
 loja: (req, res) => {

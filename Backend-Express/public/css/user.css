@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.mainContainer {
+	padding-left: 6rem;
+	padding-right: 6rem;
+}
+
+.btn-user {
+	display: block;
+	padding: 2rem;
+	background-color: lightgray;
+	margin: 2rem;
+}
+
+.btn-user:hover {
+	background-color: rgb(181, 181, 181);
+}
+
+button {
+	border: none;
+	background-color: inherit;
+}

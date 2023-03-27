@@ -22,6 +22,12 @@ router.post('/login', userController.userLogin);
 
 router.get('/product', mainController.product);
 
+router.get('/user', mainController.user);
+
+router.get('/logout', mainController.logout);
+
+router.get('/admin', mainController.admin);
+
 //Product
 router.get('/product', productController.showAll);
 
