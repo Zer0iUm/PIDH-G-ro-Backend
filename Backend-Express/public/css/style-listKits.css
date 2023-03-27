@@ -70,10 +70,17 @@ section .container--produtos{
 }
 
 
-section .container--produtos .item{
+section .container--kits .item{
     height: 360px;
     width:269px;
 }
+
+.container--kits{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
 
 .ver--produtos{
     background-color: black;

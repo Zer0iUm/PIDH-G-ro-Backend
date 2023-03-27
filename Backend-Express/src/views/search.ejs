@@ -12,9 +12,7 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="/css/style_Result_Busca.css" />
-		<link href="/css/cabecalho.css" rel="stylesheet" />
-		<link href="/css/footer.css" rel="stylesheet" />
-		<link href="/css/busca.css" rel="stylesheet" />
+		<link href="/css/produtos.css" rel="stylesheet" />
 
 		<title>Lista de produtos - resultado de busca</title>
 	</head>
@@ -126,210 +124,48 @@
 				<section class="container-produtos">
 					<h1 class="resultado-busca">
 						<span>RESULTADO DA BUSCA "PRODUTO DIGITADO"</span>
+						<hr class="linha-produtos" />
 					</h1>
-					<hr class="linha-produtos" />
-
+					
 					<div class="container-todosProdutos">
-						<div class="item-cerveja">
-							<img
-								class="foto"
-								src="/img/PRODUTOSKIT 1.png"
-								alt="imagem-cerveja"
-								onclick="changeImage('/img/PRODUTOSKIT 1.png'); clickedImage('img-cerveja01')"
-								id="img-cerveja01"
-							/>
-							<div class="item-sacola">
-								<a href="../shoppingCart/shoppingCart.html">
-									<img
-										class="sacola"
-										src="/img/sacola.png"
-										alt="imagem-sacola"
-									/>
+						<ul class="produtos__container">
+							<% products.forEach((product) =>{ %>
+							<li class="produto__container">
+								<a href="/product" class="link__produto">
+									<div class="produto__img">
+										<img
+											class="foto"
+			
+											src="/img/<%= product.image %>"
+			
+											alt="banner"
+										/>
+										<div class="icone">
+											<a href="#"
+												><img
+													class="icone"
+			
+													src="/img/sacola.png"
+			
+													alt="banner"
+											/></a>
+										</div>
+									</div>
+									<div class="produto__conteudo">
+										<p class="produto__nome"><%= product.name %></p>
+										<p class="produto__descricao"><%= product.type %></p>
+										<p class="produto__valor">R$ <%= product.price %></p>
+									</div>
 								</a>
-							</div>
-							<p class="nome-produto">Goró - Brown Ale</p>
-							<p class="bebida">Cerveja</p>
-							<br />
-							<p class="valor-produto">R$ 00,00</p>
-						</div>
+							</li>	
+						<% } )%>
+						</ul>
 
-						<div class="item-cerveja">
-							<img
-								class="foto"
-								src="/img/PRODUTOSKIT 1.png"
-								alt="imagem-cerveja"
-							/>
-							<div class="item-sacola">
-								<a href="../shoppingCart/shoppingCart.html">
-									<img
-										class="sacola"
-										src="/img/sacola.png"
-										alt="imagem-sacola"
-									/>
-								</a>
-							</div>
-							<p class="nome-produto">Goró - Brown Ale</p>
-							<p class="bebida">Cerveja</p>
-							<br />
-							<p class="valor-produto">R$ 00,00</p>
-						</div>
-
-						<div class="item-cerveja">
-							<img
-								class="foto"
-								src="/img/PRODUTOSKIT 1.png"
-								alt="imagem-cerveja"
-							/>
-							<div class="item-sacola">
-								<a href="../shoppingCart/shoppingCart.html">
-									<img
-										class="sacola"
-										src="/img/sacola.png"
-										alt="imagem-sacola"
-									/>
-								</a>
-							</div>
-							<p class="nome-produto">Goró - Brown Ale</p>
-							<p class="bebida">Cerveja</p>
-							<br />
-							<p class="valor-produto">R$ 00,00</p>
-						</div>
-
-						<div class="item-cerveja">
-							<img
-								class="foto"
-								src="/img/PRODUTOSKIT 1.png"
-								alt="imagem-cerveja"
-							/>
-							<div class="item-sacola">
-								<a href="../shoppingCart/shoppingCart.html">
-									<img
-										class="sacola"
-										src="/img/sacola.png"
-										alt="imagem-sacola"
-									/>
-								</a>
-							</div>
-							<p class="nome-produto">Goró - Brown Ale</p>
-							<p class="bebida">Cerveja</p>
-							<p class="valor-produto">R$ 00,00</p>
-						</div>
-
-						<div class="item-cerveja">
-							<img
-								class="foto"
-								src="/img/PRODUTOSKIT 1.png"
-								alt="imagem-cerveja"
-							/>
-							<div class="item-sacola">
-								<a href="../shoppingCart/shoppingCart.html">
-									<img
-										class="sacola"
-										src="/img/sacola.png"
-										alt="imagem-sacola"
-									/>
-								</a>
-							</div>
-							<p class="nome-produto">Goró - Brown Ale</p>
-							<p class="bebida">Cerveja</p>
-							<p class="valor-produto">R$ 00,00</p>
-						</div>
-
-						<div class="item-cerveja">
-							<img
-								class="foto"
-								src="/img/PRODUTOSKIT 1.png"
-								alt="imagem-cerveja"
-							/>
-							<div class="item-sacola">
-								<a href="../shoppingCart/shoppingCart.html">
-									<img
-										class="sacola"
-										src="/img/sacola.png"
-										alt="imagem-sacola"
-									/>
-								</a>
-							</div>
-							<p class="nome-produto">Goró - Brown Ale</p>
-							<p class="bebida">Cerveja</p>
-							<p class="valor-produto">R$ 00,00</p>
-						</div>
-
-						<div class="item-cerveja">
-							<img
-								class="foto"
-								src="/img/PRODUTOSKIT 1.png"
-								alt="imagem-cerveja"
-							/>
-							<div class="item-sacola">
-								<a href="../shoppingCart/shoppingCart.html">
-									<img
-										class="sacola"
-										src="/img/sacola.png"
-										alt="imagem-sacola"
-									/>
-								</a>
-							</div>
-							<p class="nome-produto">Goró - Brown Ale</p>
-							<p class="bebida">Cerveja</p>
-							<p class="valor-produto">R$ 00,00</p>
-						</div>
-
-						<div class="item-cerveja">
-							<img
-								class="foto"
-								src="/img/PRODUTOSKIT 1.png"
-								alt="imagem-cerveja"
-							/>
-							<div class="item-sacola">
-								<a href="../shoppingCart/shoppingCart.html">
-									<img
-										class="sacola"
-										src="/img/sacola.png"
-										alt="imagem-sacola"
-									/>
-								</a>
-							</div>
-							<p class="nome-produto">Goró - Brown Ale</p>
-							<p class="bebida">Cerveja</p>
-							<p class="valor-produto">R$ 00,00</p>
-						</div>
-
-						<div class="item-cerveja">
-							<img
-								class="foto"
-								src="/img/PRODUTOSKIT 1.png"
-								alt="imagem-cerveja"
-							/>
-							<div class="item-sacola">
-								<a href="../shoppingCart/shoppingCart.html">
-									<img
-										class="sacola"
-										src="/img/sacola.png"
-										alt="imagem-sacola"
-									/>
-								</a>
-							</div>
-							<p class="nome-produto">Goró - Brown Ale</p>
-							<p class="bebida">Cerveja</p>
-							<p class="valor-produto">R$ 00,00</p>
-						</div>
 					</div>
-
-					<button class="verMaisProdutos" type="button">
-						<p>
-							<a href="../shoppingCart/shoppingCart.html"
-								>VER MAIS PRODUTOS</a
-							>
-						</p>
-					</button>
+					<a class="produtos__botao" href="#">VER TODOS OS PRODUTOS</a>
 				</section>
 			</div>
 		</main>
-
-		<hr class="amarelo" />
-		<hr class="vermelho" />
-		<hr class="preto" />
 
 		<%- include("includes/footer") %>
 		<script src="./search.js"></script>

@@ -46,15 +46,19 @@ const MainController = {
     signUp:(req, res) => {
 		res.render('signUp', {});
 	},
-	pesquisa:(req, res) => {
-		let pesquisa = req.query.keywords
-		let produdutosParaPesquisa = products.filter(product => product.name.toLowerCase().includes(pesquisa))
+
+	search:(req, res) => {
+		res.render('search', { products })
+	},
+/* 	search:(req, res) => {
+		let search = req.query.keywords
+		let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search))
 		res.render('search', {
-			products: produdutosParaPesquisa,
-			pesquisa,
+			products: productsToSearch,
+			search,
 			toThousand,
 		})
-	},	
+	} */
     erro:(req, res) => {
 		res.render('404', {});
 	},
