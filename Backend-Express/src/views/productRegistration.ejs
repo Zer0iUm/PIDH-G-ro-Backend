@@ -9,7 +9,10 @@
 	<body>
 		<%- include('includes/header') -%>
 		<h1>Cadastro de Produtos</h1>
-		<form>
+		
+		<!-- Alterado para receber o MULTER -->
+		<form action="/register" method="POST" enctype="multipart/form-data">
+
 			<label for="nome">Nome:</label>
 			<input type="text" id="nome" name="nome" /><br />
 
@@ -20,7 +23,7 @@
 			<input type="number" id="preco" name="preco" /><br />
 
 			<label for="imagem">Imagem:</label>
-			<input type="file" id="imagem" name="imagem" /><br />
+			<input type="file" id="imagem" name="image" /><br /> 
 
 			<button type="submit">Cadastrar</button>
 		</form>

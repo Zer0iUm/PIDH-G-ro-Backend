@@ -14,10 +14,16 @@ const ProductController = {
 			res.render('product', { req, product });
 		else return res.status(400).json({ error: 'Produto não encontrado.' });
 	},
+	// Create product
+	
 	create(req, res) {
+		console.log(req.files)
+		
 		products.push(req.body);
 		res.json(products);
 	},
+
+
 	update(req, res) {
 		const { id } = req.params;
 
@@ -45,4 +51,19 @@ const ProductController = {
 			return res.status(400).json({ error: 'Produto não encontrado.' });
 	},
 };
+
+// MULTER
+/* module.exports = {
+	viewCadastro: (req, res) => {
+		return res.render("index");
+	},
+	salvarCadastro: (req, res) => {
+		if (!req.file){
+			return res.send("Você deve enviar uma imagem!");
+		}
+		
+		return res.send('Deu certo!');
+	}
+}; */
+
 module.exports = ProductController;

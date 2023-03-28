@@ -1,9 +1,32 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer'); // FUNCIONALIDADES DO MULTER
+const path = require('path'); // MANIPULAR PASTAS
+
+// -------------------------------------------- MULTER ---------------------------- //
+const multerDiskStorage = multer.diskStorage({
+    destination: (req, file, callback) => {
+        /* const folder = path.join(__dirname, './public/img') // COMBINA SEGMENTOS DE CAMINHO
+        callback(null, folder); */
+        callback(null, 'public/img')
+    },
+    filename: (req, file, callback)=>{
+        const imageName = Date.now() + file.originalname;
+        callback(null, imageName);
+       // callback(null, Date.now() + "-" + file.originalname)
+    },
+});
+
+const upload = multer({ storage: multerDiskStorage}); 
+
+// --------------------------------------------------------------------------------- //
 
 const mainController = require('../controllers/MainController');
 const productController = require('../controllers/ProductController');
 const userController = require('../controllers/LoginController');
+
+
+
 
 router.get('/', mainController.index);
 
@@ -42,12 +65,22 @@ router.get('/product', productController.showAll);
 
 router.get('/product/:id', productController.showById);
 
-router.post('/product', productController.create);
+router.post('/product', upload.any(), productController.create); // Executa o método upload - middleware
 
-router.put('/product/:id', productController.update);
+router.put('/product/:id', upload.any(), productController.update);
 
 router.delete('/product/:id', productController.delete);
 
 router.get('/erro', mainController.erro);
+
+// ROTA PARA SUBIR A IMAGEM DO CADASTRO DE PRODUTOS -------------------------------- //
+
+//router.get('/register', productController.productRegistration);
+router.post('/register', upload.any(), productController.create);
+
+// --------------------------------------------------------------------------------- //
+
+
+
 
 module.exports = router;
