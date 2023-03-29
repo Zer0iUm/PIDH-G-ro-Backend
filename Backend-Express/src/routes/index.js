@@ -5,28 +5,26 @@ const path = require('path'); // MANIPULAR PASTAS
 
 // -------------------------------------------- MULTER ---------------------------- //
 const multerDiskStorage = multer.diskStorage({
-    destination: (req, file, callback) => {
-        /* const folder = path.join(__dirname, './public/img') // COMBINA SEGMENTOS DE CAMINHO
+	destination: (req, file, callback) => {
+		/* const folder = path.join(__dirname, './public/img') // COMBINA SEGMENTOS DE CAMINHO
         callback(null, folder); */
-        callback(null, 'public/img')
-    },
-    filename: (req, file, callback)=>{
-        const imageName = Date.now() + file.originalname;
-        callback(null, imageName);
-       // callback(null, Date.now() + "-" + file.originalname)
-    },
+		callback(null, 'public/img');
+	},
+	filename: (req, file, callback) => {
+		const imageName = Date.now() + file.originalname;
+		callback(null, imageName);
+		// callback(null, Date.now() + "-" + file.originalname)
+	},
 });
 
-const upload = multer({ storage: multerDiskStorage}); 
+const upload = multer({ storage: multerDiskStorage });
 
 // --------------------------------------------------------------------------------- //
 
 const mainController = require('../controllers/MainController');
 const productController = require('../controllers/ProductController');
-const userController = require('../controllers/LoginController');
-
-
-
+const userController = require('../controllers/userController');
+const registerController = require('../controllers/RegistrationController');
 
 router.get('/', mainController.index);
 
@@ -46,6 +44,8 @@ router.get('/logout', mainController.logout);
 
 router.get('/accountUser', mainController.accountUser);
 
+router.put('/accountUser/:id', userController.edit);
+
 router.get('/accountAdmin', mainController.accountAdmin);
 
 router.get('/productRegistration', mainController.productRegistration);
@@ -59,6 +59,8 @@ router.get('/search', mainController.search);
 router.get('/shoppingCart', mainController.shoppingCart);
 
 router.get('/signUp', mainController.signUp);
+
+router.post('/signUp', userController.register);
 
 //Product
 router.get('/product', productController.showAll);
@@ -77,16 +79,15 @@ router.get('/erro', mainController.erro);
 //router.get('/product/create', productController.createFormEJS)
 
 // GET - EJS Update Form - View
-router.get('/product/update/:id', productController.updateFormEJS)
+router.get('/product/update/:id', productController.updateFormEJS);
 
 // POST - EJS Create
-router.post('/product', upload.any(), productController.createEJS)
+router.post('/product', upload.any(), productController.createEJS);
 
 // PUT - EJS Update
-router.put('/product/:id', upload.any(), productController.updateEJS)
+router.put('/product/:id', upload.any(), productController.updateEJS);
 
 // DELETE - EJS Delete
-router.delete('/product/:id', productController.deleteEJS)
-
+router.delete('/product/:id', productController.deleteEJS);
 
 module.exports = router;
