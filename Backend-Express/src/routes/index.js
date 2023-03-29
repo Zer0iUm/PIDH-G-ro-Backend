@@ -65,7 +65,7 @@ router.get('/product', productController.showAll);
 
 router.get('/product/:id', productController.showById);
 
-router.put('/product/:id', productController.update);
+//router.put('/product/:id', productController.update);
 
 //router.delete('/product/:id', productController.delete);
 

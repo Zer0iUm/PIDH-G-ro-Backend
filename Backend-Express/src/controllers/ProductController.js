@@ -38,7 +38,7 @@ let newProduct = {
 }
 
 products.push(newProduct)
-res.redirect('/')
+res.redirect('http://localhost:3000/homeStore')
 	},
 
 	update(req, res) {
@@ -98,7 +98,7 @@ res.redirect('/')
 			products[productIndex] = productToEdit // atualiza
 			
 	
-			res.redirect('/')
+			res.redirect('http://localhost:3000/homeStore')
 		}
 		else return res.status(400).json({ error: 'Produto não encontrado.' })
 	  },
@@ -110,7 +110,7 @@ res.redirect('/')
 	  
 		if (productIndex != -1) {
 			products.splice(productIndex, 1)
-			res.redirect('/')
+			res.redirect('http://localhost:3000/homeStore')
 		}
 		else return res.status(400).json({ error: 'Produto não encontrado.' })
 	  }
