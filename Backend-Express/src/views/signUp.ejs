@@ -24,7 +24,6 @@
 	</head>
 
 	<body>
-
 		<%- include("includes/header") %>
 
 		<section class="section__cadastro">
@@ -41,13 +40,19 @@
 				</div>
 			</div>
 
-			<form class="form">
+			<form class="form" method='post' action='/signUp'>
 				<div class="teste">
-					<input type="nome" placeholder="Nome" id="nome" />
+					<input
+						type="nome"
+						placeholder="Nome"
+						id="nome"
+						name="name"
+					/>
 					<input
 						type="sobrenome"
 						placeholder="Sobrenome"
 						id="sobrenome"
+						name="lastname"
 					/>
 				</div>
 				<div class="teste">
@@ -55,11 +60,13 @@
 						type="dataNascimento"
 						placeholder="Data de Nascimento | 00/00/0000"
 						id="dataNascimento"
+						name="birthday"
 					/>
 					<input
 						type="genero"
 						placeholder="Gênero | ex: Feminino"
 						id="genero"
+						name="genre"
 					/>
 				</div>
 				<div class="teste">
@@ -67,16 +74,18 @@
 						type="CPF"
 						placeholder="CPF | 000.000.000-00"
 						id="CPF"
+						name="cpf"
 					/>
 					<input
 						type="telefoneContato"
 						placeholder="Telefone | (00) 00000-0000"
 						id="telefoneContato"
+						name="phone"
 					/>
 				</div>
 				<span class="form__erro">Mensagem de erro</span>
-			</form>
-		</section>
+			<!-- </form> -->
+		<!-- </section> -->
 
 		<section class="section__cadastro">
 			<div class="cadastro">
@@ -92,22 +101,24 @@
 				</div>
 			</div>
 
-			<form class="form">
+			<!-- <form class="form"> -->
 				<div class="teste">
-					<input type="email" placeholder="E-mail" id="email" />
+					<input type="email" placeholder="E-mail" id="email" name='email' />
 					<input
 						type="emailConfirmar"
 						placeholder="Confirme seu e-mail"
+						name='emailConfirm'
 					/>
 				</div>
 				<div class="teste">
-					<input type="senha" placeholder="Senha" id="senha" />
+					<input type="password" placeholder="Senha" id="senha" name='password' />
 					<input
-						type="senhaConfirmar"
+						type="password"
 						placeholder="Confirme sua senha"
+						name='passwordConfirm'
 					/>
 				</div>
-			</form>
+			<!-- </form> -->
 		</section>
 
 		<section class="section__cadastro" style="margin-bottom: 4.5rem">
@@ -124,9 +135,9 @@
 				</div>
 			</div>
 
-			<form class="form">
+			<!-- <form class="form"> -->
 				<div class="teste">
-					<input type="cep" placeholder="CEP | 00000-000" />
+					<input type="cep" placeholder="CEP | 00000-000" name='cep' />
 					<input
 						class="teste vazio"
 						aria-hidden="true"
@@ -134,27 +145,28 @@
 					/>
 				</div>
 				<div class="teste">
-					<input type="cidade" placeholder="Cidade" />
-					<select id="state">
+					<input type="cidade" placeholder="Cidade" name='city' />
+					<select id="state" name='state'>
 						<option class="select" disabled selected hidden>
 							Selecione seu estado
 						</option>
 					</select>
 				</div>
 				<div class="teste">
-					<input type="endereco" placeholder="Rua" />
-					<input type="complemento" placeholder="Complemento" />
+					<input type="endereco" placeholder="Rua" name='address' />
+					<input type="complemento" placeholder="Complemento" name='complement' />
 				</div>
 				<div class="teste">
-					<input type="numero" placeholder="Número" />
-					<input type="bairro" placeholder="Bairro" />
+					<input type="numero" placeholder="Número" name='number' />
+					<input type="bairro" placeholder="Bairro" name='district' />
 				</div>
-			</form>
+			
 			<div class="teste">
 				<button type="submit" class="cadastro__botao">
 					CRIAR CONTA
 				</button>
 			</div>
+		</form>
 		</section>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>

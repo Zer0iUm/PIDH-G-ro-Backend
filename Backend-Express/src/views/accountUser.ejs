@@ -9,6 +9,7 @@
 		<link href="/css/footer.css" rel="stylesheet" />
 		<link href="/css/user.css" rel="stylesheet" />
 		<link href="/css/style.css" rel="stylesheet" />
+		<script src="/js/userAccount.js"></script>
 	</head>
 	<body>
 		<%- include('includes/header') -%>
@@ -16,9 +17,34 @@
 		<div class="mainContainer">
 			<h1>Olá, <%= req.session.username %></h1>
 
-			<a class="btn-user" href="#">
+			<a class="btn-user" id="btn-editUser" href="#">
 				<button>Alterar dados</button>
 			</a>
+			<form
+				class="editUser"
+				id="editUserForm"
+				method="POST"
+				action="/accountUser/<%= id %>?_method=PUT"
+			>
+				<label for="email">Email:</label>
+				<input
+					type="email"
+					id="email"
+					name="email"
+					value="<%=req.session.email %>"
+					required
+				/>
+
+				<label for="password">New Password:</label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					minlength="8"
+				/>
+
+				<input type="submit" value="Save Changes" />
+			</form>
 			<a class="btn-user" href="/logout">
 				<button>Sair</button>
 			</a>
