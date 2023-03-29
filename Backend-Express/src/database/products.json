@@ -99,101 +99,101 @@
 	{
 		"id": "9",
 		"type": "Acessorios",
-		"name": "Taça de Cerveja",
+		"name": "Abridor de Lata e Garrafa",
 		"ABV": 0,
 		"IBU": 0,
-		"quantity": 650,
+		"quantity": 50,
 		"typeGlass": 0,
-		"description": "São 12 copos e 04 frases que você irá querer a coleção completa! Vale lembrar que é um ótimo presente, enviamos todas em caixas de presente para agradar alguém especial ou você mesmo.",
-		"price": 23.6,
-		"image": "taca-happy-hour.PNG"
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+		"price": 38.6,
+		"image": "abridor de lata e garrafa 3.png"
 	},
 
 	{
 		"id": "10",
 		"type": "Acessorios",
-		"name": "Taça de Cerveja",
+		"name": "Boné",
 		"ABV": 0,
 		"IBU": 0,
 		"quantity": 650,
 		"typeGlass": 0,
-		"description": "São 12 copos e 04 frases que você irá querer a coleção completa! Vale lembrar que é um ótimo presente, enviamos todas em caixas de presente para agradar alguém especial ou você mesmo.",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
 		"price": 23.6,
-		"image": "taca-happy-hour.PNG"
+		"image": "bone.png"
 	},
 
 	{
 		"id": "11",
 		"type": "Acessorios",
-		"name": "Taça de Cerveja",
+		"name": "Caixa Térmica",
 		"ABV": 0,
 		"IBU": 0,
 		"quantity": 650,
 		"typeGlass": 0,
-		"description": "São 12 copos e 04 frases que você irá querer a coleção completa! Vale lembrar que é um ótimo presente, enviamos todas em caixas de presente para agradar alguém especial ou você mesmo.",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"price": 23.6,
-		"image": "taca-happy-hour.PNG"
+		"image": "caixa termica.png"
 	},
 	{
 		"id": "12",
 		"type": "Acessorios",
-		"name": "Taça de Cerveja",
+		"name": "Camiseta Listrada",
 		"ABV": 0,
 		"IBU": 0,
 		"quantity": 650,
 		"typeGlass": 0,
-		"description": "São 12 copos e 04 frases que você irá querer a coleção completa! Vale lembrar que é um ótimo presente, enviamos todas em caixas de presente para agradar alguém especial ou você mesmo.",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"price": 23.6,
-		"image": "taca-happy-hour.PNG"
+		"image": "camiseta listra 2.png"
 	},
 	{
 		"id": "13",
 		"type": "Kits",
-		"name": "Kit Cerveja Stella Artois",
+		"name": "Kit de Cerveja",
 		"ABV": 0,
 		"IBU": 0,
 		"quantity": 200,
 		"typeGlass": 0,
-		"description": "Kit Cerveja Stella Artois 4 Long Necks 330 ml + Cálice 250ml Oficial.",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"price": 23.6,
-		"image": "kit-cerveja-stella.jpg"
+		"image": "kits cervejas.png"
 	},
 
 	{
 		"id": "14",
 		"type": "Kits",
-		"name": "Kit Cerveja Stella Artois",
+		"name": "Kit de Cerveja",
 		"ABV": 0,
 		"IBU": 0,
 		"quantity": 200,
 		"typeGlass": 0,
-		"description": "Kit Cerveja Stella Artois 4 Long Necks 330 ml + Cálice 250ml Oficial.",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"price": 23.6,
-		"image": "kit-cerveja-stella.jpg"
+		"image": "kits cervejas.png"
 	},
 	{
 		"id": "15",
 		"type": "Kits",
-		"name": "Kit Cerveja Stella Artois",
+		"name": "Kit de Cerveja",
 		"ABV": 0,
 		"IBU": 0,
 		"quantity": 200,
 		"typeGlass": 0,
-		"description": "Kit Cerveja Stella Artois 4 Long Necks 330 ml + Cálice 250ml Oficial.",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"price": 23.6,
-		"image": "kit-cerveja-stella.jpg"
+		"image": "kits cervejas.png"
 	},
 
 	{
 		"id": "16",
 		"type": "Kits",
-		"name": "Kit Cerveja Stella Artois",
+		"name": "Kit de Cerveja",
 		"ABV": 0,
 		"IBU": 0,
 		"quantity": 200,
 		"typeGlass": 0,
-		"description": "Kit Cerveja Stella Artois 4 Long Necks 330 ml + Cálice 250ml Oficial.",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 		"price": 23.6,
-		"image": "kit-cerveja-stella.jpg"
+		"image": "kits cervejas.png"
 	}
 ]

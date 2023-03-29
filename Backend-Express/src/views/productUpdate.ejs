@@ -2,14 +2,14 @@
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>Cadastro de Produtos</title>
+		<title>Editar Produtos</title>
 		<script src="/js/script.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/style_cad_prod.css" />
 	</head>
 	<body>
 		
 		
-		<h1>Cadastro de Produtos</h1>
+		<h1>Editar Produtos</h1>
 		
 		<!-- Alterado para receber o MULTER -->
 		<form action="/product/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
@@ -26,7 +26,7 @@
 			<label for="image">Imagem:</label>
 			<input type="file" id="image" name="image" value="<%= productToEdit.image %>"/><br /> 
 
-			<button type="submit">Cadastrar</button>
+			<button type="submit">Editar</button>
 		</form>
 
 		
