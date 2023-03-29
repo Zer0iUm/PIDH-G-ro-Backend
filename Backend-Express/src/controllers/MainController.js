@@ -21,17 +21,35 @@ const MainController = {
 	},
 
 	cervejas: (req, res) => {
-		res.render('listBeer', { req, products });
-		toThousand;
+		let productsToSearch = products.filter(product =>
+			product.type == 'Cerveja'
+		);
+			
+		res.render('listBeer', { req, products: productsToSearch })
 	},
 
 	listAcessories: (req, res) => {
-		res.render('listAcessories', { req, products });
+		let productsToSearch = products.filter(product =>
+			product.type == 'Acessorios'
+		);
+			
+		res.render('listAcessories', { req, products: productsToSearch })
 	},
 
 	kits: (req, res) => {
-		res.render('listKits', { req, products });
+		let productsToSearch = products.filter(product =>
+			product.type == 'Kits'
+		);
+			
+		res.render('listKits', { req, products: productsToSearch })
+		
+		/* let productsToSearch = products.filter(product =>
+			product.type == 'Kits'
+		);
+		//res.render('listKits', { req, products });
+		res.render('listKits', { req, products: productsToSearch }) */
 	},
+
 	login: (req, res) => {
 		// const errorMessage = req.session.errorMessage;
 		// req.session.errorMessage = null;

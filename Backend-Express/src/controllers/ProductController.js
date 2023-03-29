@@ -16,13 +16,30 @@ const ProductController = {
 	},
 	// Create product
 	
-	create(req, res) {
-		console.log(req.files)
-		
+	create(req, res)  {
+				
 		products.push(req.body);
 		res.json(products);
+		
 	},
 
+	createEJS (req, res) {
+//--------------multer-------------
+console.log(req.body)
+let image = ''
+if (req.files[0] !== undefined){    
+	image = req.files[0].filename
+} 
+
+let newProduct = {
+	id: Number(products[products.length - 1].id) + 1,
+	...req.body,
+	image: image
+}
+
+products.push(newProduct)
+res.redirect('/')
+	},
 
 	update(req, res) {
 		const { id } = req.params;
