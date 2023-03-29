@@ -65,9 +65,9 @@ router.get('/product', productController.showAll);
 
 router.get('/product/:id', productController.showById);
 
-router.post('/product', upload.any(), productController.create); // Executa o método upload - middleware
+//router.post('/product', productController.create); 
 
-router.put('/product/:id', upload.any(), productController.update);
+router.put('/product/:id', productController.update);
 
 router.delete('/product/:id', productController.delete);
 
@@ -75,12 +75,12 @@ router.get('/erro', mainController.erro);
 
 // ROTA PARA SUBIR A IMAGEM DO CADASTRO DE PRODUTOS -------------------------------- //
 
-//router.get('/register', productController.productRegistration);
-router.post('/register', upload.any(), productController.create);
+/* router.get('/register', (req, res) => {
+    res.render(register);
+}); */
+router.post('/product', upload.any(), productController.createEJS); // Executa o método upload - middleware
+// router.put('/product/:id', upload.any(), productController.update);
 
 // --------------------------------------------------------------------------------- //
-
-
-
 
 module.exports = router;

@@ -94,5 +94,106 @@
 		"description": "amargor. Esta é a característica comum entre as diferentes IPAs. Este amargor vem do lúpulo, que, além do sabor peculiar, oferece quatro tipos de aromas diferentes: terroso, herbáceo, cítrico e frutado.",
 		"price": 16.5,
 		"image": "american pale ale.png"
+	},
+
+	{
+		"id": "9",
+		"type": "Acessorios",
+		"name": "Taça de Cerveja",
+		"ABV": 0,
+		"IBU": 0,
+		"quantity": 650,
+		"typeGlass": 0,
+		"description": "São 12 copos e 04 frases que você irá querer a coleção completa! Vale lembrar que é um ótimo presente, enviamos todas em caixas de presente para agradar alguém especial ou você mesmo.",
+		"price": 23.6,
+		"image": "taca-happy-hour.PNG"
+	},
+
+	{
+		"id": "10",
+		"type": "Acessorios",
+		"name": "Taça de Cerveja",
+		"ABV": 0,
+		"IBU": 0,
+		"quantity": 650,
+		"typeGlass": 0,
+		"description": "São 12 copos e 04 frases que você irá querer a coleção completa! Vale lembrar que é um ótimo presente, enviamos todas em caixas de presente para agradar alguém especial ou você mesmo.",
+		"price": 23.6,
+		"image": "taca-happy-hour.PNG"
+	},
+
+	{
+		"id": "11",
+		"type": "Acessorios",
+		"name": "Taça de Cerveja",
+		"ABV": 0,
+		"IBU": 0,
+		"quantity": 650,
+		"typeGlass": 0,
+		"description": "São 12 copos e 04 frases que você irá querer a coleção completa! Vale lembrar que é um ótimo presente, enviamos todas em caixas de presente para agradar alguém especial ou você mesmo.",
+		"price": 23.6,
+		"image": "taca-happy-hour.PNG"
+	},
+	{
+		"id": "12",
+		"type": "Acessorios",
+		"name": "Taça de Cerveja",
+		"ABV": 0,
+		"IBU": 0,
+		"quantity": 650,
+		"typeGlass": 0,
+		"description": "São 12 copos e 04 frases que você irá querer a coleção completa! Vale lembrar que é um ótimo presente, enviamos todas em caixas de presente para agradar alguém especial ou você mesmo.",
+		"price": 23.6,
+		"image": "taca-happy-hour.PNG"
+	},
+	{
+		"id": "13",
+		"type": "Kits",
+		"name": "Kit Cerveja Stella Artois",
+		"ABV": 0,
+		"IBU": 0,
+		"quantity": 200,
+		"typeGlass": 0,
+		"description": "Kit Cerveja Stella Artois 4 Long Necks 330 ml + Cálice 250ml Oficial.",
+		"price": 23.6,
+		"image": "kit-cerveja-stella.jpg"
+	},
+
+	{
+		"id": "14",
+		"type": "Kits",
+		"name": "Kit Cerveja Stella Artois",
+		"ABV": 0,
+		"IBU": 0,
+		"quantity": 200,
+		"typeGlass": 0,
+		"description": "Kit Cerveja Stella Artois 4 Long Necks 330 ml + Cálice 250ml Oficial.",
+		"price": 23.6,
+		"image": "kit-cerveja-stella.jpg"
+	},
+	{
+		"id": "15",
+		"type": "Kits",
+		"name": "Kit Cerveja Stella Artois",
+		"ABV": 0,
+		"IBU": 0,
+		"quantity": 200,
+		"typeGlass": 0,
+		"description": "Kit Cerveja Stella Artois 4 Long Necks 330 ml + Cálice 250ml Oficial.",
+		"price": 23.6,
+		"image": "kit-cerveja-stella.jpg"
+	},
+
+	{
+		"id": "16",
+		"type": "Kits",
+		"name": "Kit Cerveja Stella Artois",
+		"ABV": 0,
+		"IBU": 0,
+		"quantity": 200,
+		"typeGlass": 0,
+		"description": "Kit Cerveja Stella Artois 4 Long Necks 330 ml + Cálice 250ml Oficial.",
+		"price": 23.6,
+		"image": "kit-cerveja-stella.jpg"
 	}
 ]
