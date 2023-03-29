@@ -21,35 +21,34 @@ const MainController = {
 	},
 
 	cervejas: (req, res) => {
-		let productsToSearch = products.filter(product =>
-			product.type == 'Cerveja'
+		let productsToSearch = products.filter(
+			product => product.type == 'Cerveja'
 		);
-			
-		res.render('listBeer', { req, products: productsToSearch })
+
+		res.render('listBeer', { req, products: productsToSearch });
 	},
 
 	listAcessories: (req, res) => {
-		let productsToSearch = products.filter(product =>
-			product.type == 'Acessorios'
+		let productsToSearch = products.filter(
+			product => product.type == 'Acessorios'
 		);
-			
-		res.render('listAcessories', { req, products: productsToSearch })
+
+		res.render('listAcessories', { req, products: productsToSearch });
 	},
 
 	kits: (req, res) => {
-		let productsToSearch = products.filter(product =>
-			product.type == 'Kits'
+		let productsToSearch = products.filter(
+			product => product.type == 'Kits'
 		);
-			
-		res.render('listKits', { req, products: productsToSearch })
-		
+
+		res.render('listKits', { req, products: productsToSearch });
+
 		/* let productsToSearch = products.filter(product =>
 			product.type == 'Kits'
 		);
 		//res.render('listKits', { req, products });
 		res.render('listKits', { req, products: productsToSearch }) */
 	},
-
 	login: (req, res) => {
 		// const errorMessage = req.session.errorMessage;
 		// req.session.errorMessage = null;
@@ -62,7 +61,8 @@ const MainController = {
 		toThousand;
 	},
 	accountUser: (req, res) => {
-		res.render('accountUser', { req });
+		const id = req.session.id;
+		res.render('accountUser', { req, id });
 		toThousand;
 	},
 	accountAdmin: (req, res) => {
@@ -89,12 +89,14 @@ const MainController = {
 	signUp: (req, res) => {
 		res.render('signUp', { req });
 	},
+
 	search: (req, res) => {
 		let search = req.query.keywords;
 		let productsToSearch = products.filter(product =>
 			product.name.toLowerCase().includes(search.toLowerCase())
 		);
-		res.render('search', {req, 
+		res.render('search', {
+			req,
 			products: productsToSearch,
 			search,
 			toThousand,
