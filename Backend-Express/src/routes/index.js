@@ -24,7 +24,6 @@ const upload = multer({ storage: multerDiskStorage });
 const mainController = require('../controllers/MainController');
 const productController = require('../controllers/ProductController');
 const userController = require('../controllers/userController');
-const registerController = require('../controllers/RegistrationController');
 
 router.get('/', mainController.index);
 
@@ -43,8 +42,6 @@ router.post('/login', userController.userLogin);
 router.get('/logout', mainController.logout);
 
 router.get('/accountUser', mainController.accountUser);
-
-router.put('/accountUser/:id', userController.edit);
 
 router.get('/accountAdmin', mainController.accountAdmin);
 
