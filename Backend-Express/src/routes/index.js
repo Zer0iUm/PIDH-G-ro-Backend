@@ -65,11 +65,11 @@ router.get('/product', productController.showAll);
 
 router.get('/product/:id', productController.showById);
 
-router.post('/product', upload.any(), productController.create); // Executa o método upload - middleware
+//router.post('/product', upload.any(), productController.create); // Executa o método upload - middleware
 
-router.put('/product/:id', upload.any(), productController.update);
+//router.put('/product/:id', upload.any(), productController.update);
 
-router.delete('/product/:id', productController.delete);
+//router.delete('/product/:id', productController.delete);
 
 router.get('/erro', mainController.erro);
 
@@ -80,7 +80,22 @@ router.post('/register', upload.any(), productController.create);
 
 // --------------------------------------------------------------------------------- //
 
+// # Product
 
+// GET - EJS Create Form - View
+//router.get('/product/create', productController.createFormEJS)
+
+// GET - EJS Update Form - View
+router.get('/product/update/:id', productController.updateFormEJS)
+
+// POST - EJS Create
+//router.post('/product', upload.any(), productController.createEJS)
+
+// PUT - EJS Update
+router.put('/product/:id', upload.any(), productController.updateEJS)
+
+// DELETE - EJS Delete
+router.delete('/product/:id', productController.deleteEJS)
 
 
 module.exports = router;

@@ -7,11 +7,11 @@
 		<link rel="stylesheet" type="text/css" href="/css/style_cad_prod.css" />
 	</head>
 	<body>
-		<%- include('includes/header') -%>
+		<%- include('includes/header') %>
 		<h1>Cadastro de Produtos</h1>
 		
 		<!-- Alterado para receber o MULTER -->
-		<form action="/register" method="POST" enctype="multipart/form-data">
+		<form action="/register/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
 			<label for="nome">Nome:</label>
 			<input type="text" id="nome" name="nome" /><br />

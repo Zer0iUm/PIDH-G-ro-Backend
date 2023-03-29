@@ -321,6 +321,7 @@ h2.filtro{
     cursor: pointer;
     text-decoration: none;
     transition: 15ms;
+    width: 20%;
 }
 
 .produtos-botao:hover {
