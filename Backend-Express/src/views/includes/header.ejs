@@ -18,7 +18,7 @@
 	</div>
 	<div>
 		<ul class="menu__profile">
-			<% if (req.session.isLogged) { %>
+			 <% if (req.session.isLogged) { %> 
 			<li class="log">
 				<img class="login" alt="login" src="/img/profile.svg" />
 				<% if (req.session.username == 'Admin'){ %>
@@ -49,8 +49,9 @@
 </header>
 
 <section class="pesquisa">
+	<form action="/search" method="GET" class="seach-form">
 	<div class="pesquisa__container">
-		<form action="/search" method="GET" class="seach-form">
+		
 		<input
 			name="keywords"
 			class="pesquisa__input"
@@ -63,3 +64,4 @@
 		</form>
 	</div>
 </section>
+

@@ -1,6 +1,7 @@
 const routes = require('./routes/index');
 const path = require('path');
 const express = require('express');
+const methodOverride = require('method-override')
 const bodyparser = require('body-parser');
 const session = require('express-session');
 const { v4: uuidv4 } = require('uuid');
@@ -19,6 +20,9 @@ app.use(express.static('public'));
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/img', express.static(__dirname + '/img'));
 app.use('/js', express.static(__dirname + '/js'));
+
+// métodos PUT e DELETE
+app.use(methodOverride('_method'))
 
 // instanciando como view engine
 app.set('view engine', 'ejs');

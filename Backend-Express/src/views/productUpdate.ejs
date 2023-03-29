@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Cadastro de Produtos</title>
+		<script src="/js/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/style_cad_prod.css" />
+	</head>
+	<body>
+		
+		
+		<h1>Cadastro de Produtos</h1>
+		
+		<!-- Alterado para receber o MULTER -->
+		<form action="/product/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+			<label for="name">Nome:</label>
+			<input type="text" id="name" name="name"  value="<%= productToEdit.name %>"/><br />
+
+			<label for="description">Descrição:</label>
+			<textarea id="description" name="description" value="<%= productToEdit.description %>"></textarea><br />
+
+			<label for="price">Preço:</label>
+			<input type="number" id="price" name="price" value="<%= productToEdit.price %>" /><br />
+
+			<label for="image">Imagem:</label>
+			<input type="file" id="image" name="image" value="<%= productToEdit.image %>"/><br /> 
+
+			<button type="submit">Cadastrar</button>
+		</form>
+
+		
+	</body>
+</html>

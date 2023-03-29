@@ -101,7 +101,13 @@
 							+
 						</div>
 						<button>COMPRAR</button>
+
+					
 					</section>
+					<a href="/product/update/<%= product.id %>" class="action-button edit">Editar Produto</a>
+					<form action="/product/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+					  <button type="submit" class="action-button delete">Remover Produto</button>
+					</form>
 				</section>
 			</div>
 
