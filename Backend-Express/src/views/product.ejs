@@ -51,8 +51,12 @@
 				</section>
 				<section id="info-produto">
 					<h1><%= product.name%></h1>
-					<h2><%=product.type%> - <%= product.quantity%> ML</h2>
+					<h2>
+						<%=product.type%> <%if (product.type == 'Cerveja') { %>
+						- <%= product.quantity%> ML <%}%>
+					</h2>
 					<p><%=product.description%></p>
+					<%if (product.type == 'Cerveja') { %>
 					<table id="info-tabela">
 						<tr>
 							<th>% de álcool</th>
@@ -65,6 +69,7 @@
 							<td><%=product.typeGlass %></td>
 						</tr>
 					</table>
+					<%}%>
 					<hr />
 					<div id="rating">
 						<img
