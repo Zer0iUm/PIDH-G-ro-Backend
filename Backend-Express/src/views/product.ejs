@@ -11,13 +11,12 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;900&display=swap"
 			rel="stylesheet"
 		/>
-		<link href="/css/reset.css" rel="stylesheet" />
 		<link href="/css/pagina-produto.css" rel="stylesheet" />
 		<script
 			src="https://kit.fontawesome.com/8efdacdf0c.js"
 			crossorigin="anonymous"
 		></script>
-		<script src="/js/script.js"></script>
+		<script src="/js/product.js"></script>
 	</head>
 	<body>
 		<%- include("includes/header") %>
@@ -27,8 +26,8 @@
 					<div id="produto-mini">
 						<img
 							alt="Pequeno 1"
-							src="/img/brown.png"
-							onclick="changeImage('/img/brown.png'); clickedImage('img-mini-1')"
+							src="/img/<%= product.image %>"
+							onclick="changeImage('/img/<%= product.image %>'); clickedImage('img-mini-1')"
 							id="img-mini-1"
 						/>
 						<img
@@ -46,7 +45,7 @@
 					</div>
 					<img
 						alt="Imagem principal"
-						src="/img/brown.png"
+						src="/img/<%= product.image %>"
 						id="display"
 					/>
 				</section>

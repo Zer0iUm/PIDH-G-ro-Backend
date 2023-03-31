@@ -19,31 +19,6 @@ function changeInfo(info) {
 
 /**********PRODUTO**************/
 
-function setQuantidade(input) {
-	let valor = document.getElementById('input-quantidade').value;
-	if (input === 'remove') {
-		valor <= 0 ? (valor = 0) : valor--;
-		document.getElementById('input-quantidade').value = valor;
-	} else if (input === 'add') {
-		valor++;
-		document.getElementById('input-quantidade').value = valor;
-	}
-	total = document.getElementById('valorTotal').textContent;
-	console.log(total);
-}
-
-function changeImage(thumbnail) {
-	document.getElementById('display').src = thumbnail;
-}
-
-function clickedImage(id) {
-	document.getElementById('img-mini-1').style.opacity = 1;
-	document.getElementById('img-mini-2').style.opacity = 1;
-	document.getElementById('img-mini-3').style.opacity = 1;
-
-	document.getElementById(id).style.opacity = 0.5;
-}
-
 /* INDEX POPUP */
 function closePopUp() {
 	document.getElementById('container-pop-up').style.display = 'none';
@@ -122,23 +97,21 @@ const mouseOutMenuFive = () => {
 /***********CADASTRO DE PRODUTOS*****************/
 
 const form = document.querySelector('form');
-	form.addEventListener('submit', cadastrarProduto);
+form.addEventListener('submit', cadastrarProduto);
 
-	function cadastrarProduto(event) {
-        event.preventDefault();
+function cadastrarProduto(event) {
+	event.preventDefault();
 
-    const nome = document.querySelector('#nome').value;
-    const descricao = document.querySelector('#descricao').value;
-    const preco = document.querySelector('#preco').value;
-    const imagem = document.querySelector('#imagem').value;
+	const nome = document.querySelector('#nome').value;
+	const descricao = document.querySelector('#descricao').value;
+	const preco = document.querySelector('#preco').value;
+	const imagem = document.querySelector('#imagem').value;
 
-    console.log('Nome:', nome);
-    console.log('Descrição:', descricao);
-    console.log('Preço:', preco);
-    console.log('Imagem:', imagem);
+	console.log('Nome:', nome);
+	console.log('Descrição:', descricao);
+	console.log('Preço:', preco);
+	console.log('Imagem:', imagem);
 }
-
-
 
 // /***********Mouse event carrinho*****************/
 // window.addEventListener('load', function () {
