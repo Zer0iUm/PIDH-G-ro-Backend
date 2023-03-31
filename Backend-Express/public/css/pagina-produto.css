@@ -23,6 +23,14 @@ main {
 	flex-direction: row;
 	gap: 3rem;
 	border-radius: 0px;
+	align-self: center;
+}
+
+#display {
+	width: 25.625rem;
+	height: 28.25rem;
+	border-radius: 5px;
+	align-self: center;
 }
 
 #produto-mini img {

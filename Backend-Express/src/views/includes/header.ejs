@@ -23,11 +23,11 @@
 				<img class="login" alt="login" src="/img/profile.svg" />
 				<% if (req.session.username == 'Admin'){ %>
 				<a class="login" href="/accountAdmin"
-					><%= req.session.username %></a
+					><%= req.session.username.toUpperCase() %></a
 				>
 				<% } else { %>
 				<a class="login" href="/accountUser"
-					><%= req.session.username %></a
+					><%= req.session.username.toUpperCase() %></a
 				>
 				<%}%>
 			</li>
