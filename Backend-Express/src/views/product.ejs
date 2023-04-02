@@ -183,17 +183,24 @@
 					</div>
 				</section>
 			</section>
+
+			<!-- RECOMENDAÇÃO DE PRODUTOS -->
 			<section id="recomendacao">
 				<h2 class="subtitulo">QUEM VIU ESSE PRODUTO TAMBÉM VIU</h2>
 				<hr class="divisao" />
 
 				<ul class="produtos__container">
+					<% for(let i=0; i<=3; i++) { %> <% const iRandom =
+					Math.floor(Math.random() * products.length) %>
 					<li class="produto__container">
-						<a href="./product.html" class="link__produto">
+						<a
+							href="/product/<%= products[iRandom].id%>"
+							class="link__produto"
+						>
 							<div class="produto__img">
 								<img
 									class="foto"
-									src="/img/PRODUTOSKIT 1.png"
+									src="/img/<%= products[iRandom].image %>"
 									alt="banner"
 								/>
 								<div class="icone">
@@ -207,91 +214,18 @@
 							</div>
 							<div class="produto__conteudo">
 								<p class="produto__nome">
-									Kit Goró - 3 cervejas
+									<%= products[iRandom].name %>
 								</p>
-								<p class="produto__descricao">kits</p>
-								<p class="produto__valor">R$ 00,00</p>
+								<p class="produto__descricao">
+									<%= products[iRandom].type %>
+								</p>
+								<p class="produto__valor">
+									<%= products[iRandom].price.toFixed(2) %>
+								</p>
 							</div>
 						</a>
 					</li>
-					<li class="produto__container">
-						<a href="./product.html" class="link__produto">
-							<div class="produto__img">
-								<img
-									class="foto"
-									src="/img/PRODUTOSKIT 1.png"
-									alt="banner"
-								/>
-								<div class="icone">
-									<a href="#"
-										><img
-											class="icone"
-											src="/img/sacola.png"
-											alt="banner"
-									/></a>
-								</div>
-							</div>
-							<div class="produto__conteudo">
-								<p class="produto__nome">
-									Kit Goró - 3 cervejas
-								</p>
-								<p class="produto__descricao">kits</p>
-								<p class="produto__valor">R$ 00,00</p>
-							</div>
-						</a>
-					</li>
-					<li class="produto__container">
-						<a href="./product.html" class="link__produto">
-							<div class="produto__img">
-								<img
-									class="foto"
-									src="/img/PRODUTOSKIT 1.png"
-									alt="banner"
-								/>
-								<div class="icone">
-									<a href="#"
-										><img
-											class="icone"
-											src="/img/sacola.png"
-											alt="banner"
-									/></a>
-								</div>
-							</div>
-							<div class="produto__conteudo">
-								<p class="produto__nome">
-									Kit Goró - 3 cervejas
-								</p>
-								<p class="produto__descricao">kits</p>
-								<p class="produto__valor">R$ 00,00</p>
-							</div>
-						</a>
-					</li>
-					<li class="produto__container">
-						<a href="./product.html" class="link__produto">
-							<div class="produto__img">
-								<img
-									class="foto"
-									src="/img/PRODUTOSKIT 1.png"
-									alt="banner"
-								/>
-								<div class="icone">
-									<a href="#"
-										><img
-											class="icone"
-											src="/img/sacola.png"
-											alt="banner"
-									/></a>
-								</div>
-							</div>
-							<div class="produto__conteudo">
-								<p class="produto__nome">
-									Kit Goró - 3 cervejas
-								</p>
-								<p class="produto__descricao">kits</p>
-								<p class="produto__valor">R$ 00,00</p>
-							</div>
-						</a>
-					</li>
+					<% } %>
 				</ul>
 			</section>
 		</main>
