@@ -4,8 +4,9 @@
 	width: 36.938rem;
 	height: 32.625rem;
 	position: fixed;
-	top: 15%;
-	left: 30%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	z-index: 4;
 	justify-content: center;
 	background-color: #fbf7f2;
