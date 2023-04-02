@@ -1,142 +1,148 @@
 .produtos {
-  padding: 5rem 8rem;
-  font-family: "Lato";
-  text-align: center;
+	padding: 5rem 8rem;
+	font-family: 'Lato';
+	text-align: center;
+}
+
+.alignProdutos {
+	display: flex;
+	justify-content: center;
 }
 
 .produtos__container {
-  text-align: center;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+	text-align: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	justify-content: space-between;
 }
 
 .produto__container {
-  padding: 1rem;
+	padding: 1rem;
+	justify-self: flex-start;
 }
 
 .produto__container:hover {
-  background-color: #f3f0eb70;
-  border-radius: 10px;
+	background-color: #f3f0eb70;
+	border-radius: 10px;
 }
 
 .produtos h3 {
-  font-size: 25px;
-  border-bottom: solid;
-  padding-bottom: 2rem;
-  text-align: left;
-  font-weight: 900;
+	font-size: 25px;
+	border-bottom: solid;
+	padding-bottom: 2rem;
+	text-align: left;
+	font-weight: 900;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
 .produto__img {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .foto {
-  border-radius: 10px;
-  width: 16.813rem;
-  height: 17.125rem;
+	border-radius: 10px;
+	width: 16.813rem;
+	height: 17.125rem;
 }
 
 .icone {
-  position: absolute;
-  top: 80%;
-  right: 2%;
-  background-color: #ffffff;
-  border-radius: 50px;
+	position: absolute;
+	top: 80%;
+	right: 2%;
+	background-color: #ffffff;
+	border-radius: 50px;
 }
 
 .icone:hover {
-  background-color: #f3f0eb70;
+	background-color: #f3f0eb70;
 }
 
 .produto__conteudo {
-  text-align: start;
+	text-align: start;
 }
 
 .produto__nome {
-  font-weight: 700;
-  font-size: 18px;
-  margin-top: 1rem;
+	font-weight: 700;
+	font-size: 18px;
+	margin-top: 1rem;
 }
 
 .produto__descricao {
-  font-weight: 400;
-  font-size: 15px;
-  color: #8b8b8b;
-  margin-top: 0.4rem;
+	font-weight: 400;
+	font-size: 15px;
+	color: #8b8b8b;
+	margin-top: 0.4rem;
 }
 
 .produto__valor {
-  font-weight: 900;
-  font-size: 20px;
-  line-height: 24px;
-  margin-top: 1rem;
+	font-weight: 900;
+	font-size: 20px;
+	line-height: 24px;
+	margin-top: 1rem;
 }
 
 .produtos__botao {
-  background-color: #000000;
-  color: #ffffff;
-  
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-  text-decoration: none;
-  transition: 15ms;
+	background-color: #000000;
+	color: #ffffff;
+
+	padding: 0.5rem 1.5rem;
+	cursor: pointer;
+	text-decoration: none;
+	transition: 15ms;
 }
 
 .produtos__botao:hover {
-  background-color: #606060;
+	background-color: #606060;
 }
 
 hr {
-  padding: 0;
-  margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 .amarelo {
-  border-top: 6px solid #f8a912;
+	border-top: 6px solid #f8a912;
 }
 
 .vermelho {
-  border-top: 6px solid #bd2d16;
+	border-top: 6px solid #bd2d16;
 }
 
 .preto {
-  border-top: 6px solid #1e0202;
+	border-top: 6px solid #1e0202;
 }
 
 /*=============== Responsividade =============*/
 @media (max-width: 360px) {
-  .produtos h3 {
-    margin-top: 1rem;
-    font-size: 15px;
-    border-bottom: solid;
-    text-align: left;
-    font-weight: 700;
-  }
+	.produtos h3 {
+		margin-top: 1rem;
+		font-size: 15px;
+		border-bottom: solid;
+		text-align: left;
+		font-weight: 700;
+	}
 
-  .produtos__botao {
-    font-size: 15px;
-  }
+	.produtos__botao {
+		font-size: 15px;
+	}
 }
 @media (max-width: 630px) {
-  .produtos h3 {
-    margin-top: 1rem;
-    font-size: 18px;
-    border-bottom: solid;
-    text-align: left;
-    font-weight: 700;
-  }
+	.produtos h3 {
+		margin-top: 1rem;
+		font-size: 18px;
+		border-bottom: solid;
+		text-align: left;
+		font-weight: 700;
+	}
 
-  .produtos__botao {
-    font-size: 10px;
-    padding: 0.5rem;
-  }
+	.produtos__botao {
+		font-size: 10px;
+		padding: 0.5rem;
+	}
 }

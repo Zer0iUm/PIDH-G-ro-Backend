@@ -91,24 +91,15 @@
 		<section class="categoria">
 			<h3>CATEGORIAS</h3>
 			<div class="categoria__container">
-				<a
-					href="/cervejas"
-					class="categoria__amarelo"
-				>
+				<a href="/cervejas" class="categoria__amarelo">
 					<img src="/img/Group 4.svg" />
 					<h4>CERVEJA</h4>
 				</a>
-				<a
-					href="/listAcessories"
-					class="categoria__preto"
-				>
+				<a href="/listAcessories" class="categoria__preto">
 					<img src="/img/Vector.svg" />
 					<h4>ACESSÓRIOS</h4>
 				</a>
-				<a
-					href="/Kits"
-					class="categoria__vermelho"
-				>
+				<a href="/Kits" class="categoria__vermelho">
 					<img src="/img/Vector_.svg" />
 					<h4>KITS</h4>
 				</a>
@@ -117,38 +108,45 @@
 
 		<section class="produtos">
 			<h3>TODOS OS PRODUTOS</h3>
-			<ul class="produtos__container">
-				<% products.forEach((product) =>{ %>
-				<li class="produto__container">
-					<a href="/product/<%= product.id%>" class="link__produto">
-						<div class="produto__img">
-							<img
-								class="foto"
-								src="/img/<%= product.image %>"
-								alt="banner"
-							/>
-							<div class="icone">
-								<a href="#"
-									><img
-										class="icone"
-										src="/img/sacola.png"
-										alt="banner"
-								/></a>
+			<div class="alignProdutos">
+				<ul class="produtos__container">
+					<% for(let i=1; i<=10; i++){ %>
+					<li class="produto__container">
+						<a
+							href="/product/<%= products[i].id%>"
+							class="link__produto"
+						>
+							<div class="produto__img">
+								<img
+									class="foto"
+									src="/img/<%= products[i].image %>"
+									alt="banner"
+								/>
+								<div class="icone">
+									<a href="#"
+										><img
+											class="icone"
+											src="/img/sacola.png"
+											alt="banner"
+									/></a>
+								</div>
 							</div>
-						</div>
-						<div class="produto__conteudo">
-							<p class="produto__nome"><%= product.name %></p>
-							<p class="produto__descricao">
-								<%= product.type %>
-							</p>
-							<p class="produto__valor">
-								R$ <%= product.price %>
-							</p>
-						</div>
-					</a>
-				</li>
-				<% } )%>
-			</ul>
+							<div class="produto__conteudo">
+								<p class="produto__nome">
+									<%= products[i].name %>
+								</p>
+								<p class="produto__descricao">
+									<%= products[i].type %>
+								</p>
+								<p class="produto__valor">
+									R$ <%= products[i].price %>
+								</p>
+							</div>
+						</a>
+					</li>
+					<% } %>
+				</ul>
+			</div>
 
 			<a class="produtos__botao" href="#">VER TODOS OS PRODUTOS</a>
 		</section>
