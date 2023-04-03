@@ -17,11 +17,11 @@ app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
 // ROTA 404
-app.use((req, res, next) => {
-	res.status(404).render('404-page');
+/* app.use((req, res, next) => {
+	res.status(404).render('404');
 	next();
 })
-
+ */
 // Static Files
 app.use(express.static('public'));
 app.use('/css', express.static(__dirname + '/css'));

@@ -43,11 +43,7 @@ const MainController = {
 
 		res.render('listKits', { req, products: productsToSearch });
 
-		/* let productsToSearch = products.filter(product =>
-			product.type == 'Kits'
-		);
-		//res.render('listKits', { req, products });
-		res.render('listKits', { req, products: productsToSearch }) */
+		
 	},
 	login: (req, res) => {
 		// const errorMessage = req.session.errorMessage;
