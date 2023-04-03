@@ -6,14 +6,13 @@ const path = require('path'); // MANIPULAR PASTAS
 // -------------------------------------------- MULTER ---------------------------- //
 const multerDiskStorage = multer.diskStorage({
 	destination: (req, file, callback) => {
-		/* const folder = path.join(__dirname, './public/img') // COMBINA SEGMENTOS DE CAMINHO
-        callback(null, folder); */
+		
 		callback(null, 'public/img');
 	},
 	filename: (req, file, callback) => {
 		const imageName = Date.now() + file.originalname;
 		callback(null, imageName);
-		// callback(null, Date.now() + "-" + file.originalname)
+		
 	},
 });
 
