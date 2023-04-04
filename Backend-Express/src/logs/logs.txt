@@ -43,3 +43,10 @@ O usuário acessou a rota: /product
 O usuário acessou a rota: /product
 O usuário acessou a rota: /product
 O usuário acessou a rota: /product
+O usuário acessou a rota: /
+O usuário acessou a rota: /favicon.ico
+O usuário acessou a rota: /homeStore
+O usuário acessou a rota: /login
+O usuário acessou a rota: /signUp
+O usuário acessou a rota: /cadastro.js
+O usuário acessou a rota: /signUp
