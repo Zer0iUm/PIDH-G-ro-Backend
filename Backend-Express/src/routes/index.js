@@ -1,9 +1,14 @@
+const { body } = require('express-validator')
+
 const express = require('express');
 const router = express.Router();
-const multer = require('multer'); // FUNCIONALIDADES DO MULTER
 const path = require('path'); // MANIPULAR PASTAS
 
-// -------------------------------------------- MULTER ---------------------------- //
+//middlewares
+const log = require('../middlewares/log')
+const upload = require('../middlewares/upload') // multer
+
+/* // -------------------------------------------- MULTER ---------------------------- //
 const multerDiskStorage = multer.diskStorage({
 	destination: (req, file, callback) => {
 		
@@ -16,15 +21,15 @@ const multerDiskStorage = multer.diskStorage({
 	},
 });
 
-const upload = multer({ storage: multerDiskStorage });
+const upload = multer({ storage: multerDiskStorage }); */
 
-// --------------------------------------------------------------------------------- //
+
 
 const mainController = require('../controllers/MainController');
 const productController = require('../controllers/ProductController');
 const userController = require('../controllers/userController');
 
-router.get('/', mainController.index);
+router.get('/', mainController.index); // router.get('/',  log, mainController.index);
 
 router.get('/homeStore', mainController.homeStore);
 
@@ -78,7 +83,11 @@ router.get('/erro', mainController.erro);
 router.get('/product/update/:id', productController.updateFormEJS);
 
 // POST - EJS Create
-router.post('/product', upload.any(), productController.createEJS);
+router.post('/product', upload.any(),
+body('name')
+	.notEmpty()
+	.withMessage('Nome do Produto deve ser informado'),
+	productController.createEJS);
 
 // PUT - EJS Update
 router.put('/product/:id', upload.any(), productController.updateEJS);

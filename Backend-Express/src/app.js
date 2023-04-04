@@ -1,3 +1,4 @@
+const log = require('./middlewares/log')
 const routes = require('./routes/index');
 const path = require('path');
 const express = require('express');
@@ -16,12 +17,6 @@ app.use(express.json());
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: true }));
 
-// ROTA 404
-/* app.use((req, res, next) => {
-	res.status(404).render('404');
-	next();
-})
- */
 // Static Files
 app.use(express.static('public'));
 app.use('/css', express.static(__dirname + '/css'));
@@ -45,7 +40,16 @@ app.use(
 		saveUninitialized: true,
 	})
 );
+// Middleware log - nível global
+app.use(log)
 
+// ROTA 404
+/* app.use((req, res, next) => {
+	res.status(404).render('404');
+	next();
+})
+
+ */
 /**
  * Rotas
  */

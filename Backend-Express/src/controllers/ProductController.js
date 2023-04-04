@@ -1,3 +1,6 @@
+
+const { validationResult } = require('express-validator')
+
 const products = require('../database/products.json');
 
 const ProductController = {
@@ -24,7 +27,12 @@ const ProductController = {
 	createEJS(req, res) {
 		//--------------multer-------------
 		console.log(req.body);
-		let image = '';
+		let image = ''
+
+const errors = validationResult(req) // express-validation
+if (!errors.isEmpty())
+res.render('productRegistration', {errors: errors.mapped()}) // ou array()
+
 		if (req.files[0] !== undefined) {
 			image = req.files[0].filename;
 		}
@@ -38,6 +46,8 @@ const ProductController = {
 		products.push(newProduct);
 		res.redirect('http://localhost:3000/homeStore');
 	},
+
+
 
 	update(req, res) {
 		const { id } = req.params;
