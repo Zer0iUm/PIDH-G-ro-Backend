@@ -10,8 +10,18 @@
 
 		<h1>Cadastro de Produtos</h1>
 		
+		
+		
+			<% if (typeof errors !== 'undefined') { %>
+            <ul>
+              <% for(let error in errors) { %>
+                <li> <%= errors[error].msg %> </li>
+              <% } %>
+            </ul>
+          <% } %>
+		
+		
 		<!-- Alterado para receber o MULTER -->
-
 		<form action="/product" method="POST" enctype="multipart/form-data">
 
 			<label for="name">Nome:</label>
