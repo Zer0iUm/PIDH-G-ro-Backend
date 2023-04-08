@@ -15,11 +15,6 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
 		/>
-		<link href="/css/reset.css" rel="stylesheet" />
-		<link href="/css/cabecalho.css" rel="stylesheet" />
-		<link href="/css/banner.css" rel="stylesheet" />
-		<link href="/css/footer.css" rel="stylesheet" />
-		<link href="/css/busca.css" rel="stylesheet" />
 		<link href="/css/cadastro.css" rel="stylesheet" />
 	</head>
 
@@ -137,15 +132,23 @@
 
 			<!-- <form class="form"> -->
 				<div class="teste">
-					<input type="cep" placeholder="CEP | 00000-000" name='cep' />
+					<input 
+					id="viaCep"
+					type="cep" 
+					placeholder="CEP | 00000-000" 
+					name='cep'
+					maxlength="8"
+					minlength="8"
+					 />
 					<input
 						class="teste vazio"
 						aria-hidden="true"
 						disabled="disabled"
+
 					/>
 				</div>
 				<div class="teste">
-					<input type="cidade" placeholder="Cidade" name='city' />
+					<input id="cidade" type="cidade" placeholder="Cidade" name='city' />
 					<select id="state" name='state'>
 						<option class="select" disabled selected hidden>
 							Selecione seu estado
@@ -153,12 +156,12 @@
 					</select>
 				</div>
 				<div class="teste">
-					<input type="endereco" placeholder="Rua" name='address' />
+					<input id="endereco" type="endereco" placeholder="Rua" name='address' />
 					<input type="complemento" placeholder="Complemento" name='complement' />
 				</div>
 				<div class="teste">
 					<input type="numero" placeholder="Número" name='number' />
-					<input type="bairro" placeholder="Bairro" name='district' />
+					<input id="bairro" type="bairro" placeholder="Bairro" name='district' />
 				</div>
 			
 			<div class="teste">
@@ -181,10 +184,6 @@
 				},
 			});
 		</script>
-
-		<hr class="amarelo" />
-		<hr class="vermelho" />
-		<hr class="preto" />
 
 		<%- include("includes/footer") %>
 		<script src="/js/cadastro.js"></script>
