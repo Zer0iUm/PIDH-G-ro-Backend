@@ -1,0 +1,3 @@
+O usuário acessou a rota: /
+O usuário acessou a rota: /shoppingCart
+O usuário acessou a rota: /script.js
