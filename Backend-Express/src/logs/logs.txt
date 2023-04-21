@@ -151,3 +151,13 @@ O usuário acessou a rota: /listAcessories
 O usuário acessou a rota: /style.css
 O usuário acessou a rota: /listAcessories
 O usuário acessou a rota: /style.css
+O usuário acessou a rota: /
+O usuário acessou a rota: /favicon.ico
+O usuário acessou a rota: /kits
+O usuário acessou a rota: /reset.css
+O usuário acessou a rota: /
+O usuário acessou a rota: /kits
+O usuário acessou a rota: /reset.css
+O usuário acessou a rota: /product
+O usuário acessou a rota: /product/create
+O usuário acessou a rota: /product
