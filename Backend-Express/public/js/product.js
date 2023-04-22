@@ -4,6 +4,7 @@ function setQuantidade(input) {
 	if (input === 'remove') {
 		valor <= 1 ? (valor = 1) : valor--;
 		document.getElementById('input-quantidade').value = valor;
+		//updateTotal();
 	} else if (input === 'add') {
 		valor++;
 		document.getElementById('input-quantidade').value = valor;
@@ -43,3 +44,22 @@ window.addEventListener('load', () => {
 	btnRemover.addEventListener('click', handleValue);
 	btnAdicionar.addEventListener('click', handleValue);
 });
+
+
+
+// Valor total0, do produto
+
+/* function updateTotal(){
+    let valorTotal = 0
+    const produtoCarrinho = document.getElementsByClassName("compra")
+
+for (var i = 0; i < produtoCarrinho.length; i++) {
+    const precoProduto = produtoCarrinho[i].getElementByName("valor_unitário")[0].innerText.replace("R$", "").replace(",", ".");
+    quantidadeProduto = produtoCarrinho[i].getElementByName("input-quantidade")[0].value;
+
+      valorTotal += (precoProduto * quantidadeProduto) 
+}
+    valorTotal = valorTotal.toFixed(2)
+    valorTotal = valorTotal.replace(".", ",")
+    document.querySelector(".valor_total class").innnerText = "R$ " + valorTotal
+} */
