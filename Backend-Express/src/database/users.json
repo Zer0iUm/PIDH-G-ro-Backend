@@ -103,5 +103,23 @@
     "complement": "",
     "number": "111",
     "district": "Vila Nivi"
+  },
+  {
+    "id": 7,
+    "name": "Joao",
+    "lastname": "moura",
+    "birthday": "13/03/2000",
+    "genre": "Masculino",
+    "cpf": "99999999999",
+    "phone": "99999999999",
+    "email": "dawdaw@email.com",
+    "password": "$2b$10$vjy4ZIy6D.jx/uXQxzi9/eYMVWbleO8qRbGH6Lq4RO2CWc/GC4Flq",
+    "cep": "45820767",
+    "city": "Eunápolis",
+    "state": "BA",
+    "address": "Avenida 1",
+    "complement": "",
+    "number": "55",
+    "district": "Jardins das Acácias"
   }
 ]

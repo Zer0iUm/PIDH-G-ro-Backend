@@ -22,14 +22,15 @@ const userController = {
 		} else {
 			req.session.errorMessage = true;
 			res.redirect('/login');
+			console.log('nao foi');
 		}
 	},
-	
+
 	register: (req, res) => {
 		const newUserData = { id: users.length + 1, ...req.body };
 
-		const hash = bcrypt.hashSync(newUserData.password, 10) // bcrypt
-		newUserData.password = hash // salva na propriedade senha
+		const hash = bcrypt.hashSync(newUserData.password, 10); // bcrypt
+		newUserData.password = hash; // salva na propriedade senha
 
 		users.push(newUserData);
 

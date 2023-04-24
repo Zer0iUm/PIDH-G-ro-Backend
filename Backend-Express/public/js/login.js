@@ -8,18 +8,17 @@ const mensagem = document.querySelector('.form__erro');
 login.addEventListener('submit', e => {
 	e.preventDefault();
 
-	/* if (!validateEmail(email.value) || email.value == '') {
+	if (!validateEmail(email.value) || email.value == '') {
 		mensagem.textContent = 'Confira campo e-mail';
 	} else if (!validatePassword(senha.value) || senha.value == '') {
 		mensagem.textContent = 'Confira campo senha';
 		// } else if (req.session.errorMessage == true) {
 		// 	alert(req.session.errorMessage);
-		// 	req.session.errorMessage = false;
+		// 	// req.session.errorMessage = false;
 		// 	res.redirect('/login');
 	} else {
 		login.submit();
-	} */
-
+	}
 });
 
 // const errorMessage = session.errorMessage;
