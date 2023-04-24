@@ -8,23 +8,6 @@ const path = require('path'); // MANIPULAR PASTAS
 const log = require('../middlewares/log')
 const upload = require('../middlewares/upload') // multer
 
-/* // -------------------------------------------- MULTER ---------------------------- //
-const multerDiskStorage = multer.diskStorage({
-	destination: (req, file, callback) => {
-		
-		callback(null, 'public/img');
-	},
-	filename: (req, file, callback) => {
-		const imageName = Date.now() + file.originalname;
-		callback(null, imageName);
-		
-	},
-});
-
-const upload = multer({ storage: multerDiskStorage }); */
-
-
-
 const mainController = require('../controllers/MainController');
 const productController = require('../controllers/ProductController');
 const userController = require('../controllers/userController');
@@ -59,9 +42,18 @@ router.get('/search', mainController.search);
 
 router.get('/shoppingCart', mainController.shoppingCart);
 
+//user
+
 router.get('/signUp', mainController.signUp);
 
 router.post('/signUp', userController.register);
+
+/* router.post('/signUp',
+body('name')
+	.notEmpty()
+	.withMessage('Nome do usuário deve ser informado'),
+	userController.register); */
+
 
 //Product
 router.get('/product', productController.showAll);
