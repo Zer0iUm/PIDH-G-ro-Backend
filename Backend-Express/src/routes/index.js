@@ -1,12 +1,14 @@
-const { body } = require('express-validator')
+const { body } = require('express-validator');
 
 const express = require('express');
 const router = express.Router();
 const path = require('path'); // MANIPULAR PASTAS
 
 //middlewares
-const log = require('../middlewares/log')
-const upload = require('../middlewares/upload') // multer
+const log = require('../middlewares/log');
+const upload = require('../middlewares/upload'); // multer
+const authentication = require('../middlewares/authentication');
+
 
 const mainController = require('../controllers/MainController');
 const productController = require('../controllers/ProductController');
@@ -40,7 +42,7 @@ router.get('/checkout', mainController.checkout);
 
 router.get('/search', mainController.search);
 
-router.get('/shoppingCart', mainController.shoppingCart);
+router.get('/shoppingCart', authentication, mainController.shoppingCart);
 
 //user
 
@@ -75,11 +77,12 @@ router.get('/erro', mainController.erro);
 router.get('/product/update/:id', productController.updateFormEJS);
 
 // POST - EJS Create
-router.post('/product', upload.any(),
-body('name')
-	.notEmpty()
-	.withMessage('Nome do Produto deve ser informado'),
-	productController.createEJS);
+router.post(
+	'/product',
+	upload.any(),
+	body('name').notEmpty().withMessage('Nome do Produto deve ser informado'),
+	productController.createEJS
+);
 
 // PUT - EJS Update
 router.put('/product/:id', upload.any(), productController.updateEJS);

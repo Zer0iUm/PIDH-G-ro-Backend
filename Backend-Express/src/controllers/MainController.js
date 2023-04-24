@@ -2,13 +2,6 @@ const products = require('../database/products.json');
 const users = require('../database/users.json');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-const requireLogin = (req, res, next) => {
-	if (!req.session.isLogged) {
-		res.redirect('login');
-	} else {
-		next();
-	}
-};
 const MainController = {
 	index: (req, res) => {
 		res.render('index', { products });
@@ -42,8 +35,6 @@ const MainController = {
 		);
 
 		res.render('listKits', { req, products: productsToSearch });
-
-		
 	},
 	login: (req, res) => {
 		// const errorMessage = req.session.errorMessage;
