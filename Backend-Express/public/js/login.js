@@ -14,7 +14,7 @@ login.addEventListener('submit', e => {
 		mensagem.textContent = 'Confira campo senha';
 		// } else if (req.session.errorMessage == true) {
 		// 	alert(req.session.errorMessage);
-		// 	req.session.errorMessage = false;
+		// 	// req.session.errorMessage = false;
 		// 	res.redirect('/login');
 	} else {
 		login.submit();

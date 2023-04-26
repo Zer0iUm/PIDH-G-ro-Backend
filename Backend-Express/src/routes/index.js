@@ -1,28 +1,13 @@
-const { body } = require('express-validator')
+const { body } = require('express-validator');
 
 const express = require('express');
 const router = express.Router();
 const path = require('path'); // MANIPULAR PASTAS
 
 //middlewares
-const log = require('../middlewares/log')
-const upload = require('../middlewares/upload') // multer
-
-/* // -------------------------------------------- MULTER ---------------------------- //
-const multerDiskStorage = multer.diskStorage({
-	destination: (req, file, callback) => {
-		
-		callback(null, 'public/img');
-	},
-	filename: (req, file, callback) => {
-		const imageName = Date.now() + file.originalname;
-		callback(null, imageName);
-		
-	},
-});
-
-const upload = multer({ storage: multerDiskStorage }); */
-
+const log = require('../middlewares/log');
+const upload = require('../middlewares/upload'); // multer
+const authentication = require('../middlewares/authentication');
 
 
 const mainController = require('../controllers/MainController');
@@ -57,11 +42,20 @@ router.get('/checkout', mainController.checkout);
 
 router.get('/search', mainController.search);
 
-router.get('/shoppingCart', mainController.shoppingCart);
+router.get('/shoppingCart', authentication, mainController.shoppingCart);
+
+//user
 
 router.get('/signUp', mainController.signUp);
 
 router.post('/signUp', userController.register);
+
+/* router.post('/signUp',
+body('name')
+	.notEmpty()
+	.withMessage('Nome do usuário deve ser informado'),
+	userController.register); */
+
 
 //Product
 router.get('/product', productController.showAll);
@@ -83,11 +77,12 @@ router.get('/erro', mainController.erro);
 router.get('/product/update/:id', productController.updateFormEJS);
 
 // POST - EJS Create
-router.post('/product', upload.any(),
-body('name')
-	.notEmpty()
-	.withMessage('Nome do Produto deve ser informado'),
-	productController.createEJS);
+router.post(
+	'/product',
+	upload.any(),
+	body('name').notEmpty().withMessage('Nome do Produto deve ser informado'),
+	productController.createEJS
+);
 
 // PUT - EJS Update
 router.put('/product/:id', upload.any(), productController.updateEJS);

@@ -1,8 +1,8 @@
-const log = require('./middlewares/log')
+const log = require('./middlewares/log');
 const routes = require('./routes/index');
 const path = require('path');
 const express = require('express');
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
 const bodyparser = require('body-parser');
 const session = require('express-session');
 const { v4: uuidv4 } = require('uuid');
@@ -24,7 +24,7 @@ app.use('/img', express.static(__dirname + '/img'));
 app.use('/js', express.static(__dirname + '/js'));
 
 // métodos PUT e DELETE
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method'));
 
 // instanciando como view engine
 app.set('view engine', 'ejs');
@@ -41,7 +41,7 @@ app.use(
 	})
 );
 // Middleware log - nível global
-app.use(log)
+// app.use(log)
 
 // ROTA 404
 /* app.use((req, res, next) => {
@@ -58,4 +58,3 @@ app.use(routes);
 app.listen(3000, () => {
 	console.log('Servidor Rodando!');
 });
-
