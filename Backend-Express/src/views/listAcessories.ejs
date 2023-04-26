@@ -35,54 +35,50 @@
             <h2 class="filtro">Filtros</h2>
             <hr class="linha--filtro">
             <h3 class="produto">Produto</h3>
+            <form action="/search" method="get" class="filter-form">
+              <section>
+                <div class="camiseta">
+                  <input type="checkbox" id="camiseta" name="filtro" value="camiseta" checked/>
+                  <label for="camiseta">Camiseta</label>
+                </div>
 
-            <section>
-              <div class="camiseta">
-                <input
-                  type="checkbox"
-                  id="camiseta"
-                  name="camiseta"
-                  checked
-                />
-                <label for="camiseta">Camiseta</label>
-              </div>
+                <div class="copo">
+                  <input type="checkbox" id="copo" name="filtro" value="copo" />
+                  <label for="copo">Copo</label>
+                </div>
 
-              <div class="copo">
-                <input type="checkbox" id="copo" name="copo" />
-                <label for="copo">Copo</label>
-              </div>
+                <div class="termicos">
+                  <input type="checkbox" id="termicos" name="filtro" value="termicos" />
+                  <label for="termicos">Térmicos</label>
+                </div>
 
-              <div class="termicos">
-                <input type="checkbox" id="termicos" name="termicos" />
-                <label for="termicos">Térmicos</label>
-              </div>
+                <div class="abridor">
+                  <input type="checkbox" id="abridor" name="filtro" value="abridor de cerveja"/>
+                  <label for="abridor">Abridor de Cerveja</label>
+                </div>
 
-              <div class="abridor">
-                <input type="checkbox" id="abridor" name="abridor" />
-                <label for="abridor">Abridor de Cerveja</label>
-              </div>
+                <div class="balde">
+                  <input type="checkbox" id="balde" name="filtro" value="balde"/>
+                  <label for="balde">Balde</label>
+                </div>
 
-              <div class="balde">
-                <input type="checkbox" id="balde" name="balde" />
-                <label for="balde">Balde</label>
-              </div>
+              </section>
 
-            </section>
+              <section>
+                <h3 class="preco">Preço</h3>
 
-            <section>
-              <h3 class="preco">Preço</h3>
+                <div class="menor--preco">
+                  <input type="checkbox" id="menor--preco" name="filtro" value="menor preço"/>
+                  <label for="menor--preco">Menor preço</label>
+                </div>
 
-              <div class="menor--preco">
-                <input type="checkbox" id="menor--preco" name="menor--preco" />
-                <label for="menor--preco">Menor preço</label>
-              </div>
-
-              <div class="maior--preco">
-                <input type="checkbox" id="maior--preco" name="maior--preco" />
-                <label for="maior--preco">Maior preço</label>
-              </div>
-            </section>
-
+                <div class="maior--preco">
+                  <input type="checkbox" id="maior--preco" name="filtro" value="maior preço"/>
+                  <label for="maior--preco">Maior preço</label>
+                </div>
+              </section>
+              <button id="btn-pesquisar" type="submit">Pesquisar</button>
+          </form>
           </div>
           <section class="container--cervejas">
             
