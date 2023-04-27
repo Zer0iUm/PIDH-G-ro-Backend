@@ -1,16 +1,33 @@
-const products = require('../database/products.json');
+// const products = require('../database/products.json');
+const { Product, User, User_Adress } = require('../models')
 const users = require('../database/users.json');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 const MainController = {
-	index: (req, res) => {
-		res.render('index', { products });
-		toThousand;
+	index: async (req, res) => {
+		try {
+			const products = await Product.findAll()
+
+			res.render('index', {
+				products
+			})
+		} catch (error) {
+			res.status(400).json({ error })
+		}
 	},
 
-	homeStore: (req, res) => {
-		res.render('homeStore', { req, products });
-		toThousand;
+	homeStore: async (req, res) => {
+		try {
+			const products = await Product.findAll()
+
+			res.render('homeStore', {
+				req,
+				products
+			})
+		} catch (error) {
+			res.status(400).json({ error })
+		}
+		//res.render('homeStore', { req, products });
 	},
 
 	cervejas: (req, res) => {

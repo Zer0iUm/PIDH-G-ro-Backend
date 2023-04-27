@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Vini1997",
-    "database": "pidh_database.mwb",
+    "password": "Vini1997*",
+    "database": "gorozeroium_dh",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
