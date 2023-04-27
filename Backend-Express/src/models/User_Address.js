@@ -17,7 +17,7 @@ module.exports = (sequelize, DataType) => {
         id_product_type: DataType.INTEGER
     }, {
         timestamps: false,
-        tabelName: 'user_address'
+        tableName: 'user_address'
     })
 
     return User_Address

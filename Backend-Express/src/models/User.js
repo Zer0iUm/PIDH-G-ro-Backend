@@ -15,7 +15,7 @@ module.exports = (sequelize, DataType) => {
         is_admin: DataType.INTEGER,
     }, {
         timestamps: false,
-        tabelName: 'user'
+        tableName: 'user'
     })
 
     return User
