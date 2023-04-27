@@ -5,16 +5,11 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        name: DataType.STRING(45),
-        price: DataType.DECIMAL(10, 2),
-        type: DataType.STRING(45),
-        image: DataType.STRING(100),
-        description: DataType.STRING(1000),
-        rating: DataType.TINYINT,
-        abv: DataType.INTEGER,
-        ibu: DataType.INTEGER,
-        type_glass: DataType.STRING(45),
-        id_product_type: DataType.INTEGER
+        cep: DataType.INTEGER,
+        city: DataType.STRING(45),
+        state: DataType.STRING(20),
+        street: DataType.STRING(45),
+        number: DataType.INTEGER,
     }, {
         timestamps: false,
         tableName: 'user_address'
