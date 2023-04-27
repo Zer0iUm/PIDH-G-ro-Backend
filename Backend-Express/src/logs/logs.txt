@@ -110,4 +110,3 @@ O usuário acessou a rota: /homeStore
 O usuário acessou a rota: /login
 O usuário acessou a rota: /signUp
 O usuário acessou a rota: /signUp
-O usuário acessou a rota: /login
