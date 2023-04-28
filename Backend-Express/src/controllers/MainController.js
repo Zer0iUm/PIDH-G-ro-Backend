@@ -86,8 +86,19 @@ const MainController = {
 		res.render('checkout', { req });
 	},
 
-	shoppingCart: (req, res) => {
-		res.render('shoppingCart', { req, products });
+	shoppingCart: async (req, res) => {
+		try {
+			const products = await Product.findAll()
+
+			res.render('shoppingCart', {
+				req,
+				products
+			})
+		} catch (error) {
+			res.status(400).json({ error })
+		}
+		
+		//res.render('shoppingCart', { req, products });
 	},
 
 	signUp: (req, res) => {

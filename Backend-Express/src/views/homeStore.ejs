@@ -110,40 +110,40 @@
 			<h3>TODOS OS PRODUTOS</h3>
 			<div class="alignProdutos">
 				<ul class="produtos__container">
-					<% for(let i=1; i<=10; i++){ %>
-					<li class="produto__container">
-						<a
-							href="/product/<%= products[i].id%>"
-							class="link__produto"
-						>
-							<div class="produto__img">
-								<img
-									class="foto"
-									src="/img/<%= products[i].image %>"
-									alt="banner"
-								/>
-								<div class="icone">
-									<a href="#"
-										><img
-											class="icone"
-											src="/img/sacola.png"
-											alt="banner"
-									/></a>
+					<% for(let i=0; i<products.length; i++){ %>
+						<li class="produto__container">
+							<a
+								href="/product/<%= products[i].id%>"
+								class="link__produto"
+							>
+								<div class="produto__img">
+									<img
+										class="foto"
+										src="/img/<%= products[i].image %>"
+										alt="banner"
+									/>
+									<div class="icone">
+										<a href="#"
+											><img
+												class="icone"
+												src="/img/sacola.png"
+												alt="banner"
+										/></a>
+									</div>
 								</div>
-							</div>
-							<div class="produto__conteudo">
-								<p class="produto__nome">
-									<%= products[i].name %>
-								</p>
-								<p class="produto__descricao">
-									<%= products[i].type %>
-								</p>
-								<p class="produto__valor">
-									R$ <%= products[i].price %>
-								</p>
-							</div>
-						</a>
-					</li>
+								<div class="produto__conteudo">
+									<p class="produto__nome">
+										<%= products[i].name %>
+									</p>
+									<p class="produto__descricao">
+										<%= products[i].type %>
+									</p>
+									<p class="produto__valor">
+										R$ <%= products[i].price %>
+									</p>
+								</div>
+							</a>
+						</li>
 					<% } %>
 				</ul>
 			</div>

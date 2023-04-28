@@ -6,7 +6,7 @@ module.exports = (sequelize, DataType) => {
             autoIncrement: true,
         },
         total: DataType.DECIMAL(10, 2),
-        status: DataType.TINYINT(1),
+        status: DataType.BOOLEAN,
         shipment_price: DataType.DECIMAL(10, 2),
     }, {
         timestamps: false,

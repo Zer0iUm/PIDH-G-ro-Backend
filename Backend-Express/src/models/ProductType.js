@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataType) => {
-    const Product_Type = sequelize.define('Product_Type', {
+    const ProductType = sequelize.define('ProductType', {
         id: {
             type: DataType.INTEGER,
             primaryKey: true,
@@ -11,5 +11,5 @@ module.exports = (sequelize, DataType) => {
         tableName: 'product_type'
     })
 
-    return Product_Type
+    return ProductType
 }
