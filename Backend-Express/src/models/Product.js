@@ -10,7 +10,7 @@ module.exports = (sequelize, DataType) => {
         type: DataType.STRING(45),
         image: DataType.STRING(100),
         description: DataType.STRING(1000),
-        rating: DataType.TINYINT,
+        rating: DataType.TINYINT(1),
         abv: DataType.INTEGER,
         ibu: DataType.INTEGER,
         type_glass: DataType.STRING(45),

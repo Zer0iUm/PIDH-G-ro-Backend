@@ -1,10 +1,11 @@
 module.exports = (sequelize, DataType) => {
-    const User_Address = sequelize.define('User_Address', {
+    const UserAddress = sequelize.define('UserAddress', {
         id: {
             type: DataType.INTEGER,
             primaryKey: true,
             autoIncrement: true,
         },
+        user_id: DataType.INTEGER,
         cep: DataType.INTEGER,
         city: DataType.STRING(45),
         state: DataType.STRING(20),
@@ -15,5 +16,5 @@ module.exports = (sequelize, DataType) => {
         tableName: 'user_address'
     })
 
-    return User_Address
+    return UserAddress
 }

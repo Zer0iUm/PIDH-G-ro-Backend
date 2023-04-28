@@ -5,9 +5,11 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true,
         },
-        status: DataType.TINYINT(1),
+        user_id: DataType.INTEGER,
+        cart_id: DataType.INTEGER,
+        status: DataType.BOOLEAN,
         total: DataType.DECIMAL(10, 2),
-        shipment_dat: DataType.DATE,
+        shipment_dat: DataType.DATEONLY,
         created_at: DataType.DATE
     }, {
         timestamps: false,

@@ -5,6 +5,7 @@ module.exports = (sequelize, DataType) => {
             primaryKey: true,
             autoIncrement: true,
         },
+        category_id: DataType.INTEGER,
         name: DataType.STRING(45),
     }, {
         timestamps: false,

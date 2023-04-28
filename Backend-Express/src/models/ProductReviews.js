@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataType) => {
-    const Product_Reviews = sequelize.define('Product_Reviews', {
+    const ProductReviews = sequelize.define('ProductReviews', {
         id: {
             type: DataType.INTEGER,
             primaryKey: true,
@@ -8,11 +8,12 @@ module.exports = (sequelize, DataType) => {
         name: DataType.STRING(45),
         rating: DataType.TINYINT(1),
         comment: DataType.STRING(300),
-        comment_rating: DataType.INTEGER
+        comment_rating: DataType.INTEGER,
+        product_id: DataType.INTEGER
     }, {
         timestamps: false,
         tableName: 'product_reviews'
     })
 
-    return Product_Reviews
+    return ProductReviews
 }
