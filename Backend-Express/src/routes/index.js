@@ -38,6 +38,8 @@ router.get('/productRegistration', mainController.productRegistration);
 
 router.get('/product', mainController.product);
 
+// router.get('/product/:id', mainController.search); //testando
+
 router.get('/checkout', mainController.checkout);
 
 router.get('/search', mainController.search);
@@ -61,10 +63,6 @@ body('name')
 router.get('/product', productController.showAll);
 
 router.get('/product/:id', productController.showById);
-
-//router.put('/product/:id', productController.update);
-
-//router.delete('/product/:id', productController.delete);
 
 router.get('/erro', mainController.erro);
 
