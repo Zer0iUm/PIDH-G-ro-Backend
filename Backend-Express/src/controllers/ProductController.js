@@ -127,18 +127,4 @@ res.render('productRegistration', {errors: errors.mapped()}) // ou array()
 	},
 };
 
-// MULTER
-/* module.exports = {
-	viewCadastro: (req, res) => {
-		return res.render("index");
-	},
-	salvarCadastro: (req, res) => {
-		if (!req.file){
-			return res.send("Você deve enviar uma imagem!");
-		}
-		
-		return res.send('Deu certo!');
-	}
-}; */
-
 module.exports = ProductController;
