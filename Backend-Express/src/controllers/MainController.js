@@ -1,4 +1,4 @@
-// const products = require('../database/products.json');
+const products = require('../database/products.json');
 const { Product, User, User_Adress } = require("../models");
 const users = require("../database/users.json");
 const { Op } = require("sequelize");
@@ -30,27 +30,58 @@ const MainController = {
     }
   },
 
-  cervejas: (req, res) => {
-    let productsToSearch = products.filter(
-      (product) => product.type == "Cerveja"
-    );
+  cervejas: async (req, res) => {
+    try {
+      const products = await Product.findAll({
+        where: {
+          product_type_id: 1 // Filtra apenas produtos do tipo cerveja
+        }
+      });
 
-    res.render("listBeer", { req, products: productsToSearch });
+      res.render("listBeer", {
+        req,
+        products,
+      });
+    } catch (error) {
+      res.status(400).json({ error });
+    }
   },
+  
+  
+  listAcessories: async (req, res) => {
+    try {
+      const products = await Product.findAll({
+        where: {
+          product_type_id: 2 // Filtra apenas produtos do tipo acessórios
+        }
+      });
 
-  listAcessories: (req, res) => {
-    let productsToSearch = products.filter(
-      (product) => product.type == "Acessorios"
-    );
-
-    res.render("listAcessories", { req, products: productsToSearch });
+      res.render("listAcessories", {
+        req,
+        products,
+      });
+    } catch (error) {
+      res.status(400).json({ error });
+    }
   },
+  
+  kits: async (req, res) => {
+    try {
+      const products = await Product.findAll({
+        where: {
+          product_type_id: 3 // Filtra apenas produtos do tipo kits
+        }
+      });
 
-  kits: (req, res) => {
-    let productsToSearch = products.filter((product) => product.type == "Kits");
-
-    res.render("listKits", { req, products: productsToSearch });
+      res.render("listKits", {
+        req,
+        products,
+      });
+    } catch (error) {
+      res.status(400).json({ error });
+    }
   },
+  
   login: (req, res) => {
     // const errorMessage = req.session.errorMessage;
     // req.session.errorMessage = null;
@@ -72,11 +103,14 @@ const MainController = {
     toThousand;
   },
   
-  product: /* (req, res) => {
+  product: 
+  
+  (req, res) => {
     res.render("product", { req, products });
-    toThousand; */
+    toThousand; 
+  },
 
-    async (req, res) => {
+   /*  async (req, res) => {
       try {
         const products = await Product.findAll();
   
@@ -87,7 +121,7 @@ const MainController = {
       } catch (error) {
         res.status(400).json({ error });
       }
-    },
+    }, */
 
   checkout: (req, res) => {
     res.render("checkout", { req });
