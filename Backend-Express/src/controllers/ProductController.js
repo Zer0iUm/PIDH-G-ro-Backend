@@ -24,7 +24,39 @@ const ProductController = {
 		res.json(products);
 	},
 
-	createEJS(req, res) {
+	createFormEJS: (req, res) => {
+		res.render('productRegistration')
+	  },
+
+	createEJS: async (req, res) => {
+		let image = ''
+	
+		const errors = validationResult(req)
+		if (!errors.isEmpty())
+			res.render('product-create-form', { errors: errors.mapped() }) // ou array()
+		console.log(req.body)
+
+		try {
+		  if (req.files[0] !== undefined) {
+			image = req.files[0].filename
+		  } else {
+			image = 'default-image.png'
+		  }
+		  
+		  let newProduct = {
+			...req.body,
+			image: image
+		  }
+	
+		  await Product.create(newProduct) // cria o registro no banco de dados
+	
+		  res.redirect('/')
+		} catch (error) {
+		  res.status(400).json({ error })
+		}
+	  },
+	
+	/* (req, res) {
 		//--------------multer-------------
 		console.log(req.body);
 		let image = ''
@@ -45,7 +77,7 @@ res.render('productRegistration', {errors: errors.mapped()}) // ou array()
 
 		products.push(newProduct);
 		res.redirect('http://localhost:3000/homeStore');
-	},
+	}, */
 
 
 
@@ -76,13 +108,65 @@ res.render('productRegistration', {errors: errors.mapped()}) // ou array()
 			return res.status(400).json({ error: 'Produto não encontrado.3' });
 	},
 
-	updateFormEJS: (req, res) => {
+	/* updateFormEJS: (req, res) => {
 		let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id);
 		res.render('productUpdate', { productToEdit });
-	},
+	}, */
 
-	updateEJS: (req, res) => {
+// Update form product - View - professor
+
+
+  // Update product
+updateEJS: async (req, res) => {
+    const { id } = req.params
+    let image = ''
+    
+    try {
+      const productToEdit = await Product.findByPk(id)
+    
+      if (productToEdit != undefined) {
+          if (req.files[0] !== undefined) {
+              image = req.files[0].filename
+          } else {
+              image = productToEdit.image
+          }
+
+          let product = {
+            ...req.body,
+            image: image
+          }
+
+          await Product.update(
+            product,
+            {
+              where: {
+                id: id
+              }
+            }
+          ) // atualiza o registro no banco de dados
+
+          res.redirect('/')
+      } else return res.status(400).json({ error: 'Produto não encontrado.' })
+
+    } catch (error) {
+      res.status(400).json({ error })
+    }
+  },
+
+  updateFormEJS: async (req, res) => {
+    const id = req.params.id
+
+    try {
+      const productToEdit = await Product.findByPk(id)
+
+      res.render('productUpdate', { productToEdit })
+    } catch (error) {
+      res.status(400).json({ error })
+    }
+  },
+
+	/* updateEJS: (req, res) => {
 		const { id } = req.params;
 		let image = '';
 
@@ -110,7 +194,7 @@ res.render('productRegistration', {errors: errors.mapped()}) // ou array()
 			res.redirect('http://localhost:3000/homeStore');
 		} else
 			return res.status(400).json({ error: 'Produto não encontrado.' });
-	},
+	}, */
 
 	deleteEJS: (req, res) => {
 		const { id } = req.params;

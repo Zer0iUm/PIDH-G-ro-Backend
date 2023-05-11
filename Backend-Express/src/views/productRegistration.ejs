@@ -10,9 +10,7 @@
 
 		<h1>Cadastro de Produtos</h1>
 		
-		
-		
-			<% if (typeof errors !== 'undefined') { %>
+		<% if (typeof errors !== 'undefined') { %>
             <ul>
               <% for(let error in errors) { %>
                 <li> <%= errors[error].msg %> </li>

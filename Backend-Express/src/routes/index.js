@@ -1,18 +1,19 @@
 const { body } = require('express-validator');
-
 const express = require('express');
 const router = express.Router();
-const path = require('path'); // MANIPULAR PASTAS
+
+/* Controllers */
+const mainController = require('../controllers/MainController');
+const productController = require('../controllers/ProductController');
+const userController = require('../controllers/userController');
 
 //middlewares
 const log = require('../middlewares/log');
 const upload = require('../middlewares/upload'); // multer
 const authentication = require('../middlewares/authentication');
+const path = require('path'); // MANIPULAR PASTAS
 
 
-const mainController = require('../controllers/MainController');
-const productController = require('../controllers/ProductController');
-const userController = require('../controllers/userController');
 
 router.get('/', mainController.index); // router.get('/',  log, mainController.index);
 
@@ -34,11 +35,15 @@ router.get('/accountUser', mainController.accountUser);
 
 router.get('/accountAdmin', mainController.accountAdmin);
 
-router.get('/productRegistration', mainController.productRegistration);
+router.get('/productRegistration', productController.createFormEJS);
+
+router.get('/productUpdate', productController.updateFormEJS);
+
+//router.get('/productUpdate', productController.updateEJS);
 
 router.get('/product', mainController.product);
 
-// router.get('/product/:id', mainController.search); //testando
+//router.get('/product/:id', mainController.search);
 
 router.get('/checkout', mainController.checkout);
 
@@ -51,12 +56,6 @@ router.get('/shoppingCart', authentication, mainController.shoppingCart);
 router.get('/signUp', mainController.signUp);
 
 router.post('/signUp', userController.register);
-
-/* router.post('/signUp',
-body('name')
-	.notEmpty()
-	.withMessage('Nome do usuário deve ser informado'),
-	userController.register); */
 
 
 //Product
@@ -72,7 +71,7 @@ router.get('/erro', mainController.erro);
 //router.get('/product/create', productController.createFormEJS)
 
 // GET - EJS Update Form - View
-router.get('/product/update/:id', productController.updateFormEJS);
+//router.get('/product/update/:id', productController.updateFormEJS); testeando
 
 // POST - EJS Create
 router.post(

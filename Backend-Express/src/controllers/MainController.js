@@ -71,14 +71,23 @@ const MainController = {
     res.render("accountAdmin", { req });
     toThousand;
   },
-  productRegistration: (req, res) => {
-    res.render("productRegistration", { req });
-    toThousand;
-  },
-  product: (req, res) => {
+  
+  product: /* (req, res) => {
     res.render("product", { req, products });
-    toThousand;
-  },
+    toThousand; */
+
+    async (req, res) => {
+      try {
+        const products = await Product.findAll();
+  
+        res.render("product", {
+          req,
+          products,
+        });
+      } catch (error) {
+        res.status(400).json({ error });
+      }
+    },
 
   checkout: (req, res) => {
     res.render("checkout", { req });
@@ -101,18 +110,6 @@ const MainController = {
     res.render("signUp", { req });
   },
 
-  /* search: (req, res) => {
-		let search = req.query.keywords;
-		let productsToSearch = products.filter(product =>
-			product.name.toLowerCase().includes(search.toLowerCase())
-		);
-		res.render('search', {
-			req,
-			products: productsToSearch,
-			search,
-			toThousand,
-		});
-	},  */
 
   search: async (req, res) => {
     let search = req.query.keywords;
@@ -120,11 +117,13 @@ const MainController = {
       const productsToSearch = await Product.findAll({
         where: {
           name: {
-            [Op.substring]: search, // sequelize findAll na busca
-          },
-        },
+            [Op.substring]: search // sequelize findAll na busca
+          }
+        }
       });
-	  return res.json(productsToSearch);
+    res.render("search", {
+      req,
+      products: productsToSearch, search });
 
     } catch (error) {
       return res.status(500).json({ error: error.message });
