@@ -103,14 +103,14 @@ const MainController = {
     toThousand;
   },
   
-  product: 
-  
-  (req, res) => {
-    res.render("product", { req, products });
-    toThousand; 
-  },
+  product:
+   
+  (req, res) => { 
+   res.render("product", { req, products });
+       toThousand; 
+   },
 
-   /*  async (req, res) => {
+/*   async (req, res) => {
       try {
         const products = await Product.findAll();
   
@@ -121,7 +121,7 @@ const MainController = {
       } catch (error) {
         res.status(400).json({ error });
       }
-    }, */
+    },  */
 
   checkout: (req, res) => {
     res.render("checkout", { req });

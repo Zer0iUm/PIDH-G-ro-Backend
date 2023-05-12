@@ -18,8 +18,8 @@ module.exports = (sequelize, DataType) => {
 			tableName: 'product_reviews',
 		}
 	);
-	ProductReview.associate = models => {
-		ProductReview.belongsTo(models.Product, {
+	ProductReviews.associate = models => {
+		ProductReviews.belongsTo(models.Product, {
 			foreignKey: 'product_id',
 			as: 'product',
 		});

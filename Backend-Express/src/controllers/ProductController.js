@@ -7,7 +7,32 @@ const ProductController = {
 	showAll(req, res) {
 		res.json(products);
 	},
-	showById(req, res) {
+	showById: async(req, res) => {
+		const id = req.params.id
+
+		try {
+			const product = await Product.findOne({
+				where: {
+					id: id
+				},
+				include: {
+					model: ProductType,
+					as: 'productType',
+					required: true
+				}
+			})
+
+			res.render('product', {
+				req,
+				product
+			})
+		} catch (error) {
+			res.status(400).json({ error })
+		}
+	},
+	
+	
+	/* (req, res) {
 		const { id } = req.params;
 
 		const product = products.find(product => String(product.id) === id);
@@ -16,7 +41,7 @@ const ProductController = {
 			// return res.json(product)
 			res.render('product', { req, product, products });
 		else return res.status(400).json({ error: 'Produto não encontrado.1' });
-	},
+	}, */
 	// Create product
 
 	create(req, res) {

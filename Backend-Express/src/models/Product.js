@@ -29,17 +29,17 @@ module.exports = (sequelize, DataType) => {
 			foreignKey: 'product_type_id',
 			as: 'productType',
 		});
-		Product.belongsToMany(modelsList.Order, {
+		Product.belongsToMany(modelsList.Cart, {
 			foreignKey: 'request_id',
 			as: 'request',
 			through: modelsList.RequestItem,
 		});
-		Product.belongsToMany(modelsList.Order, {
+		Product.belongsToMany(modelsList.Cart, {
 			foreignKey: 'cart_id',
 			as: 'cart',
 			through: modelsList.CartItem,
 		});
-		Product.hasMany(models.ProductReview, {
+		Product.hasMany(modelsList.ProductReviews, {
 			foreignKey: 'product_id',
 			as: 'reviews',
 		});
