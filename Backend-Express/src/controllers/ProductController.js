@@ -2,6 +2,7 @@
 const { validationResult } = require('express-validator')
 
 const products = require('../database/products.json');
+const Product = require('../models/Product');
 
 const ProductController = {
 	showAll(req, res) {
@@ -51,7 +52,7 @@ const ProductController = {
 
 	createFormEJS: (req, res) => {
 		res.render('productRegistration')
-	  },
+	},
 
 	createEJS: async (req, res) => {
 		let image = ''
@@ -62,24 +63,24 @@ const ProductController = {
 		console.log(req.body)
 
 		try {
-		  if (req.files[0] !== undefined) {
+		if (req.files[0] !== undefined) {
 			image = req.files[0].filename
-		  } else {
+		} else {
 			image = 'default-image.png'
-		  }
-		  
-		  let newProduct = {
+		}
+		
+		let newProduct = {
 			...req.body,
 			image: image
-		  }
+		}
 	
 		  await Product.create(newProduct) // cria o registro no banco de dados
 	
-		  res.redirect('/')
+		res.redirect('/')
 		} catch (error) {
-		  res.status(400).json({ error })
+		res.status(400).json({ error })
 		}
-	  },
+	},
 	
 	/* (req, res) {
 		//--------------multer-------------
@@ -148,48 +149,48 @@ updateEJS: async (req, res) => {
     let image = ''
     
     try {
-      const productToEdit = await Product.findByPk(id)
+    const productToEdit = await Product.findByPk(id)
     
-      if (productToEdit != undefined) {
-          if (req.files[0] !== undefined) {
-              image = req.files[0].filename
-          } else {
-              image = productToEdit.image
-          }
+    if (productToEdit != undefined) {
+        if (req.files[0] !== undefined) {
+            image = req.files[0].filename
+        } else {
+            image = productToEdit.image
+        }
 
-          let product = {
+        let product = {
             ...req.body,
             image: image
-          }
+        }
 
-          await Product.update(
+        await Product.update(
             product,
             {
-              where: {
+            where: {
                 id: id
-              }
+            }
             }
           ) // atualiza o registro no banco de dados
 
-          res.redirect('/')
-      } else return res.status(400).json({ error: 'Produto não encontrado.' })
+        res.redirect('/')
+    } else return res.status(400).json({ error: 'Produto não encontrado.' })
 
     } catch (error) {
-      res.status(400).json({ error })
+    res.status(400).json({ error })
     }
-  },
+},
 
-  updateFormEJS: async (req, res) => {
+updateFormEJS: async (req, res) => {
     const id = req.params.id
 
     try {
-      const productToEdit = await Product.findByPk(id)
+    const productToEdit = await Product.findByPk(id)
 
-      res.render('productUpdate', { productToEdit })
+    res.render('productUpdate', { productToEdit })
     } catch (error) {
-      res.status(400).json({ error })
+    res.status(400).json({ error })
     }
-  },
+},
 
 	/* updateEJS: (req, res) => {
 		const { id } = req.params;
@@ -221,19 +222,30 @@ updateEJS: async (req, res) => {
 			return res.status(400).json({ error: 'Produto não encontrado.' });
 	}, */
 
-	deleteEJS: (req, res) => {
+	deleteEJS: async (req, res) => {
 		const { id } = req.params;
 
-		const productIndex = products.findIndex(
+		/* const productIndex = products.findIndex(
 			product => String(product.id) === id
-		);
+		); */
 
-		if (productIndex != -1) {
+		try {
+			await Product.destroy({
+				where: {
+					id: id
+				}
+			}) // remove o regitro do banco de dados
+			res.redirect('http://localhost:3000/homeStore')
+		} catch (error) {
+			res.status(400).json({ error })
+		}
+
+		/* if (productIndex != -1) {
 			products.splice(productIndex, 1);
 			res.redirect('http://localhost:3000/homeStore');
 		} else
-			return res.status(400).json({ error: 'Produto não encontrado.' });
-	},
+			return res.status(400).json({ error: 'Produto não encontrado.' }); */
+	}
 };
 
 module.exports = ProductController;
