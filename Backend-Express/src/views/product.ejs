@@ -1,122 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Goro - <%= product.name%></title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;900&display=swap"
-			rel="stylesheet"
-		/>
-		<link href="/css/pagina-produto.css" rel="stylesheet" />
-		<script
-			src="https://kit.fontawesome.com/8efdacdf0c.js"
-			crossorigin="anonymous"
-		></script>
-		<script src="/js/product.js"></script>
-	</head>
-	<body>
-		<%- include("includes/header") %>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Goro - <%= product.name%>
+	</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lato:wght@400;900&display=swap"
+		rel="stylesheet" />
+	<link href="/css/pagina-produto.css" rel="stylesheet" />
+	<script src="https://kit.fontawesome.com/8efdacdf0c.js" crossorigin="anonymous"></script>
+	<script src="/js/product.js"></script>
+</head>
+
+<body>
+	<%- include("includes/header") %>
 		<main>
 			<div id="produto">
 				<section id="img-produto">
 					<div id="produto-mini">
-						<img
-							alt="Pequeno 1"
-							src="/img/<%= product.image %>"
+						<img alt="Pequeno 1" src="/img/<%= product.image %>"
 							onclick="changeImage('/img/<%= product.image %>'); clickedImage('img-mini-1')"
-							id="img-mini-1"
-						/>
-						<img
-							alt="Pequeno 2"
-							src="/img/double.png"
-							onclick="changeImage('/img/double.png'); clickedImage('img-mini-2')"
-							id="img-mini-2"
-						/>
-						<img
-							alt="Pequeno 3"
-							src="/img/american pale ale.png"
+							id="img-mini-1" />
+						<img alt="Pequeno 2" src="/img/double.png"
+							onclick="changeImage('/img/double.png'); clickedImage('img-mini-2')" id="img-mini-2" />
+						<img alt="Pequeno 3" src="/img/american pale ale.png"
 							onclick="changeImage('/img/american pale ale.png'); clickedImage('img-mini-3')"
-							id="img-mini-3"
-						/>
+							id="img-mini-3" />
 					</div>
-					<img
-						alt="Imagem principal"
-						src="/img/<%= product.image %>"
-						id="display"
-					/>
+					<img alt="Imagem principal" src="/img/<%= product.image %>" id="display" />
 				</section>
 				<section id="info-produto">
-					<h1><%= product.name%></h1>
+					<h1>
+						<%= product.name%>
+					</h1>
 					<h2>
-						<%=product.type%> <%if (product.type == '1') { %>
-						- <%= product.quantity%> ML <%}%>
+						<%=product.type%>
+							<%if (product.type=='1' ) { %>
+								- <%= product.quantity%> ML <%}%>
 					</h2>
-					<p><%=product.description%></p>
-					<%if (product.type == '1') { %>
-					<table id="info-tabela">
-						<tr>
-							<th>% de álcool</th>
-							<th>IBU</th>
-							<th>Tipo de copo</th>
-						</tr>
-						<tr>
-							<td><%= product.ABV %></td>
-							<td><%=product.IBU %></td>
-							<td><%=product.typeGlass %></td>
-						</tr>
-					</table>
-					<%}%>
-					<hr />
-					<div id="rating">
-						<img
-							src="/img/star-active.png"
-							alt="star 1"
-							id="rating-1"
-						/>
-						<img src="/img/star.png" alt="star 2" id="rating-2" />
-						<img src="/img/star.png" alt="star 3" id="rating-3" />
-						<img src="/img/star.png" alt="star 4" id="rating-4" />
-						<img src="/img/star.png" alt="star 5" id="rating-5" />
-					</div>
-					<h3 id="valorTotal">R$<%=product.price.toFixed(2)%></h3>
-					<section id="compra">
-						<div
-							class="btn-quantidade"
-							id="remover"
-							onclick="setQuantidade('remove')"
-						>
-							-
-						</div>
-						<input id="input-quantidade" type="text" value="1" />
-						<div
-							class="btn-quantidade"
-							id="adicionar"
-							onclick="setQuantidade('add')"
-						>
-							+
-						</div>
-						<button>COMPRAR</button>
-					</section>
-					<% if (req.session.username == 'Admin'){ %>
-					<a
-						href="/product/update/<%= product.id %>"
-						class="action-button edit"
-						>Editar Produto</a
-					>
-					<form
-						action="/product/<%= product.id %>?_method=DELETE"
-						method="POST"
-						style="display: inline-flex"
-					>
-						<button type="submit" class="action-button delete">
-							Remover Produto
-						</button>
-					</form>
-					<% } %>
+					<p>
+						<%=product.description%>
+					</p>
+					<%if (product.type=='1' ) { %>
+						<table id="info-tabela">
+							<tr>
+								<th>% de álcool</th>
+								<th>IBU</th>
+								<th>Tipo de copo</th>
+							</tr>
+							<tr>
+								<td>
+									<%= product.ABV %>
+								</td>
+								<td>
+									<%=product.IBU %>
+								</td>
+								<td>
+									<%=product.typeGlass %>
+								</td>
+							</tr>
+						</table>
+						<%}%>
+							<hr />
+							<div id="rating">
+								<img src="/img/star-active.png" alt="star 1" id="rating-1" />
+								<img src="/img/star.png" alt="star 2" id="rating-2" />
+								<img src="/img/star.png" alt="star 3" id="rating-3" />
+								<img src="/img/star.png" alt="star 4" id="rating-4" />
+								<img src="/img/star.png" alt="star 5" id="rating-5" />
+							</div>
+							<h3 id="valorTotal">R$<%=product.price%>
+							</h3>
+							<section id="compra">
+								<div class="btn-quantidade" id="remover" onclick="setQuantidade('remove')">
+									-
+								</div>
+								<input id="input-quantidade" type="text" value="1" />
+								<div class="btn-quantidade" id="adicionar" onclick="setQuantidade('add')">
+									+
+								</div>
+								<button>COMPRAR</button>
+							</section>
+							<% if (req.session.username=='Admin' ){ %>
+								<a href="/product/update/<%= product.id %>" class="action-button edit">Editar
+									Produto</a>
+								<form action="/product/<%= product.id %>?_method=DELETE" method="POST"
+									style="display: inline-flex">
+									<button type="submit" class="action-button delete">
+										Remover Produto
+									</button>
+								</form>
+								<% } %>
 				</section>
 			</div>
 
@@ -190,46 +168,35 @@
 				<hr class="divisao" />
 
 				<ul class="produtos__container">
-					<% for(let i=0; i<=3; i++) { %> <% const iRandom =
-					Math.floor(Math.random() * products.length) %>
-					<li class="produto__container">
-						<a
-							href="/product/<%= products[iRandom].id%>"
-							class="link__produto"
-						>
-							<div class="produto__img">
-								<img
-									class="foto"
-									src="/img/<%= products[iRandom].image %>"
-									alt="banner"
-								/>
-								<div class="icone">
-									<a href="#"
-										><img
-											class="icone"
-											src="/img/sacola.png"
-											alt="banner"
-									/></a>
-								</div>
-							</div>
-							<div class="produto__conteudo">
-								<p class="produto__nome">
-									<%= products[iRandom].name %>
-								</p>
-								<p class="produto__descricao">
-									<%= products[iRandom].type %>
-								</p>
-								<p class="produto__valor">
-									<%= products[iRandom].price.toFixed(2) %>
-								</p>
-							</div>
-						</a>
-					</li>
-					<% } %>
+					<% for(let i=0; i<=3; i++) { %>
+						<% const iRandom=Math.floor(Math.random() * product.length) %>
+							<li class="produto__container">
+								<a href="/product/<%= product.id%>" class="link__produto">
+									<div class="produto__img">
+										<img class="foto" src="/img/<%= product.image %>" alt="banner" />
+										<div class="icone">
+											<a href="#"><img class="icone" src="/img/sacola.png" alt="banner" /></a>
+										</div>
+									</div>
+									<div class="produto__conteudo">
+										<p class="produto__nome">
+											<%= product.name %>
+										</p>
+										<p class="produto__descricao">
+											<%= product.type %>
+										</p>
+										<p class="produto__valor">
+											<%= product.price%>
+										</p>
+									</div>
+								</a>
+							</li>
+							<% } %>
 				</ul>
 			</section>
 		</main>
 
 		<%- include("includes/footer") %>
-	</body>
+</body>
+
 </html>

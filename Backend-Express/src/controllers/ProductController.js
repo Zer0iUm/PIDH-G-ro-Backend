@@ -1,39 +1,38 @@
+const { validationResult } = require("express-validator");
 
-const { validationResult } = require('express-validator')
-
-const products = require('../database/products.json');
-const Product = require('../models/Product');
+//const products = require("../database/products.json");
+const { Product, ProductType } = require("../models");
 
 const ProductController = {
-	showAll(req, res) {
-		res.json(products);
-	},
-	showById: async(req, res) => {
-		const id = req.params.id
+  showAll(req, res) {
+    res.json(products);
+  },
 
-		try {
-			const product = await Product.findOne({
-				where: {
-					id: id
-				},
-				include: {
-					model: ProductType,
-					as: 'productType',
-					required: true
-				}
-			})
+  showById: async (req, res) => {
+    const id = req.params.id;
 
-			res.render('product', {
-				req,
-				product
-			})
-		} catch (error) {
-			res.status(400).json({ error })
-		}
-	},
-	
-	
-	/* (req, res) {
+    try {
+      const product = await Product.findOne({
+        where: {
+          id: id,
+        },
+        include: {
+          model: ProductType,
+          as: "productType",
+          required: true,
+        },
+      });
+
+      res.render("product", {
+        req,
+        product,
+      });
+    } catch (error) {
+      res.status(400).json({ error });
+    }
+  },
+
+  /* (req, res) {
 		const { id } = req.params;
 
 		const product = products.find(product => String(product.id) === id);
@@ -43,46 +42,46 @@ const ProductController = {
 			res.render('product', { req, product, products });
 		else return res.status(400).json({ error: 'Produto não encontrado.1' });
 	}, */
-	// Create product
+  // Create product
 
-	create(req, res) {
-		products.push(req.body);
-		res.json(products);
-	},
+  create(req, res) {
+    products.push(req.body);
+    res.json(products);
+  },
 
-	createFormEJS: (req, res) => {
-		res.render('productRegistration')
-	},
+  createFormEJS: (req, res) => {
+    res.render("productRegistration");
+  },
 
-	createEJS: async (req, res) => {
-		let image = ''
-	
-		const errors = validationResult(req)
-		if (!errors.isEmpty())
-			res.render('product-create-form', { errors: errors.mapped() }) // ou array()
-		console.log(req.body)
+  createEJS: async (req, res) => {
+    let image = "";
 
-		try {
-		if (req.files[0] !== undefined) {
-			image = req.files[0].filename
-		} else {
-			image = 'default-image.png'
-		}
-		
-		let newProduct = {
-			...req.body,
-			image: image
-		}
-	
-		  await Product.create(newProduct) // cria o registro no banco de dados
-	
-		res.redirect('/')
-		} catch (error) {
-		res.status(400).json({ error })
-		}
-	},
-	
-	/* (req, res) {
+    const errors = validationResult(req);
+    if (!errors.isEmpty())
+      res.render("product-create-form", { errors: errors.mapped() }); // ou array()
+    console.log(req.body);
+
+    try {
+      if (req.files[0] !== undefined) {
+        image = req.files[0].filename;
+      } else {
+        image = "default-image.png";
+      }
+
+      let newProduct = {
+        ...req.body,
+        image: image,
+      };
+
+      await Product.create(newProduct); // cria o registro no banco de dados
+
+      res.redirect("/");
+    } catch (error) {
+      res.status(400).json({ error });
+    }
+  },
+
+  /* (req, res) {
 		//--------------multer-------------
 		console.log(req.body);
 		let image = ''
@@ -105,94 +104,85 @@ res.render('productRegistration', {errors: errors.mapped()}) // ou array()
 		res.redirect('http://localhost:3000/homeStore');
 	}, */
 
+  update(req, res) {
+    const { id } = req.params;
 
+    const productIndex = products.findIndex(
+      (product) => String(product.id) === id
+    );
 
-	update(req, res) {
-		const { id } = req.params;
+    if (productIndex != -1) {
+      products[productIndex] = req.body;
+      return res.json(products);
+    } else return res.status(400).json({ error: "Produto não encontrado.2" });
+  },
+  delete(req, res) {
+    const { id } = req.params;
 
-		const productIndex = products.findIndex(
-			product => String(product.id) === id
-		);
+    const productIndex = products.findIndex(
+      (product) => String(product.id) === id
+    );
 
-		if (productIndex != -1) {
-			products[productIndex] = req.body;
-			return res.json(products);
-		} else
-			return res.status(400).json({ error: 'Produto não encontrado.2' });
-	},
-	delete(req, res) {
-		const { id } = req.params;
+    if (productIndex != -1) {
+      products.splice(productIndex, 1);
+      return res.json(products);
+    } else return res.status(400).json({ error: "Produto não encontrado.3" });
+  },
 
-		const productIndex = products.findIndex(
-			product => String(product.id) === id
-		);
-
-		if (productIndex != -1) {
-			products.splice(productIndex, 1);
-			return res.json(products);
-		} else
-			return res.status(400).json({ error: 'Produto não encontrado.3' });
-	},
-
-	/* updateFormEJS: (req, res) => {
+  /* updateFormEJS: (req, res) => {
 		let id = req.params.id;
 		let productToEdit = products.find(product => product.id == id);
 		res.render('productUpdate', { productToEdit });
 	}, */
 
-// Update form product - View - professor
-
+  // Update form product - View - professor
 
   // Update product
-updateEJS: async (req, res) => {
-    const { id } = req.params
-    let image = ''
-    
+  updateEJS: async (req, res) => {
+    const { id } = req.params;
+    let image = "";
+
     try {
-    const productToEdit = await Product.findByPk(id)
-    
-    if (productToEdit != undefined) {
+      const productToEdit = await Product.findByPk(id);
+
+      if (productToEdit != undefined) {
         if (req.files[0] !== undefined) {
-            image = req.files[0].filename
+          image = req.files[0].filename;
         } else {
-            image = productToEdit.image
+          image = productToEdit.image;
         }
 
         let product = {
-            ...req.body,
-            image: image
-        }
+          ...req.body,
+          image: image,
+        };
 
-        await Product.update(
-            product,
-            {
-            where: {
-                id: id
-            }
-            }
-          ) // atualiza o registro no banco de dados
+        await Product.update(product, {
+          where: {
+            id: id,
+          },
+        }); // atualiza o registro no banco de dados
 
-        res.redirect('/')
-    } else return res.status(400).json({ error: 'Produto não encontrado.' })
-
+        res.redirect("/");
+      } else return res.status(400).json({ error: "Produto não encontrado." });
     } catch (error) {
-    res.status(400).json({ error })
+      res.status(400).json({ error });
     }
-},
+  },
 
-updateFormEJS: async (req, res) => {
-    const id = req.params.id
+  updateFormEJS: async (req, res) => {
+    const id = req.params.id;
 
     try {
-    const productToEdit = await Product.findByPk(id)
+      const productToEdit = await Product.findByPk(id);
 
-    res.render('productUpdate', { productToEdit })
+      res.render("productUpdate", { productToEdit });
     } catch (error) {
-    res.status(400).json({ error })
+      res.status(400).json({ error });
     }
-},
+  },
 
-	/* updateEJS: (req, res) => {
+  /* updateEJS: (req, res) => {
 		const { id } = req.params;
 		let image = '';
 
@@ -222,30 +212,30 @@ updateFormEJS: async (req, res) => {
 			return res.status(400).json({ error: 'Produto não encontrado.' });
 	}, */
 
-	deleteEJS: async (req, res) => {
-		const { id } = req.params;
+  deleteEJS: async (req, res) => {
+    const { id } = req.params;
 
-		/* const productIndex = products.findIndex(
+    /* const productIndex = products.findIndex(
 			product => String(product.id) === id
 		); */
 
-		try {
-			await Product.destroy({
-				where: {
-					id: id
-				}
-			}) // remove o regitro do banco de dados
-			res.redirect('http://localhost:3000/homeStore')
-		} catch (error) {
-			res.status(400).json({ error })
-		}
+    try {
+      await Product.destroy({
+        where: {
+          id: id,
+        },
+      }); // remove o regitro do banco de dados
+      res.redirect("http://localhost:3000/homeStore");
+    } catch (error) {
+      res.status(400).json({ error });
+    }
 
-		/* if (productIndex != -1) {
+    /* if (productIndex != -1) {
 			products.splice(productIndex, 1);
 			res.redirect('http://localhost:3000/homeStore');
 		} else
 			return res.status(400).json({ error: 'Produto não encontrado.' }); */
-	}
+  },
 };
 
 module.exports = ProductController;
