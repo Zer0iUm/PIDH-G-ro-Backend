@@ -44,13 +44,8 @@ const ProductController = {
 	}, */
   // Create product
 
-  create(req, res) {
-    products.push(req.body);
-    res.json(products);
-  },
-
-  createFormEJS: (req, res) => {
-    res.render("productRegistration");
+  createFormEJS: async (req, res) => {
+    await res.render("productRegistration");
   },
 
   createEJS: async (req, res) => {
@@ -58,7 +53,7 @@ const ProductController = {
 
     const errors = validationResult(req);
     if (!errors.isEmpty())
-      res.render("product-create-form", { errors: errors.mapped() }); // ou array()
+      res.render("productRegistration", { errors: errors.mapped() }); // ou array()
     console.log(req.body);
 
     try {
@@ -75,7 +70,7 @@ const ProductController = {
 
       await Product.create(newProduct); // cria o registro no banco de dados
 
-      res.redirect("/");
+      res.redirect("/homeStore");
     } catch (error) {
       res.status(400).json({ error });
     }
@@ -104,7 +99,7 @@ res.render('productRegistration', {errors: errors.mapped()}) // ou array()
 		res.redirect('http://localhost:3000/homeStore');
 	}, */
 
-  update(req, res) {
+  /*  update(req, res) {
     const { id } = req.params;
 
     const productIndex = products.findIndex(
@@ -127,7 +122,7 @@ res.render('productRegistration', {errors: errors.mapped()}) // ou array()
       products.splice(productIndex, 1);
       return res.json(products);
     } else return res.status(400).json({ error: "Produto não encontrado.3" });
-  },
+  }, */
 
   /* updateFormEJS: (req, res) => {
 		let id = req.params.id;
@@ -163,7 +158,7 @@ res.render('productRegistration', {errors: errors.mapped()}) // ou array()
           },
         }); // atualiza o registro no banco de dados
 
-        res.redirect("/");
+        res.redirect("/homeStore");
       } else return res.status(400).json({ error: "Produto não encontrado." });
     } catch (error) {
       res.status(400).json({ error });

@@ -1,69 +1,66 @@
-const { body } = require('express-validator');
-const express = require('express');
+const { body } = require("express-validator");
+const express = require("express");
 const router = express.Router();
 
 /* Controllers */
-const mainController = require('../controllers/MainController');
-const productController = require('../controllers/ProductController');
-const userController = require('../controllers/userController');
+const mainController = require("../controllers/MainController");
+const productController = require("../controllers/ProductController");
+const userController = require("../controllers/userController");
 
 //middlewares
-const log = require('../middlewares/log');
-const upload = require('../middlewares/upload'); // multer
-const authentication = require('../middlewares/authentication');
-const path = require('path'); // MANIPULAR PASTAS
+const log = require("../middlewares/log");
+const upload = require("../middlewares/upload"); // multer
+const authentication = require("../middlewares/authentication");
+const path = require("path"); // MANIPULAR PASTAS
 
+router.get("/", mainController.index); // router.get('/',  log, mainController.index);
 
+router.get("/homeStore", mainController.homeStore);
 
-router.get('/', mainController.index); // router.get('/',  log, mainController.index);
+router.get("/cervejas", mainController.cervejas);
 
-router.get('/homeStore', mainController.homeStore);
+router.get("/listAcessories", mainController.listAcessories);
 
-router.get('/cervejas', mainController.cervejas);
+router.get("/kits", mainController.kits);
 
-router.get('/listAcessories', mainController.listAcessories);
+router.get("/login", mainController.login);
 
-router.get('/kits', mainController.kits);
+router.post("/login", userController.userLogin);
 
-router.get('/login', mainController.login);
+router.get("/logout", mainController.logout);
 
-router.post('/login', userController.userLogin);
+router.get("/accountUser", mainController.accountUser);
 
-router.get('/logout', mainController.logout);
+router.get("/accountAdmin", mainController.accountAdmin);
 
-router.get('/accountUser', mainController.accountUser);
+router.get("/productRegistration", productController.createFormEJS);
 
-router.get('/accountAdmin', mainController.accountAdmin);
-
-router.get('/productRegistration', productController.createFormEJS);
-
-router.get('/productUpdate', productController.updateFormEJS);
+router.get("/product/update/:id", productController.updateFormEJS);
 
 //router.get('/productUpdate', productController.updateEJS);
 
-router.get('/product', mainController.product);
+router.get("/product", mainController.product);
 
 //router.get('/product/:id', mainController.search);
 
-router.get('/checkout', mainController.checkout);
+router.get("/checkout", mainController.checkout);
 
-router.get('/search', mainController.search);
+router.get("/search", mainController.search);
 
-router.get('/shoppingCart', authentication, mainController.shoppingCart);
+router.get("/shoppingCart", authentication, mainController.shoppingCart);
 
 //user
 
-router.get('/signUp', mainController.signUp);
+router.get("/signUp", mainController.signUp);
 
-router.post('/signUp', userController.register);
-
+router.post("/signUp", userController.register);
 
 //Product
-router.get('/product', productController.showAll);
+router.get("/product", productController.showAll);
 
-router.get('/product/:id', productController.showById);
+router.get("/product/:id", productController.showById);
 
-router.get('/erro', mainController.erro);
+router.get("/erro", mainController.erro);
 
 // # Product
 
@@ -75,16 +72,16 @@ router.get('/erro', mainController.erro);
 
 // POST - EJS Create
 router.post(
-	'/product',
-	upload.any(),
-	body('name').notEmpty().withMessage('Nome do Produto deve ser informado'),
-	productController.createEJS
+  "/product",
+  upload.any(),
+  body("name").notEmpty().withMessage("Nome do Produto deve ser informado"),
+  productController.createEJS
 );
 
 // PUT - EJS Update
-router.put('/product/:id', upload.any(), productController.updateEJS);
+router.put("/product/:id", upload.any(), productController.updateEJS);
 
 // DELETE - EJS Delete
-router.delete('/product/:id', productController.deleteEJS);
+router.delete("/product/:id", productController.deleteEJS);
 
 module.exports = router;

@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<title>Cadastro de Produtos</title>
-		<script src="/js/script.js"></script>
-		<link rel="stylesheet" type="text/css" href="/css/style_cad_prod.css" />
-	</head>
-	<body>
 
-		<h1>Cadastro de Produtos</h1>
-		
-		<% if (typeof errors !== 'undefined') { %>
-            <ul>
-              <% for(let error in errors) { %>
-                <li> <%= errors[error].msg %> </li>
-              <% } %>
-            </ul>
-          <% } %>
-		
-		
-		<!-- Alterado para receber o MULTER -->
-		<form action="/product" method="POST" enctype="multipart/form-data">
+<head>
+	<meta charset="UTF-8" />
+	<title>Cadastro de Produtos</title>
+	<script src="/js/script.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/style_cad_prod.css" />
+</head>
 
-			<label for="name">Nome:</label>
-			<input type="text" id="name" name="name" /><br />
+<body>
 
-			<label for="type">Categoria:</label>
-			<select id="type" name="type">
-				<option value="Cerveja">Cerveja</option>
-				<option value="Acessorios">Acessórios</option>
-				<option value="Kits">Kits</option>
-			</select><br />
+	<h1>Cadastro de Produtos</h1>
 
-			<label for="description">Descrição:</label>
-			<textarea id="description" name="description"></textarea><br />
+	<% if (typeof errors !=='undefined' ) { %>
+		<ul>
+			<% for(let error in errors) { %>
+				<li>
+					<%= errors[error].msg %>
+				</li>
+				<% } %>
+		</ul>
+		<% } %>
 
-			<label for="price">Preço:</label>
-			<input type="number" id="price" name="price" /><br />
 
-			<label for="image">Imagem:</label>
-			<input type="file" id="image" name="image" /><br /> 
+			<!-- Alterado para receber o MULTER -->
+			<form action="/product" method="POST" enctype="multipart/form-data">
 
-			<button type="submit">Cadastrar</button>
-		</form>
+				<label for="name">Nome:</label>
+				<input type="text" id="name" name="name" /><br />
 
-	</body>
+
+				<label for="product_type_id">Categoria:</label>
+				<select id="product_type_id" name="product_type_id">
+					<option value="1">Cerveja</option>
+					<option value="2">Acessórios</option>
+					<option value="3">Kits</option>
+				</select><br />
+
+				<label for="description">Descrição:</label>
+				<textarea id="description" name="description"></textarea><br />
+
+				<label for="price">Preço:</label>
+				<input type="number" id="price" name="price" /><br />
+
+				<label for="image">Imagem:</label>
+				<input type="file" id="image" name="image" /><br />
+
+				<button type="submit">Cadastrar</button>
+			</form>
+
+</body>
+
 </html>
